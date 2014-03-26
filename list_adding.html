@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Top 5</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- DIY Theme -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/magic-bootstrap.css" >
+
+	<link rel="stylesheet" type="text/css" href="css/list_adding.css" />
+	
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
+	
+	<script>
+	
+$(function(){
+
+
+
+	if (!$.top5) $.top5 = {};   
+	else if ($.top5.listAdding) return;
+	
+	$.top5.listAdding = (function(){
+		var _catOpen = false;
+		
+		function init(){
+			$('#t5-list-cat-wrap').click(function(){
+				_catOpen = !_catOpen;
+				render_cat();
+			});
+			
+			render_cat();
+		}
+
+		function render_cat(){
+			if (_catOpen) {
+				$('#t5-list-cat-menu').show();
+				$('#t5-list-cat-wrap').addClass('t5-open');
+			} else {
+				$('#t5-list-cat-menu').hide();
+				$('#t5-list-cat-wrap').removeClass('t5-open');				
+			}
+		}
+		
+		
+		init(); 
+	})();
+		
+	
+		
+});
+	
+	
+	
+	</script>
+    
+  </head>
+  <body>
+  	
+
+	<div id='t5-topbar'>
+		<img id='t5-logo' src='img/logo.png'>
+		<div id='t5-home-btn' class='t5-topbar-btn'></div>
+		<input id='t5-search'>
+		<div id='t5-list-adding-btn' class='t5-topbar-btn'>+</div>
+	</div>   
+	
+	
+	<div id='t5-list-adding'>
+		<div id='t5-list-adding-title'>
+			<div class='container t5-container-md'>
+				<div class='col-md-5'>
+					<input id='t5-list-title-input'>
+				</div>
+				<div class='col-md-5'>
+					<span id='t5-list-cat-wrap'>
+						<span>Category</span>
+						<span id='t5-list-cat-btn'></span>
+					</span>
+				</div>
+				<div class='col-md-2 text-right'>
+					<button class='btn btn-primary' id='t5-save-list-btn'>Save List</button>
+				</div>
+			</div>
+		</div>
+		<div id='t5-list-cat-menu'>
+			<div class='container t5-container-md'>
+				<div class='t5-list-cat-col'>
+					<h4>Lifestyle</h4>
+					<div>
+						<div>Travel & Leisure</div>
+						<div>Food & Drink</div>
+						<div>Health & Fitness</div>
+						<div>Home</div>
+						<div>Holiday</div>
+					</div>
+				</div>
+				<div class='t5-list-cat-col'>
+					<h4>Technology</h4>
+					<div>
+						<div>Software & Apps</div>
+						<div>Electronics</div>
+						<div>Gadgets</div>
+						<div>Autos</div>
+					</div>
+				</div>
+				<div class='t5-list-cat-col'>
+					<h4>Entertainment</h4>
+					<div>
+						<div>Games</div>
+						<div>Music</div>
+						<div>Movies & TV</div>
+						<div>Sports</div>
+						<div>Books</div>
+					</div>
+				</div>
+				<div class='t5-list-cat-col t5-list-cat-col-wide'>
+					<h4>Beauty & Fashion</h4>
+					<div>
+						<div>Shoes</div>
+						<div>Bags</div>
+						<div>Clothes</div>
+						<div>Skincare</div>
+						<div>Makeup</div>
+					</div>
+					<div>
+						<div>Hair care</div>
+						<div>Bath & Body</div>
+						<div>Accessories</div>
+					</div>
+				</div>
+				<div class='t5-list-cat-col'>
+					<h4>Business</h4>
+					<div>
+						<div>Jobs</div>
+						<div>Marketing</div>
+						<div>Media</div>
+						<div>Company</div>
+					</div>
+				</div>
+				<div class='t5-list-cat-col'>
+					<h4>Personal</h4>
+					<div>
+						<div>Wish</div>
+						<div>Holiday</div>
+						<div>Romance</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div id='t5-la-body'>
+			<div class='container t5-container-md'>
+				<div class='col-md-5'>
+					<input id='t5-la-item-input'>
+					<div id='t5-la-item-wrap'>
+						<div id='t5-la-item-image'><img></div>
+						<textarea id='t5-la-item-comment'></textarea>
+					</div>
+					<button class='btn btn-primary' id='t5-la-item-btn'>Add Item</button>
+				</div>
+				<div class='col-md-5'>
+					<div class='t5-la-item t5-selected'>
+						<span>1</span>
+						<div>Dior 'Addict' Gloss</div>
+					</div>
+					<div class='t5-la-item'>
+						<span>2</span>
+					</div>
+					<div class='t5-la-item'>
+						<span>3</span>
+					</div>
+					<div class='t5-la-item'>
+						<span>4</span>
+					</div>
+					<div class='t5-la-item'>
+						<span>5</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+
+
+   
+   
+	
+	
+	
+
+  </body>
+</html>

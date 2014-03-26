@@ -1,0 +1,80 @@
+/*  LESS var  */
+/* overwrite bootstrap */
+.btn {
+  border-radius: 0;
+}
+/* body */
+body {
+  background-color: #333333;
+}
+/*  topbar  */
+#t5-topbar {
+  position: fixed;
+  top: 0;
+  height: 40pt;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  z-index: 9999;
+}
+#t5-logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 30pt;
+  margin: 5pt 10pt;
+}
+/*   category menu   */
+#t5-cat-menu {
+  display: inline-block;
+  position: fixed;
+  top: 100pt;
+  width: 23pt;
+  background-color: white;
+}
+.t5-cat-1st {
+  position: relative;
+}
+.t5-cat-1st > span {
+  display: block;
+  height: 20pt;
+  margin-left: 3pt;
+  background-color: #f13d0b;
+  cursor: default;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20pt;
+}
+.t5-cat-1st:not(:last-child) > span {
+  border-bottom: 1px solid #cf3409;
+}
+.t5-cat-1st > div {
+  position: absolute;
+  left: 23pt;
+  top: 0;
+  width: 120pt;
+  padding: 0.5em 0em 0.5em 2em;
+  background-color: white;
+  display: none;
+}
+.t5-cat-2nd {
+  padding: 0.4em 0;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: top;
+}
+.t5-cat-2nd:hover {
+  font-family: Playball, cursive;
+  font-size: 18px;
+  margin-left: -0.5em;
+}
+.t5-cat-1st:hover > div {
+  display: block;
+}
+.t5-cat-1st:hover > span {
+  background-color: white;
+  color: black;
+  border-right: 1px solid #eeeeee;
+}

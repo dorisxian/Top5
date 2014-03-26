@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Top 5</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- DIY Theme -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/magic-bootstrap.css" >
+	
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	
+	<style>
+
+	
+	
+	</style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	
+    
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
+	
+	<script>
+	
+$(function(){
+	
+	
+	
+	var width = $("#t5-banner-collage").width();
+	function move_collage(){
+		$('#t5-banner-collage').css('background-position', 0);
+		$('#t5-banner-collage').animate({'background-position': - width + 'px'}, {
+			duration: 20000
+			, easing: 'linear'
+			, complete: function(){
+				move_collage();
+			}
+		});
+	}
+	move_collage();
+	
+});
+	
+	
+	
+	</script>
+    
+  </head>
+  <body>
+  	
+
+	<div id='t5-topbar'>
+		<img id='t5-logo' src='img/top5-logo.png'>
+		<div class='container'>
+			<div id='t5-search-wrap'>
+				<input id='t5-search'>
+			</div>
+			<span id='t5-welcome'>Welcome, guest !</span>
+		</div>
+	</div>   
+
+	<div id='t5-banner'>
+		<div id='t5-banner-mask'></div>			
+		<div id='t5-banner-collage'></div>
+		
+		<div class='container'>
+			<div class='row' id='t5-banner-row'>
+				<div class='col-lg-2 col-md-2'>
+					<img id='t5-title' src='img/top5-title.png'>
+				</div>
+				
+				<div class='col-lg-5 col-md-4' id='t5-headline-col'>
+					<div id='t5-headline'>A Top 5 List Community that sets out <p> to know the best in life !</div>
+				</div>
+			
+				<div id='t5-login-col'>
+					<div id='t5-login'>
+						<div id='t5-login-mask'></div>			
+						<div id='t5-login-collage'></div>
+						
+						<h3 id='t5-login-title'>Sign in to your account</h3>
+						<table id='t5-login-table'>
+							<tr>
+								<td>Email : </td>
+								<td><input id='t5-username'></td>
+								<td>Login with</td>
+							</tr>
+							<tr>
+								<td>Password : </td>
+								<td><input id='t5-password'></td>
+								<td>
+									<span class='t5-social'></span>
+									<span class='t5-social'></span>
+									<span class='t5-social'></span>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class='text-right'><small>Forgot Password ?</small></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><input id='t5-remember' type='checkbox'></td>
+								<td><small>Remember my password<small></td>
+								<td><small>Not a member yet?</small></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td class='text-right'><button id='t5-login-btn' class='btn'>Sign in</button></td>
+								<td><button id='t5-register-btn' class='btn'>Join us</button></td>
+							</tr>
+						</table>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+
+
+   
+   
+	
+	
+	
+
+  </body>
+</html>
