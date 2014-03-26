@@ -36,30 +36,30 @@
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
 	
 	<script>
-	
-$(function(){
-		
-});
-	
-	
-	
+	$(document).ready(function () {
+		$(".t5-cat-1st").mouseenter(function () {
+			var path_dark = $(this).find(".t5-cat-icon").attr("src").replace("light", "dark");
+	        $(this).find(".t5-cat-icon").attr('src', path_dark);
+	    })
+	    .mouseleave(function () {
+			var path_light = $(this).find(".t5-cat-icon").attr("src").replace("dark", "light");
+	        $(this).find(".t5-cat-icon").attr('src', path_light);
+	    });
+	});
 	</script>
     
   </head>
-  <body>
-  	
+  <body>  	
 
 	<div id='t5-topbar'>
 		<img id='t5-logo' src='img/logo.png'>
 	</div>   
 
-
-
-
-	<div id='t5-cat-menu'>
+	<section id='t5-cat-menu'>
 		<div class='t5-cat-1st'>
-			<span>P</span>
+			<span><img class="t5-cat-icon" src="img/category-icons/popular_light.png" alt="popular"></span>
 			<div>
+				<div class="t5-cat-title">Popular</div>
 				<div class='t5-cat-2nd'>Travel & Leisure</div>
 				<div class='t5-cat-2nd'>Food</div>
 				<div class='t5-cat-2nd'>Makeup</div>
@@ -67,8 +67,9 @@ $(function(){
 			</div>
 		</div>
 		<div class='t5-cat-1st'>
-			<span>L</span>
+			<span><img class="t5-cat-icon" src="img/category-icons/lifestyle_light.png" alt="lifestyle"></span>
 			<div>
+				<div class="t5-cat-title">Lifestyle</div>
 				<div class='t5-cat-2nd'>Travel & Leisure</div>
 				<div class='t5-cat-2nd'>Food</div>
 				<div class='t5-cat-2nd'>Health & Fitness</div>
@@ -77,8 +78,9 @@ $(function(){
 			</div>
 		</div>
 		<div class='t5-cat-1st'>
-			<span>T</span>
+			<span><img class="t5-cat-icon" src="img/category-icons/technology_light.png" alt="technology"></span>
 			<div>
+				<div class="t5-cat-title">Technology</div>
 				<div class='t5-cat-2nd'>Software & Apps</div>
 				<div class='t5-cat-2nd'>Electronics</div>
 				<div class='t5-cat-2nd'>Gadgets</div>
@@ -86,8 +88,9 @@ $(function(){
 			</div>
 		</div>
 		<div class='t5-cat-1st'>
-			<span>E</span>
-			<div>
+			<span><img class="t5-cat-icon" src="img/category-icons/entertainment_light.png" alt="entertainment"></span>
+			<div class="t5-cat-area">
+				<div class="t5-cat-title">Entertainment</div>
 				<div class='t5-cat-2nd'>Games</div>
 				<div class='t5-cat-2nd'>Music</div>
 				<div class='t5-cat-2nd'>Movies & TV</div>
@@ -96,8 +99,9 @@ $(function(){
 			</div>
 		</div>
 		<div class='t5-cat-1st'>
-			<span>B</span>
+			<span><img class="t5-cat-icon t5-cat-bf" src="img/category-icons/b&f_light.png" alt="beauty&fashion"></span>
 			<div>
+				<div class="t5-cat-title" style="word-spacing:-3px;">Beauty & Fashion</div>
 				<div class='t5-cat-2nd'>Shoes</div>
 				<div class='t5-cat-2nd'>Bags</div>
 				<div class='t5-cat-2nd'>Clothes</div>
@@ -109,8 +113,9 @@ $(function(){
 			</div>
 		</div>
 		<div class='t5-cat-1st'>
-			<span>B</span>
+			<span><img class="t5-cat-icon t5-cat-bf" src="img/category-icons/business_light.png" alt="business"></span>
 			<div>
+				<div class="t5-cat-title">Business</div>
 				<div class='t5-cat-2nd'>Jobs</div>
 				<div class='t5-cat-2nd'>Marketing</div>
 				<div class='t5-cat-2nd'>Media</div>
@@ -118,19 +123,15 @@ $(function(){
 			</div>
 		</div>
 		<div class='t5-cat-1st'>
-			<span>P</span>
+			<span><img class="t5-cat-icon" src="img/category-icons/personal_light.png" alt="personal"></span>
 			<div>
+				<div class="t5-cat-title">Personal</div>
 				<div class='t5-cat-2nd'>Wish</div>
 				<div class='t5-cat-2nd'>Holiday</div>
 				<div class='t5-cat-2nd'>Romance</div>
 			</div>
 		</div>
-	</div>
-   
-   
-	
-	
-	
+	</section>
 
   </body>
 </html>

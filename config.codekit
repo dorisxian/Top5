@@ -1076,6 +1076,30 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/index.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/index.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/list_adding.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/list_adding.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/menu.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/menu.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
 	"\/img\/6D.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1086,13 +1110,153 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/banner-collage.png": {
+	"\/img\/category-icons\/b&f_dark.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 2.48268e+06,
-		"inputAbbreviatedPath": "\/img\/banner-collage.png",
-		"outputAbbreviatedPath": "\/img\/banner-collage.png",
+		"initialSize": 1832,
+		"inputAbbreviatedPath": "\/img\/category-icons\/b&f_dark.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/b&f_dark.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/b&f_light.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1771,
+		"inputAbbreviatedPath": "\/img\/category-icons\/b&f_light.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/b&f_light.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/business_dark.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1403,
+		"inputAbbreviatedPath": "\/img\/category-icons\/business_dark.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/business_dark.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/business_light.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1364,
+		"inputAbbreviatedPath": "\/img\/category-icons\/business_light.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/business_light.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/entertainment_dark.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2024,
+		"inputAbbreviatedPath": "\/img\/category-icons\/entertainment_dark.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/entertainment_dark.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/entertainment_light.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1997,
+		"inputAbbreviatedPath": "\/img\/category-icons\/entertainment_light.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/entertainment_light.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/lifestyle_dark.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1814,
+		"inputAbbreviatedPath": "\/img\/category-icons\/lifestyle_dark.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/lifestyle_dark.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/lifestyle_light.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1722,
+		"inputAbbreviatedPath": "\/img\/category-icons\/lifestyle_light.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/lifestyle_light.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/personal_dark.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1891,
+		"inputAbbreviatedPath": "\/img\/category-icons\/personal_dark.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/personal_dark.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/personal_light.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1781,
+		"inputAbbreviatedPath": "\/img\/category-icons\/personal_light.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/personal_light.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/popular_dark.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1892,
+		"inputAbbreviatedPath": "\/img\/category-icons\/popular_dark.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/popular_dark.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/popular_light.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1734,
+		"inputAbbreviatedPath": "\/img\/category-icons\/popular_light.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/popular_light.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/technology_dark.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1599,
+		"inputAbbreviatedPath": "\/img\/category-icons\/technology_dark.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/technology_dark.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/category-icons\/technology_light.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1540,
+		"inputAbbreviatedPath": "\/img\/category-icons\/technology_light.png",
+		"outputAbbreviatedPath": "\/img\/category-icons\/technology_light.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/collage.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4.0482e+06,
+		"inputAbbreviatedPath": "\/img\/collage.png",
+		"outputAbbreviatedPath": "\/img\/collage.png",
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -1146,6 +1310,16 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/top5-logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 30227,
+		"inputAbbreviatedPath": "\/img\/top5-logo.png",
+		"outputAbbreviatedPath": "\/img\/top5-logo.png",
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/top5-title.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1165,6 +1339,14 @@
 		"outputAbbreviatedPath": "\/img\/XQ1.jpg",
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
 		},
 	"\/js\/category.js": {
 		"fileType": 64,
@@ -1215,6 +1397,44 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/less\/index.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/index.less",
+		"outputAbbreviatedPath": "\/css\/index.css",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/less\/list_adding.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/list_adding.less",
+		"outputAbbreviatedPath": "\/css\/list_adding.css",
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/less\/magic-bootstrap.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -1226,6 +1446,25 @@
 		"inputAbbreviatedPath": "\/less\/magic-bootstrap.less",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/css\/magic-bootstrap.css",
 		"outputPathIsSetByUser": 1,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/less\/menu.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/menu.less",
+		"outputAbbreviatedPath": "\/css\/menu.css",
+		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
@@ -1252,6 +1491,22 @@
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
+		},
+	"\/list_adding.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/list_adding.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
+		},
+	"\/menu.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/menu.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsSetByUser": 0
 		},
 	"\/README.md": {
 		"enableFootnoteSupport": 0,
