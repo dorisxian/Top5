@@ -1,13 +1,16 @@
+.Border {
+  border: #f13d0b 1px solid;
+}
+.Border-white {
+  border: 1px solid #ffffff;
+}
+.Circle {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
 body {
-  background-color: #282828;
   min-width: 768px;
-}
-.hidden {
-  display: none;
-}
-.row {
-  margin-left: 0;
-  margin-right: 0;
 }
 .centered {
   float: none;
@@ -60,6 +63,16 @@ input:focus {
 .btn-social:hover {
   color: #ffffff;
 }
+body {
+  background-color: #282828;
+}
+.hidden {
+  display: none;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
 h2 {
   font-family: 'Playball';
   color: #ffffff;
@@ -73,12 +86,6 @@ h2 {
 .topic-filters .btn-info {
   padding: 2px 20px;
   margin: 7px;
-}
-.Border {
-  border: #f13d0b 1px solid;
-}
-.Border-white {
-  border: 1px solid #ffffff;
 }
 .list-item {
   width: 700px;
@@ -96,11 +103,6 @@ h3 {
   font-size: 2.2em;
   margin-right: 14px;
   margin-top: 12px;
-}
-.Circle {
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
 }
 .t5-user-pic {
   border-radius: 50%;

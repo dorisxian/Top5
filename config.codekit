@@ -1116,16 +1116,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/flower.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 459986,
-		"inputAbbreviatedPath": "\/img\/flower.png",
-		"outputAbbreviatedPath": "\/img\/flower.png",
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/img\/G16.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -1184,7 +1174,7 @@
 		"outputAbbreviatedPath": "\/js\/min\/category-ck.js",
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
+		"syntaxCheckerStyle": 2
 		},
 	"\/js\/isotope.pkgd.min.js": {
 		"fileType": 64,
@@ -1236,6 +1226,25 @@
 		"inputAbbreviatedPath": "\/less\/magic-bootstrap.less",
 		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/dist\/css\/magic-bootstrap.css",
 		"outputPathIsSetByUser": 1,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/less\/style.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/style.less",
+		"outputAbbreviatedPath": "\/css\/style.css",
+		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,

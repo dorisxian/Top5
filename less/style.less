@@ -1,0 +1,77 @@
+@import "magic-bootstrap.less";
+// Ranking shades
+@shade1: #EA3B0B;
+@shade2: #F44819;
+@shade3: #F56239;
+@shade4: #F77C59;
+@shade5: #F9967A;
+// Some Mixins
+.Border{
+	border: @brand-primary 1px solid;
+}
+.Border-white{
+	border: 1px solid #ffffff;
+}
+.Circle{
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+  	-moz-border-radius: 50%;
+}
+// Universal Styles
+body{
+	min-width: 768px;
+}
+.centered{
+	float: none;
+    margin: 0 auto;
+}
+.light{
+	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
+	font-weight: 300; 
+	letter-spacing: 0.4px;
+}
+.thin{
+	font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+	font-weight: 200;
+	letter-spacing: 0.5px;
+}
+.superthin{
+	font-weight: 100;
+	letter-spacing: 0.5px;
+}
+
+// Nav Bar
+
+.fa-lg {
+    font-size: 1.7em;
+}
+.form-control{
+	border: 2px solid @brand-primary;
+}
+.navbar-form .form-control {
+	width: 300px;
+}
+input:focus { 
+	color: @gray;
+	font-weight: 500;
+}
+.username{
+	line-height: @navbar-height;
+	margin: 0 15px;
+	color: darken(@gray-light, 10%);
+	font-size: larger;
+}
+.user-menu-text{
+	padding-left: 10px;
+	font-weight: 300;
+	font-size: larger;
+}
+.user-menu .dropdown-menu > li > a {
+	padding: 7px 20px;
+}
+.user-menu .dropdown-menu .divider {
+	margin: 0;
+}
+.btn-social:hover{
+	color: #ffffff;
+}
