@@ -7,8 +7,13 @@
 // Brand Colors
 @brand-primary: #F13D0B;
 @brand-info: #353535;
+@brand-primary-darker:  darken(@brand-primary, 7%);
 // Font 
 @font-family-serif: 'Playball', 'Monotype Corsiva', 'Gabriola', cursive, script;
+
+@font-size-md: floor((@font-size-base * 1.1));
+@font-size-xs: floor((@font-size-base * 0.75));
+
 // Ranking shades
 @shade1: #EA3B0B;
 @shade2: #F44819;
@@ -40,4 +45,10 @@
 .superthin{
 	font-weight: 100;
 	letter-spacing: 0.5px;
+}
+
+/* overwrit bootstrap */
+.btn
+{
+  border-radius:0;
 }
