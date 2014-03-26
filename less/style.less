@@ -1,22 +1,6 @@
 @import "magic-bootstrap.less";
-// Ranking shades
-@shade1: #EA3B0B;
-@shade2: #F44819;
-@shade3: #F56239;
-@shade4: #F77C59;
-@shade5: #F9967A;
-// Some Mixins
-.Border{
-	border: @brand-primary 1px solid;
-}
-.Border-white{
-	border: 1px solid #ffffff;
-}
-.Circle{
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-  	-moz-border-radius: 50%;
-}
+@import "basic.less";
+
 // Universal Styles
 body{
 	min-width: 768px;
@@ -25,20 +9,10 @@ body{
 	float: none;
     margin: 0 auto;
 }
-.light{
-	font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif; 
-	font-weight: 300; 
-	letter-spacing: 0.4px;
-}
-.thin{
-	font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
-	font-weight: 200;
-	letter-spacing: 0.5px;
-}
-.superthin{
-	font-weight: 100;
-	letter-spacing: 0.5px;
-}
+
+/*  LESS var  */
+@brand-primary-darker:  darken(@brand-primary, 7%);
+
 
 // Nav Bar
 
@@ -75,3 +49,88 @@ input:focus {
 .btn-social:hover{
 	color: #ffffff;
 }
+
+/*  Category Menu   */
+
+#t5-cat-menu
+{
+  display:inline-block;
+  position:fixed;
+  top:110pt;
+  width:30pt;
+  background-color:white;
+}
+
+.t5-cat-1st
+{
+  position:relative;
+}
+.t5-cat-1st > span
+{
+  display:block;
+  height:23pt;
+  margin-left:3pt;
+  background-color:@brand-primary;
+  cursor:default;
+  
+  color:white;
+  text-align:center;
+  line-height:23pt;
+}
+.t5-cat-icon{
+  max-width: 100%; 
+  max-height: 100%;
+  width: 44%;
+  vertical-align: text-bottom;
+}
+.t5-cat-bf{
+  width: 53%;
+}
+.t5-cat-icon:hover{
+  cursor: pointer;
+}
+.t5-cat-1st:not(:last-child)  > span
+{
+  border-bottom:1px solid @brand-primary-darker;
+}
+
+.t5-cat-1st > div
+{
+  position:absolute;  
+  left:30pt;
+  top:0;
+  width:120pt;
+  padding:0.5em 0em 0.5em 1.5em;
+  background-color:white;
+  display:none;
+}
+.t5-cat-title{
+  font-family: @font-family-serif;
+  font-size: 20px;
+  margin-left:-0.5em;
+  margin-top: -0.2em;
+  margin-bottom: 0.17em;
+}
+.t5-cat-2nd
+{
+  padding:0.2em 0;
+  cursor:pointer;
+  white-space:nowrap;
+  vertical-align:top;
+  .light;
+}
+.t5-cat-2nd:hover
+{
+  color: @brand-primary;
+}
+.t5-cat-1st:hover > div
+{
+  display:block;
+}
+.t5-cat-1st:hover > span
+{
+  background-color:white;  
+  color:black;
+  border-right:1px solid @gray-lighter;
+}
+

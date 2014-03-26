@@ -13,10 +13,12 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/magic-bootstrap.css" >
     <!-- Font Awesome -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <!-- Page CSS -->
     <link rel="stylesheet" href="css/category.css">
-
   </head>
+
   <body>
+    <!-- Top Navigation -->
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
         <div class="row">
@@ -134,6 +136,9 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </nav>
+
+    <!-- Category Menu -->
+    <section id='t5-cat-menu'></section>
 
     <h2>Electronics</h2>
     <section class="topic-filters" >
@@ -275,6 +280,8 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <!-- Page js -->
     <script src="js/min/category-ck.js" type="text/javascript"></script>
-   
+    <script>
+      $("#t5-cat-menu").load("parts/menu.html");
+    </script>
   </body>
 </html>

@@ -1,58 +1,15 @@
-@import "style.less";
+@import "basic.less";
 
 /*  LESS var  */
 @brand-primary-darker:  darken(@brand-primary, 7%);
 
-@font-size-md: floor((@font-size-base * 1.1));
-@font-size-xs: floor((@font-size-base * 0.75));
-
-
-/* overwrite bootstrap */
-.btn
-{
-  border-radius:0;
-}
-
-
-/* body */
-
-body
-{
-  background-color: @gray-darker;
-}
-
-
-/*  topbar  */
-
-#t5-topbar
-{
-  position:fixed;
-  top:0;
-  height:40pt;
-  width:100%;
-  background-color:white;
-  text-align:center;
-  z-index:9999;
-}
-
-
-#t5-logo
-{
-  position:absolute;
-  left:0;
-  top:0;
-  height:30pt;
-  margin:5pt 10pt;
-}
-
-
-/*   category menu   */
+/*  Category Menu   */
 
 #t5-cat-menu
 {
   display:inline-block;
   position:fixed;
-  top:100pt;
+  top:110pt;
   width:30pt;
   background-color:white;
 }
@@ -96,19 +53,20 @@ body
   left:30pt;
   top:0;
   width:120pt;
-  padding:0.5em 0em 0.5em 2em;
+  padding:0.5em 0em 0.5em 1.5em;
   background-color:white;
   display:none;
 }
 .t5-cat-title{
-  font-family:Playball, cursive;
+  font-family: @font-family-serif;
   font-size: 20px;
-  margin-left:-0.7em;
+  margin-left:-0.5em;
   margin-top: -0.2em;
+  margin-bottom: 0.17em;
 }
 .t5-cat-2nd
 {
-  padding:0.3em 0;
+  padding:0.2em 0;
   cursor:pointer;
   white-space:nowrap;
   vertical-align:top;
@@ -117,9 +75,7 @@ body
 .t5-cat-2nd:hover
 {
   color: @brand-primary;
-
 }
-
 .t5-cat-1st:hover > div
 {
   display:block;
