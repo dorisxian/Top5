@@ -1,8 +1,147 @@
-/*  LESS var  */
-/* overwrite bootstrap */
+.Border {
+  border: #f13d0b 1px solid;
+}
+.Border-white {
+  border: 1px solid #ffffff;
+}
+.Circle {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+.light {
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.thin {
+  font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+}
+.superthin {
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+/* overwrit bootstrap */
 .btn {
   border-radius: 0;
   letter-spacing: 1px;
+}
+body {
+  min-width: 768px;
+}
+.centered {
+  float: none;
+  margin: 0 auto;
+}
+.t5-container {
+  max-width: 750px;
+}
+.fa-lg {
+  font-size: 1.7em;
+}
+.form-control {
+  border: 2px solid #f13d0b;
+}
+.navbar-form .form-control {
+  width: 300px;
+}
+input:focus {
+  color: #5e5e5e;
+  font-weight: 500;
+}
+.username {
+  line-height: 70px;
+  margin: 0 15px;
+  color: #7c7c7c;
+  font-size: larger;
+}
+.user-menu-text {
+  padding-left: 10px;
+  font-weight: 300;
+  font-size: larger;
+}
+.user-menu .dropdown-menu > li > a {
+  padding: 7px 20px;
+}
+.user-menu .dropdown-menu .divider {
+  margin: 0;
+}
+.btn-social:hover {
+  color: #ffffff;
+}
+/*  Category Menu   */
+#t5-cat-menu {
+  display: inline-block;
+  position: fixed;
+  top: 110pt;
+  width: 30pt;
+  background-color: white;
+}
+.t5-cat-1st {
+  position: relative;
+}
+.t5-cat-1st > span {
+  display: block;
+  height: 23pt;
+  margin-left: 3pt;
+  background-color: #f13d0b;
+  cursor: default;
+  color: white;
+  text-align: center;
+  line-height: 23pt;
+}
+.t5-cat-icon {
+  max-width: 100%;
+  max-height: 100%;
+  width: 44%;
+  vertical-align: text-bottom;
+}
+.t5-cat-bf {
+  width: 53%;
+}
+.t5-cat-icon:hover {
+  cursor: pointer;
+}
+.t5-cat-1st:not(:last-child) > span {
+  border-bottom: 1px solid #cf3409;
+}
+.t5-cat-1st > div {
+  position: absolute;
+  left: 30pt;
+  top: 0;
+  width: 120pt;
+  padding: 0.5em 0em 0.5em 1.5em;
+  background-color: white;
+  display: none;
+}
+.t5-cat-title {
+  font-family: 'Playball', 'Monotype Corsiva', 'Gabriola', cursive, script;
+  font-size: 20px;
+  margin-left: -0.5em;
+  margin-top: -0.2em;
+  margin-bottom: 0.17em;
+}
+.t5-cat-2nd {
+  padding: 0.2em 0;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: top;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.t5-cat-2nd:hover {
+  color: #f13d0b;
+}
+.t5-cat-1st:hover > div {
+  display: block;
+}
+.t5-cat-1st:hover > span {
+  background-color: white;
+  color: black;
+  border-right: 1px solid #eeeeee;
 }
 /* body */
 body {
@@ -54,6 +193,10 @@ body {
   position: relative;
   margin-top: 40pt;
   background-color: white;
+  display: none;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
 }
 #t5-list-adding-title {
   height: 30pt;
@@ -64,9 +207,6 @@ body {
 #t5-list-adding-title .container > * {
   line-height: 30pt;
   vertical-align: middle;
-}
-.t5-container-md {
-  max-width: 970px;
 }
 #t5-list-title-input {
   width: 100%;
@@ -81,7 +221,7 @@ body {
   width: 1em;
   height: 1em;
   margin-left: 0.5em;
-  background-image: url('image/cat-icon.png');
+  background-image: url('../img/cat-icon.png');
   background-size: 100% 100%;
   vertical-align: middle;
 }
@@ -115,26 +255,35 @@ body {
 .t5-list-cat-col {
   display: inline-block;
   height: 100%;
-  width: 135px;
+  width: 105px;
   vertical-align: top;
   text-align: left;
-  padding-left: 1em;
+  padding-left: 0.5em;
 }
 .t5-list-cat-col:not(:first-child) {
   border-left: 1px solid #eeeeee;
 }
 .t5-list-cat-col-wide {
-  width: 180px;
+  width: 170px;
 }
 .t5-list-cat-col > h4 {
-  margin-top: 0;
+  margin-top: 7pt;
   color: #5e5e5e;
-  font-size: 15px;
+  font-size: 14px;
 }
 .t5-list-cat-col > div {
   color: #959595;
   font-size: 12px;
   line-height: 1.5em;
+}
+.t5-la-cat-item {
+  cursor: pointer;
+}
+.t5-la-cat-item:hover {
+  color: #f13d0b;
+}
+.t5-la-cat-item.t5-selected {
+  color: #f13d0b;
 }
 .t5-list-cat-col-wide > div {
   display: inline-block;
@@ -145,8 +294,14 @@ body {
 #t5-la-body {
   padding: 1em 0;
 }
+#t5-la-item-input,
+#t5-la-item-image,
+#t5-la-item-comment {
+  border: 2px solid #d9d9d9;
+}
 #t5-la-item-input {
   width: 100%;
+  padding-left: 0.5em;
 }
 #t5-la-item-wrap {
   margin: 5pt 0;
@@ -160,11 +315,11 @@ body {
 }
 #t5-la-item-image {
   width: 100pt;
-  border: 1px solid #959595;
 }
 #t5-la-item-comment {
-  width: 165pt;
+  width: 142pt;
   float: right;
+  padding: 0 0.5em;
 }
 #t5-la-item-btn {
   position: relative;
@@ -197,34 +352,35 @@ body {
   background-clip: content-box;
   color: white;
   font-family: Playball, cursive;
+  cursor: pointer;
 }
 .t5-la-item:first-child span {
-  background-color: #f13d0b;
+  background-color: #ea3b0b;
 }
 .t5-la-item.t5-selected:first-child span {
-  border: 1px solid #f13d0b;
+  border: 1px solid #ea3b0b;
 }
 .t5-la-item:nth-child(2) span {
-  background-color: #f65a2f;
+  background-color: #f44819;
 }
 .t5-la-item.t5-selected:nth-child(2) span {
-  border: 1px solid #f65a2f;
+  border: 1px solid #f44819;
 }
 .t5-la-item:nth-child(3) span {
-  background-color: #f6663e;
+  background-color: #f56239;
 }
 .t5-la-item.t5-selected:nth-child(3) span {
-  border: 1px solid #f6663e;
+  border: 1px solid #f56239;
 }
 .t5-la-item:nth-child(4) span {
-  background-color: #f7724d;
+  background-color: #f77c59;
 }
 .t5-la-item.t5-selected:nth-child(4) span {
-  border: 1px solid #f7724d;
+  border: 1px solid #f77c59;
 }
 .t5-la-item:nth-child(5) span {
-  background-color: #f87d5b;
+  background-color: #f9967a;
 }
 .t5-la-item.t5-selected:nth-child(5) span {
-  border: 1px solid #f87d5b;
+  border: 1px solid #f9967a;
 }

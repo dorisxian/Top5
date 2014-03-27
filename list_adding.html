@@ -28,47 +28,10 @@
 	
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
+
+    <script src="js/listAdding.js"></script>
 	
 	<script>
-	
-$(function(){
-
-
-
-	if (!$.top5) $.top5 = {};   
-	else if ($.top5.listAdding) return;
-	
-	$.top5.listAdding = (function(){
-		var _catOpen = false;
-		
-		function init(){
-			$('#t5-list-cat-wrap').click(function(){
-				_catOpen = !_catOpen;
-				render_cat();
-			});
-			
-			render_cat();
-		}
-
-		function render_cat(){
-			if (_catOpen) {
-				$('#t5-list-cat-menu').show();
-				$('#t5-list-cat-wrap').addClass('t5-open');
-			} else {
-				$('#t5-list-cat-menu').hide();
-				$('#t5-list-cat-wrap').removeClass('t5-open');				
-			}
-		}
-		
-		
-		init(); 
-	})();
-		
-	
-		
-});
-	
-	
 	
 	</script>
     
@@ -86,82 +49,82 @@ $(function(){
 	
 	<div id='t5-list-adding'>
 		<div id='t5-list-adding-title'>
-			<div class='container t5-container-md'>
-				<div class='col-md-5'>
+			<div class='container t5-container'>
+				<div class='col-sm-6'>
 					<input id='t5-list-title-input'>
 				</div>
-				<div class='col-md-5'>
+				<div class='col-sm-5'>
 					<span id='t5-list-cat-wrap'>
-						<span>Category</span>
+						<span id='t5-la-cat-title'></span>
 						<span id='t5-list-cat-btn'></span>
 					</span>
 				</div>
-				<div class='col-md-2 text-right'>
+				<div class='col-sm-1 text-right'>
 					<button class='btn btn-primary' id='t5-save-list-btn'>Save List</button>
 				</div>
 			</div>
 		</div>
 		<div id='t5-list-cat-menu'>
-			<div class='container t5-container-md'>
+			<div class='container t5-container'>
 				<div class='t5-list-cat-col'>
 					<h4>Lifestyle</h4>
 					<div>
-						<div>Travel & Leisure</div>
-						<div>Food & Drink</div>
-						<div>Health & Fitness</div>
-						<div>Home</div>
-						<div>Holiday</div>
+						<div class='t5-la-cat-item'>Travel & Leisure</div>
+						<div class='t5-la-cat-item'>Food & Drink</div>
+						<div class='t5-la-cat-item'>Health & Fitness</div>
+						<div class='t5-la-cat-item'>Home</div>
+						<div class='t5-la-cat-item'>Holiday</div>
 					</div>
 				</div>
 				<div class='t5-list-cat-col'>
 					<h4>Technology</h4>
 					<div>
-						<div>Software & Apps</div>
-						<div>Electronics</div>
-						<div>Gadgets</div>
-						<div>Autos</div>
+						<div class='t5-la-cat-item'>Software & Apps</div>
+						<div class='t5-la-cat-item'>Electronics</div>
+						<div class='t5-la-cat-item'>Gadgets</div>
+						<div class='t5-la-cat-item'>Autos</div>
 					</div>
 				</div>
 				<div class='t5-list-cat-col'>
 					<h4>Entertainment</h4>
 					<div>
-						<div>Games</div>
-						<div>Music</div>
-						<div>Movies & TV</div>
-						<div>Sports</div>
-						<div>Books</div>
+						<div class='t5-la-cat-item'>Games</div>
+						<div class='t5-la-cat-item'>Music</div>
+						<div class='t5-la-cat-item'>Movies & TV</div>
+						<div class='t5-la-cat-item'>Sports</div>
+						<div class='t5-la-cat-item'>Books</div>
 					</div>
 				</div>
 				<div class='t5-list-cat-col t5-list-cat-col-wide'>
 					<h4>Beauty & Fashion</h4>
 					<div>
-						<div>Shoes</div>
-						<div>Bags</div>
-						<div>Clothes</div>
-						<div>Skincare</div>
-						<div>Makeup</div>
+						<div class='t5-la-cat-item'>Shoes</div>
+						<div class='t5-la-cat-item'>Bags</div>
+						<div class='t5-la-cat-item'>Clothes</div>
+						<div class='t5-la-cat-item'>Skincare</div>
+						<div class='t5-la-cat-item'>Makeup</div>
 					</div>
 					<div>
-						<div>Hair care</div>
-						<div>Bath & Body</div>
-						<div>Accessories</div>
+						<div class='t5-la-cat-item'>Hair care</div>
+						<div class='t5-la-cat-item'>Bath & Body</div>
+						<div class='t5-la-cat-item'>Accessories</div>
 					</div>
 				</div>
 				<div class='t5-list-cat-col'>
 					<h4>Business</h4>
 					<div>
-						<div>Jobs</div>
-						<div>Marketing</div>
-						<div>Media</div>
-						<div>Company</div>
+						<div class='t5-la-cat-item'>Jobs</div>
+						<div class='t5-la-cat-item'>Marketing</div>
+						<div class='t5-la-cat-item'>Media</div>
+						<div class='t5-la-cat-item'>Company</div>
 					</div>
 				</div>
 				<div class='t5-list-cat-col'>
 					<h4>Personal</h4>
 					<div>
-						<div>Wish</div>
-						<div>Holiday</div>
-						<div>Romance</div>
+						<div class='t5-la-cat-item'>Wish</div>
+						<div class='t5-la-cat-item'>Holiday</div>
+						<div class='t5-la-cat-item'>Romance</div>
 					</div>
 				</div>
 			</div>
@@ -169,31 +132,35 @@ $(function(){
 		
 
 		<div id='t5-la-body'>
-			<div class='container t5-container-md'>
-				<div class='col-md-5'>
-					<input id='t5-la-item-input'>
+			<div class='container t5-container'>
+				<div class='col-sm-6'>
+					<input id='t5-la-item-input' placeholder='Item Title'>
 					<div id='t5-la-item-wrap'>
 						<div id='t5-la-item-image'><img></div>
-						<textarea id='t5-la-item-comment'></textarea>
+						<textarea id='t5-la-item-comment' placeholder='Enter Comment Here.' ></textarea>
 					</div>
 					<button class='btn btn-primary' id='t5-la-item-btn'>Add Item</button>
 				</div>
-				<div class='col-md-5'>
-					<div class='t5-la-item t5-selected'>
+				<div class='col-sm-5'>
+					<div class='t5-la-item'>
 						<span>1</span>
-						<div>Dior 'Addict' Gloss</div>
+						<div></div>
 					</div>
 					<div class='t5-la-item'>
 						<span>2</span>
+						<div></div>
 					</div>
 					<div class='t5-la-item'>
 						<span>3</span>
+						<div></div>
 					</div>
 					<div class='t5-la-item'>
 						<span>4</span>
+						<div></div>
 					</div>
 					<div class='t5-la-item'>
 						<span>5</span>
+						<div></div>
 					</div>
 				</div>
 			</div>
