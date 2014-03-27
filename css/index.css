@@ -26,6 +26,7 @@
 /* overwrit bootstrap */
 .btn {
   border-radius: 0;
+  letter-spacing: 1px;
 }
 body {
   min-width: 768px;
