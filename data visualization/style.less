@@ -1,0 +1,120 @@
+@bg-light: #FAFAF0;
+@bg: #F5F5EB;
+@bg-hover: lighten(#F5F5EB, 4%);
+@bg-deep: #C7C7BD;
+@bg-medium: #E1E1D7;
+//title colors
+@deep: #333333;
+@medium: #424242;
+@light: #5f5f5f;
+//circle colors
+@red: #FF4C35;
+@orange: #FF891C;
+@yellow: #FFEB2B;
+@green: #C1F05F;
+@blue: #4FDBFD;
+@ocean: #92EFD9;
+@purple: #E2A2FB;
+@pink: #FF7FC7;
+// font
+.condense-font{
+	font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+}
+body{
+	background-color: @bg-light;
+	margin: 0;
+}
+.hidden{
+	display: none;
+}
+h1{
+	.condense-font;
+	line-height: 55px;
+	background-color: @bg-medium;
+	padding-left: 50px;
+	margin-top: 30px;
+	color: @deep;
+	font-size: 26px;
+}
+@circle-size: 125px;
+.circle{
+	height: @circle-size;
+	width: @circle-size;
+	border-radius: 50%;
+	margin: auto;
+	cursor: pointer;
+	border: 4px @bg solid;
+}
+.circle-ethnicity{
+	background-color: @red;
+}
+.circle-ms{
+	background-color: @orange;
+}
+.circle-age{
+	background-color: @yellow;
+}
+.circle-background{
+	background-color: @green;
+}
+.circle-employment{
+	background-color: @ocean;
+}
+.circle-income{
+	background-color: @blue;
+}
+.circle-gender{
+	background-color: @purple;
+}
+.circle-education{
+	background-color: @pink;
+}
+.oneline{
+	top: 41%;
+}
+.twoline{
+	top: 34%;
+	line-height: 110%;
+}
+@title-size: 18px;
+.title{
+	.condense-font;
+	color: @deep;
+	font-size: @title-size;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+}
+.title-ms,
+.title-income{
+	.twoline;
+}
+.title-age, 
+.title-background, 
+.title-employment,
+.title-gender,
+.title-education,
+.title-ethnicity{
+	.oneline;
+}
+.left{
+	background-color: @bg-hover;
+	border: 4px solid @bg-medium; 
+	height: 360px;
+}
+.data{
+	margin-top: -26px;
+}
+.hover{
+	width: 70px;
+	position: relative;
+	top: 110px;
+	left: 200px;
+}
+h2{
+	.condense-font;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 208px;
+	color: @light;
+}
