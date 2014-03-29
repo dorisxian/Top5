@@ -1,0 +1,312 @@
+@import "style.less";
+
+.glyphicon
+{
+  color:gray;
+} 
+.label
+{
+  letter-spacing:1px;
+}
+
+  
+html, body
+{
+  height:100%;  
+}
+
+#body
+{
+  height:100%;  
+  margin-top:10pt;
+  margin-bottom:10pt;
+}
+
+.template
+{
+  display:none;
+}
+
+#filter
+{
+  padding:1em;
+}
+
+
+.filter-panel
+{
+  padding:1em;
+  border:1px solid lightgray;
+  border-radius:3px;
+  margin-bottom:2em;
+}
+
+.age-op, .gender-op, .edu-op, .mar-op, .emp-op, .prof-op
+{
+  display:inline-block;
+  white-space:nowrap;
+}
+
+.eth-op, .income-op
+{
+  display:block;
+}
+
+.age-op, .gender-op, .mar-op
+{
+  width:70px;
+}
+
+.edu-op, .emp-op, .prof-op
+{
+  width:100px;
+}
+
+
+/* profile */
+#profile
+{
+  margin-left:10pt;
+  padding:1em;
+  border:1px solid lightgray;
+}
+
+#profile-head
+{
+  position:relative;
+  height:180px;
+  padding-left:200px;
+}
+#profile-image
+{
+  position:absolute;
+  left:0; top:0;
+  width: 180px;
+  height:180px;
+  box-shadow:0 0 10px darkgray;
+}
+#name
+{
+  
+}
+
+#profile-attrs
+{
+  margin-top:2em;
+  width:100%;
+}
+
+#profile-attrs  tr > td:first-child
+{
+  width:180px;
+  text-align:right;
+  font-weight: bolder;
+  font-style:italic;
+}
+#profile-attrs  tr > td:nth-child(2)
+{
+  padding-left:2em;
+}
+#profile-attrs  tr:last-child
+{
+  height:50px;
+}
+
+#profile-attrs  tr:last-child > td:first-child
+{
+  
+}
+
+
+/* graph */
+
+#graph-timeline, #graph-number
+{
+  position:relative;
+  margin-bottom:10pt;
+  height:350px;
+}
+#graph-number
+{
+  border:1px solid lightgray;
+}
+
+#persons
+{
+  position:absolute;
+  right:0;
+  width:750px;
+  height:300px;
+  padding-top:38px;
+  border-left:1px solid darkgray;
+  border-bottom:1px solid darkgray;
+  border-top:1px solid darkgray;
+}
+#persons-mask
+{
+  position:absolute;
+  right:-200px;
+  width:200px;
+  height:300px;
+  background-color:@bg-light; 
+}
+
+#time-axis
+{
+  position: absolute;
+  top:300px;
+  right:0;
+  width:750px;
+  height:20px;
+}
+#time-legend
+{
+  position:absolute;
+  top:0;
+  right:0;
+}
+#time-axis
+{
+  font-style:italic;
+}
+.time-label
+{
+  position:absolute;
+  font-size:9px;  
+  width:100px;
+}
+.time-grid
+{
+  position:absolute;
+  left:10px;
+  top:-300px;
+  height:300px;
+  border-right:1px solid #eeeeee;
+}
+
+
+
+/* person */
+
+.person
+{
+  position:relative;
+  height:3px;
+  margin-left:-24px;
+}
+.person:hover
+{
+  height:24px;  
+  box-shadow:0 0 10px gray;
+}
+.person-image, .person-name, .person-loc, .line-start, .line-end, .line-hour
+{
+  display:none;
+} 
+.person:hover .person-image, .person:hover .person-name, .person:hover .person-loc
+/* , .person:hover .line-start, .person:hover .line-end, .person:hover .line-hour */
+{
+  display:inline-block;
+}
+.person:hover .line
+{
+}
+
+
+
+
+.person-image
+{
+  position:absolute;
+  top:0;
+  left:0;
+  height:24px;
+  width:24px;
+  border:none;
+}
+.person-name, .person-loc
+{
+  position:absolute;
+  left:-50px;
+  width:50px;
+  padding-right:5px;
+  font-size:11px;
+  text-align:right;
+  white-space:nowrap;
+  line-height:1em;
+}
+.person-name
+{
+  top:0px;
+  font-weight:bold; 
+}
+.person-loc
+{
+  bottom:0;
+  font-size:9px;
+}
+
+.lines
+{
+  position:relative;
+  height:100%;
+  left:24px;
+}
+
+.line
+{
+  position:absolute;
+  bottom:0;
+  display:inline-block;
+  background-color:steelblue;
+  width:100px;
+}
+.line:hover .line-start, .line:hover .line-end, .line:hover .line-hour
+{
+  z-index:100;
+}
+
+
+.line-start, .line-end, .line-hour
+{
+  position:absolute;
+  width:20px;
+  font-size:9px;
+  line-height:1em;
+}
+
+.line-start
+{
+  left:-20px;
+  bottom:0;
+  padding-right:3px;
+  text-align: right;
+}
+.line-end
+{
+  right:-20px;
+  bottom:0;
+  padding-left:3px;
+}
+.line-hour
+{
+  bottom:-12px;
+  width:100%;
+  text-align:center;
+}
+
+
+.tooltip b
+{
+  display:inline-block;
+  width:50px;
+  text-align:right;
+  padding-right:1em;
+  font-style:italic;
+}
+.tooltip span
+{
+  display:inline-block;
+  width:50px;
+  text-align:left;  
+}

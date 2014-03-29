@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Visualization Graph</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	
+	<link rel="stylesheet" href="graph.css">
+	
+	<style>
+
+	</style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
+	
+	<!--
+	<script src="lib/flot/jquery.flot.js"></script>    
+	-->
+	
+	<script>
+	
+$(function(){
+	
+	//$.plot($("#graph-timeline"), [ [[0, 0], [1, 1]] ], { yaxis: { max: 1 } });
+	
+	var _range = 750;
+	
+	function generate_data(){
+		var data = [];
+		for (var i = 0; i < 80; i ++) {
+			var p = [];
+			var num = Math.ceil((Math.random() + Math.random())/2 * 3);
+			for (var j = 0; j < num; j++) {
+				var l = {}
+				l.start = Math.floor(Math.random() * (_range - 100));
+				l.len = Math.floor(Math.random() * 200);
+				l.height = Math.floor(Math.random() * 24); 
+				p.push(l);
+			}
+			data.push(p);
+			
+		}
+		
+		function SortByStart(a, b){
+			return a[0].start <= b[0].start;
+		}
+		data.sort(SortByStart);
+		
+		return data;
+	}
+	/*
+	var data = generate_data();
+	//$('#output').val(JSON.stringify(data));
+	*/
+	var data;
+	$.ajax({
+	  url: 'data.json'
+	  , success: function(res){
+	  	data = res;
+	  }
+	  ,async:false
+	});
+	$.each(data, function(index, p){
+		var person = $('#person-template').clone().removeClass('template').attr('id', undefined).appendTo($('#persons')).mouseenter(function(){
+			$(this).find('.line').trigger('local-zoom');
+		}).mouseleave(function(){
+			$(this).find('.line').trigger('local-zoom-leave');
+		});;
+		var lines = person.find('.lines');
+		var tooltipStr = '<div><b>Start</b><span>3/27</span></div>'
+					   + '<div><b>End</b><span>5/30</span></div>'
+					   + '<div><b>h/Day</b><span>4</span></div>';
+		
+		$.each(p, function(index, l){
+			var line = $('#line-template').clone().removeClass('template').attr('id', undefined).appendTo(lines).css({
+				'left': l.start + 24
+				, 'width': l.len
+				, 'height': Math.floor((l.height + 1) / 8)
+			}).bind('local-zoom', function(){
+				$(this).height(l.height);
+			}).bind('local-zoom-leave', function(){
+				$(this).height(Math.floor((l.height + 1) / 8));
+			}).tooltip({title:tooltipStr, placement:'bottom', html:true});
+		});			   
+		
+		
+	});
+	
+	
+	var len = (_range - 200) / 4;
+	$('.time-label').each(function(index){
+		var overhead = index === 0 ? 0 : 30;
+		$(this).css('left', len * index + overhead);
+	});	
+	
+});	
+	
+	
+	
+	</script>
+    
+    
+    
+  </head>
+  <body>
+  	<!--
+  	<textarea id='output'>
+  	</textarea>
+  	-->
+  	
+	<div class='person template' id='person-template'>
+		<div class='lines'>
+		</div>
+		<img class='person-image' src='img/penny.png'></img>
+		<span class='person-name'>Penny</span>
+		<span class='person-loc'>Troy, NY</span>
+	</div>
+	<span id='line-template' class='line template'>
+		<span class='line-start'>3/25</span>
+		<span class='line-end'>5/30</span>
+		<span class='line-hour'>4h/day</span>
+	</span>
+	
+	<!--
+	<span id='test'>fsdsaf</span>
+	-->
+
+
+
+  	<div id='body' class='container'>
+		<div id='filter' class='col-lg-3 panel panel-default'>
+			
+		    <h4>Age</h4>
+		    <div class='filter-panel'>
+		    	<div>
+			    	<span class='age-op'>
+				    	<input type='checkbox' checked="yes">
+				    	<span>All</span>
+			    	</span>
+			    	<span class='age-op'>
+				    	<input type='checkbox'>
+				    	<span>15-18</span>
+			    	</span>
+			    	<span class='age-op'>
+				    	<input type='checkbox'>
+				    	<span>18-23</span>
+			    	</span>
+		    	</div>
+		    	<div>
+			    	<span class='age-op'>
+				    	<input type='checkbox'>
+				    	<span>23-25</span>
+			    	</span>
+			    	<span class='age-op'>
+				    	<input type='checkbox'>
+				    	<span>25-35</span>
+			    	</span>
+			    	<span class='age-op'>
+				    	<input type='checkbox'>
+				    	<span>35-45</span>
+			    	</span>
+		    	</div>
+		    	<div>
+			    	<span class='age-op'>
+				    	<input type='checkbox'>
+				    	<span>45 or elder</span>
+			    	</span>
+		    	</div>
+		    </div>
+			
+			<h4>Gender</h4>
+			<div class='filter-panel'>
+		    	<span class='gender-op'>
+			    	<input type='checkbox'>
+			    	<span>All</span>
+		    	</span>
+		    	<span class='gender-op'>
+			    	<input type='checkbox'>
+			    	<span>Female</span>
+		    	</span>
+		    	<span class='gender-op'>
+			    	<input type='checkbox'>
+			    	<span>Male</span>
+		    	</span>
+			</div>
+			
+			<h4>Marital Status</h4>
+			<div class='filter-panel'>
+		    	<span class='mar-op'>
+			    	<input type='checkbox'>
+			    	<span>All</span>
+		    	</span>
+		    	<span class='mar-op'>
+			    	<input type='checkbox'>
+			    	<span>Married</span>
+		    	</span>
+		    	<span class='mar-op'>
+			    	<input type='checkbox'>
+			    	<span>Single</span>
+		    	</span>
+			</div>
+
+			<h4>Ethnicity</h4>
+			<div class='filter-panel'>
+		    	<span class='eth-op'>
+			    	<input type='checkbox'>
+			    	<span>All</span>
+		    	</span>
+		    	<span class='eth-op'>
+			    	<input type='checkbox'>
+			    	<span>Asian/Pacific Islander</span>
+		    	</span>
+		    	<span class='eth-op'>
+			    	<input type='checkbox'>
+			    	<span>Black or African American</span>
+		    	</span>
+		    	<span class='eth-op'>
+			    	<input type='checkbox'>
+			    	<span>Caucasion</span>
+		    	</span>
+		    	<span class='eth-op'>
+			    	<input type='checkbox'>
+			    	<span>Hispanic or Latino</span>
+		    	</span>
+		    	<span class='eth-op'>
+			    	<input type='checkbox'>
+			    	<span>Native America</span>
+		    	</span>
+		    	<span class='eth-op'>
+			    	<input type='checkbox'>
+			    	<span>Other</span>
+		    	</span>
+			</div>
+
+			<h4>Education</h4>
+			<div class='filter-panel'>
+		    	<span class='edu-op'>
+			    	<input type='checkbox'>
+			    	<span>All</span>
+		    	</span>
+		    	<span class='edu-op'>
+			    	<input type='checkbox'>
+			    	<span>High School</span>
+		    	</span>
+		    	<span class='edu-op'>
+			    	<input type='checkbox'>
+			    	<span>College</span>
+		    	</span>
+		    	<span class='edu-op'>
+			    	<input type='checkbox'>
+			    	<span>Graduate School</span>
+		    	</span>
+		    	<span class='edu-op'>
+			    	<input type='checkbox'>
+			    	<span>Armed Forces</span>
+		    	</span>
+			</div>
+
+			<h4>Employment</h4>
+			<div class='filter-panel'>
+		    	<span class='emp-op'>
+			    	<input type='checkbox'>
+			    	<span>All</span>
+		    	</span>
+		    	<span class='emp-op'>
+			    	<input type='checkbox'>
+			    	<span>Full time</span>
+		    	</span>
+		    	<span class='emp-op'>
+			    	<input type='checkbox'>
+			    	<span>Part time</span>
+		    	</span>
+		    	<span class='emp-op'>
+			    	<input type='checkbox'>
+			    	<span>Retired</span>
+		    	</span>
+		    </div>
+
+			<h4>Annual Income Level</h4>
+			<div class='filter-panel'>
+		    	<span class='income-op'>
+			    	<input type='checkbox'>
+			    	<span>All</span>
+		    	</span>
+		    	<span class='income-op'>
+			    	<input type='checkbox'>
+			    	<span>Less than $10,000</span>
+		    	</span>
+		    	<span class='income-op'>
+			    	<input type='checkbox'>
+			    	<span>$10,000-$29,999</span>
+		    	</span>
+		    	<span class='income-op'>
+			    	<input type='checkbox'>
+			    	<span>$30,000-$49,999</span>
+		    	</span>
+		    	<span class='income-op'>
+			    	<input type='checkbox'>
+			    	<span>$50,000-$79,999</span>
+		    	</span>
+		    	<span class='income-op'>
+			    	<input type='checkbox'>
+			    	<span>$80,000-$109,999</span>
+		    	</span>
+		    	<span class='income-op'>
+			    	<input type='checkbox'>
+			    	<span>$110,000-$149,999</span>
+		    	</span>
+		    	<span class='income-op'>
+			    	<input type='checkbox'>
+			    	<span>$150,000-$199,999</span>
+		    	</span>
+		    	<span class='income-op'>
+			    	<input type='checkbox'>
+			    	<span>More than $200,000</span>
+		    	</span>
+		    </div>
+
+			<h4>Professional Background</h4>
+			<div class='filter-panel'>
+		    	<span class='prof-op'>
+			    	<input type='checkbox'>
+			    	<span>All</span>
+		    	</span>
+		    	<span class='prof-op'>
+			    	<input type='checkbox'>
+			    	<span>Education</span>
+		    	</span>
+		    	<span class='prof-op'>
+			    	<input type='checkbox'>
+			    	<span>Construction</span>
+		    	</span>
+		    	<span class='prof-op'>
+			    	<input type='checkbox'>
+			    	<span>Automotive</span>
+		    	</span>
+		    	<span class='prof-op'>
+			    	<input type='checkbox'>
+			    	<span>Healthcare</span>
+		    	</span>
+		    	<span class='prof-op'>
+			    	<input type='checkbox'>
+			    	<span>Religious</span>
+		    	</span>
+		    	<span class='prof-op'>
+			    	<input type='checkbox'>
+			    	<span>Retail</span>
+		    	</span>
+		    	<span class='prof-op'>
+			    	<input type='checkbox'>
+			    	<span>Government</span>
+		    	</span>
+			</div>
+			
+		</div>
+		
+	  	<div class='col-lg-9'>
+	  		<div id='graph-timeline'>
+	  			<div id='persons'>
+	  				
+	  				
+	  			</div>
+	  			<div id="persons-mask">
+	  			</div>
+	  			<div id='time-axis'>
+	  				<span id='time-start' class='time-label'>
+	  					<span>08/20</span>
+	  					<div>2011</div>
+	  					<label>Hurricane Irene</label>
+	  				</span>
+	  				<span class='time-label'>
+	  					<span>03/31</span>
+	  					<div>2012</div>
+	  					<span class='time-grid'></span>
+	  				</span>
+	  				<span class='time-label'>
+	  					<span>09/30</span>
+	  					<div>2012</div>
+	  					<span class='time-grid'></span>
+	  				</span>
+	  				<span class='time-label'>
+	  					<span>03/31</span>
+	  					<div>2013</div>
+	  					<span class='time-grid'></span>
+	  				</span>
+	  				<span class='time-label'>
+	  					<span>09/30</span>
+	  					<div>2013</div>
+	  					<span class='time-grid'></span>
+	  				</span>
+	  				<span class='time-label'>
+	  					<span>03/30</span>
+	  					<div>2014</div>
+	  					<label>NOW</label>
+	  				</span>
+	  			</div>
+			</div>  		
+	  		<div id='graph-number'>
+			</div>  		
+	  	</div>
+	  	
+	  	
+	  	<div id='profile' class='col-lg-5 panel panel-default'>
+	  		
+	  		<div id='profile-head'>
+		  		<img src='img/penny.png' id='profile-image'>
+		  		
+		  		<h4 id='name'>Penny</h4>
+		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span> 110 8th Street, Troy, New York, 12180</div>
+		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span> (518) 209-2433</div>
+	  		</div>
+	  		
+	  		<table id='profile-attrs'>
+	  			<tr>
+	  				<td>Age</td><td>23</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Gender</td><td>Female</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Marital Status</td><td>Single</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Ethnicity</td><td>Caucasian</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Education</td><td>College</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Professional background</td><td>Retail</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Employment</td><td>Part time</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Annual Income Level</td><td>$30,000 - 49,999</td>
+	  			</tr>
+	  			<tr>
+	  				<td>SKILLS AS VOLUNTEER</td>
+	  				<td>
+	  					<span class='label label-success'>Painting</span>
+	  					<span class='label label-primary'>Financial Services</span>
+	  				</td>
+	  			</tr>
+	  		</table>
+	  		
+	  		
+	  	</div>
+  	
+  	</div>
+  	
+  	
+  	
+  </body>
+</html>
