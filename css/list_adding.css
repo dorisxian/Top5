@@ -320,6 +320,7 @@ body {
   width: 142pt;
   float: right;
   padding: 0 0.5em;
+  resize: none;
 }
 #t5-la-item-btn {
   position: relative;
