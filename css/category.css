@@ -23,6 +23,11 @@
   font-weight: 100;
   letter-spacing: 0.5px;
 }
+/* overwrit bootstrap */
+.btn {
+  border-radius: 0;
+  letter-spacing: 1px;
+}
 body {
   min-width: 768px;
 }
@@ -30,7 +35,9 @@ body {
   float: none;
   margin: 0 auto;
 }
-/*  LESS var  */
+.t5-container {
+  max-width: 750px;
+}
 .fa-lg {
   font-size: 1.7em;
 }
@@ -71,6 +78,8 @@ input:focus {
   top: 110pt;
   width: 30pt;
   background-color: white;
+  z-index: 1000;
+  cursor: pointer;
 }
 .t5-cat-1st {
   position: relative;
@@ -115,10 +124,10 @@ input:focus {
   margin-left: -0.5em;
   margin-top: -0.2em;
   margin-bottom: 0.17em;
+  cursor: default;
 }
 .t5-cat-2nd {
   padding: 0.2em 0;
-  cursor: pointer;
   white-space: nowrap;
   vertical-align: top;
   font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
