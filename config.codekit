@@ -1210,168 +1210,157 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/data visualization\/data-fx\/age.png": {
+	"\/data_visualization\/data-fx\/age.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 154238,
-		"inputAbbreviatedPath": "\/data visualization\/data-fx\/age.png",
-		"outputAbbreviatedPath": "\/data visualization\/data-fx\/age.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data-fx\/age.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data-fx\/age.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/data-fx\/background.png": {
+	"\/data_visualization\/data-fx\/background.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 186981,
-		"inputAbbreviatedPath": "\/data visualization\/data-fx\/background.png",
-		"outputAbbreviatedPath": "\/data visualization\/data-fx\/background.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data-fx\/background.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data-fx\/background.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/data-fx\/employment.png": {
+	"\/data_visualization\/data-fx\/employment.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 166141,
-		"inputAbbreviatedPath": "\/data visualization\/data-fx\/employment.png",
-		"outputAbbreviatedPath": "\/data visualization\/data-fx\/employment.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data-fx\/employment.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data-fx\/employment.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/data-fx\/gender.png": {
+	"\/data_visualization\/data-fx\/gender.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 164826,
-		"inputAbbreviatedPath": "\/data visualization\/data-fx\/gender.png",
-		"outputAbbreviatedPath": "\/data visualization\/data-fx\/gender.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data-fx\/gender.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data-fx\/gender.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/data-fx\/income.png": {
+	"\/data_visualization\/data-fx\/income.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 223585,
-		"inputAbbreviatedPath": "\/data visualization\/data-fx\/income.png",
-		"outputAbbreviatedPath": "\/data visualization\/data-fx\/income.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data-fx\/income.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data-fx\/income.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/data-fx\/ms.png": {
+	"\/data_visualization\/data-fx\/ms.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 174244,
-		"inputAbbreviatedPath": "\/data visualization\/data-fx\/ms.png",
-		"outputAbbreviatedPath": "\/data visualization\/data-fx\/ms.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data-fx\/ms.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data-fx\/ms.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/data\/age.png": {
+	"\/data_visualization\/data\/age.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 125174,
-		"inputAbbreviatedPath": "\/data visualization\/data\/age.png",
-		"outputAbbreviatedPath": "\/data visualization\/data\/age.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data\/age.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data\/age.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/data\/background.png": {
+	"\/data_visualization\/data\/background.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 161100,
-		"inputAbbreviatedPath": "\/data visualization\/data\/background.png",
-		"outputAbbreviatedPath": "\/data visualization\/data\/background.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data\/background.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data\/background.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/data\/employment.png": {
+	"\/data_visualization\/data\/employment.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 128847,
-		"inputAbbreviatedPath": "\/data visualization\/data\/employment.png",
-		"outputAbbreviatedPath": "\/data visualization\/data\/employment.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data\/employment.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data\/employment.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/data\/gender.png": {
+	"\/data_visualization\/data\/gender.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 111180,
-		"inputAbbreviatedPath": "\/data visualization\/data\/gender.png",
-		"outputAbbreviatedPath": "\/data visualization\/data\/gender.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data\/gender.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data\/gender.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/data\/income.png": {
+	"\/data_visualization\/data\/income.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 183672,
-		"inputAbbreviatedPath": "\/data visualization\/data\/income.png",
-		"outputAbbreviatedPath": "\/data visualization\/data\/income.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data\/income.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data\/income.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/data\/ms.png": {
+	"\/data_visualization\/data\/ms.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 120913,
-		"inputAbbreviatedPath": "\/data visualization\/data\/ms.png",
-		"outputAbbreviatedPath": "\/data visualization\/data\/ms.png",
+		"inputAbbreviatedPath": "\/data_visualization\/data\/ms.png",
+		"outputAbbreviatedPath": "\/data_visualization\/data\/ms.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data visualization\/hover.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 16104,
-		"inputAbbreviatedPath": "\/data visualization\/hover.png",
-		"outputAbbreviatedPath": "\/data visualization\/hover.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/data visualization\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/data visualization\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/data visualization\/style.css": {
+	"\/data_visualization\/graph.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/data visualization\/style.css",
+		"inputAbbreviatedPath": "\/data_visualization\/graph.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/data visualization\/style.less": {
+	"\/data_visualization\/graph.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data_visualization\/graph.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/data_visualization\/graph.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -1379,10 +1368,70 @@
 		"ieCompatibility": 1,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/data visualization\/style.less",
-		"outputAbbreviatedPath": "\/css\/style.css",
+		"inputAbbreviatedPath": "\/data_visualization\/graph.less",
+		"outputAbbreviatedPath": "\/css\/graph.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/data_visualization\/hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 16104,
+		"inputAbbreviatedPath": "\/data_visualization\/hover.png",
+		"outputAbbreviatedPath": "\/data_visualization\/hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/data_visualization\/img\/penny.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32903,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/penny.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/penny.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/data_visualization\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data_visualization\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/data_visualization\/style.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data_visualization\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/data_visualization\/style.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data_visualization\/style.less",
+		"outputAbbreviatedPath": "\/data_visualization\/style.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 0,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
@@ -1398,6 +1447,17 @@
 		"initialSize": 121811,
 		"inputAbbreviatedPath": "\/img\/6D.jpg",
 		"outputAbbreviatedPath": "\/img\/6D.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/cat-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20970,
+		"inputAbbreviatedPath": "\/img\/cat-icon.png",
+		"outputAbbreviatedPath": "\/img\/cat-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
