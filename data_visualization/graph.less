@@ -71,10 +71,21 @@ html, body
 
 /* profile */
 
+.profile
+{
+  display:none;
+}
+#profile .profile
+{
+  display:block;
+}
+
+
 #profile
 {
+  width:470px;
   margin-left:10pt;
-  padding:1em;
+  padding:2em;
   border:1px solid lightgray;
 }
 
@@ -124,6 +135,18 @@ html, body
   
 }
 
+#loc, #contact
+{
+  position:relative;
+  padding-left:1.5em;
+}
+#loc .glyphicon, #contact .glyphicon
+{
+  position:absolute;
+  left:0;
+  line-height:1.5em;
+}
+
 
 /* graph */
 
@@ -147,7 +170,7 @@ html, body
   right:0;
   width:750px;
   height:300px;
-  padding-top:38px;
+  padding-top:18px;
   border-left:1px solid darkgray;
   border-bottom:1px solid darkgray;
   border-top:1px solid darkgray;
@@ -204,7 +227,7 @@ html, body
   height:3px;
   margin-left:-24px;
 }
-.person:hover
+.person:hover, .person.selected
 {
   height:24px;  
   box-shadow:0 0 10px gray;
@@ -214,13 +237,11 @@ html, body
 {
   display:none;
 } 
-.person:hover .person-image, .person:hover .person-name, .person:hover .person-loc
+.person:hover .person-image, .person:hover .person-name, .person:hover .person-loc, 
+.person.selected .person-image, .person.selected .person-name, .person.selected .person-loc
 /* , .person:hover .line-start, .person:hover .line-end, .person:hover .line-hour */
 {
   display:inline-block;
-}
-.person:hover .line
-{
 }
 
 
@@ -238,8 +259,8 @@ html, body
 .person-name, .person-loc
 {
   position:absolute;
-  left:-50px;
-  width:50px;
+  left:-100px;
+  width:100px;
   padding-right:5px;
   font-size:11px;
   text-align:right;

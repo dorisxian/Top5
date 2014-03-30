@@ -85,18 +85,68 @@ $(function(){
 	  , async:false
 	  , dataType:'json'
 	});
+	
+	var profiles = [{
+		first_name: "Penny"
+		, last_name: 'Erdtmann'
+		, loc: "Troy, NY"
+		, image: 'img/penny.png'
+		/*
+		, location1:'110 8th Street'
+		, location2:'Troy, New York, 12180'
+		, cell: '(518) 209-2433'
+		, age:23
+		, gender: 'Female'
+		, mar: 'Single'
+		, eth: 'Caucasian'
+		, edu: 'College'
+		, prof: 'Retail'
+		, employ:'Part time'
+		, income: '$30,000 - 49,999'
+		*/
+		,sel:'#profile-1'
+	}, {
+		first_name: "Eric"
+		, last_name: 'Mehiel'
+		, loc: "Latham, NY"
+		, image: 'img/eric.png'
+		,sel:'#profile-2'
+	}];
+	
+	var _selectedPerson, _hoverPerson;
 	$.each(data, function(index, p){
 		var person = $('#person-template').clone().removeClass('template').attr('id', undefined).appendTo($('#persons')).mouseenter(function(){
-			$(this).find('.line').trigger('local-zoom');
-		}).mouseleave(function(){
-			$(this).find('.line').trigger('local-zoom-leave');
-		});;
+			if (!$(this).hasClass('selected')) {
+				if (_hoverPerson) _hoverPerson.find('.line').trigger('local-zoom-leave');
+				_hoverPerson = $(this);
+				_hoverPerson.find('.line').trigger('local-zoom');				
+			}
+		})
+		
+		var i = Math.floor(Math.random() * 2);
+		person.find('.person-image').attr('src', profiles[i].image);
+		person.find('.person-name').html(profiles[i].first_name);
+		person.find('.person-loc').html(profiles[i].loc);
+		person.click(function(){
+			if (_selectedPerson){
+				 _selectedPerson.removeClass('selected');
+				_selectedPerson.find('.line').trigger('local-zoom-leave');				 
+			}
+			_selectedPerson = person;
+			_selectedPerson.addClass('selected');
+			$('#profile').empty();
+			$(profiles[i].sel).clone().appendTo($('#profile'));
+			if (_hoverPerson.get(0) === _selectedPerson.get(0)) _hoverPerson = undefined;
+		});
+		
+		
 		var lines = person.find('.lines');
-		var tooltipStr = '<div><b>Start</b><span>3/27</span></div>'
-					   + '<div><b>End</b><span>5/30</span></div>'
-					   + '<div><b>h/Day</b><span>4</span></div>';
 		
 		$.each(p, function(index, l){
+			var tooltipStr = '<div><b>Start</b><span>3/27</span></div>'
+					   + '<div><b>End</b><span>5/30</span></div>'
+					   + '<div><b>h/Day</b><span>' + l.height + '</span></div>';
+					   
 			var line = $('#line-template').clone().removeClass('template').attr('id', undefined).appendTo(lines).css({
 				'left': l.start + 24
 				, 'width': l.len
@@ -504,13 +554,17 @@ $(function(){
 	  	</div>
 	  	
 	  	
-	  	<div id='profile' class='col-lg-5 panel panel-default'>
+	  	<div id='profile' class='col-lg-4 panel panel-default'>
 	  		
+	  		
+	  	</div>
+	  	
+  		<div id='profile-1' class='profile'>
 	  		<div id='profile-head'>
 		  		<img src='img/penny.png' id='profile-image'>
 		  		
-		  		<h4 id='name'>Penny</h4>
-		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span> 110 8th Street, Troy, New York, 12180</div>
+		  		<h4 id='name'>Penny Erdtmann</h4>
+		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span> <span>110 8th Street<span><p> <span>Troy, New York, 12180</span></div>
 		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span> (518) 209-2433</div>
 	  		</div>
 	  		
@@ -544,6 +598,52 @@ $(function(){
 	  				<td>
 	  					<span class='label label-success'>Painting</span>
 	  					<span class='label label-primary'>Financial Services</span>
+	  				</td>
+	  			</tr>
+	  		</table>
+  		
+  		</div>
+	  	
+	  	<div id='profile-2' class='profile'>
+	  		
+	  		<div id='profile-head'>
+		  		<img src='img/eric.png' id='profile-image'>
+		  		
+		  		<h4 id='name'>Eric Mehiel</h4>
+		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span> <span>210 Old Loudon Road<span><p> <span>Latham, New York, 12110</span></div>
+		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span> (518) 877-7529</div>
+	  		</div>
+	  		
+	  		<table id='profile-attrs'>
+	  			<tr>
+	  				<td>Age</td><td>29</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Gender</td><td>Male</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Marital Status</td><td>Married</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Ethnicity</td><td>Caucasian</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Education</td><td>College</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Professional background</td><td>Automotive</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Employment</td><td>Full time</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Annual Income Level</td><td>$50,000 - 79,999</td>
+	  			</tr>
+	  			<tr>
+	  				<td>SKILLS AS VOLUNTEER</td>
+	  				<td>
+	  					<span class='label label-primary'>Electrical</span>
+	  					<span class='label label-danger'>Heaing</span>
 	  				</td>
 	  			</tr>
 	  		</table>
