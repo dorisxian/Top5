@@ -82,7 +82,8 @@ $(function(){
 	  , success: function(res){
 	  	data = res;
 	  }
-	  ,async:false
+	  , async:false
+	  , dataType:'json'
 	});
 	$.each(data, function(index, p){
 		var person = $('#person-template').clone().removeClass('template').attr('id', undefined).appendTo($('#persons')).mouseenter(function(){
@@ -130,7 +131,6 @@ $(function(){
 					.forceY([0,7000])
 	  ;
 	
-	  //chart.xAxis.tickFormat(d3.format(''));
 	
 	  chart.yAxis
 	      .tickFormat(d3.format('d')).range([0, 10000]);
