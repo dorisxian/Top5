@@ -1342,51 +1342,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data_visualization\/graph.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/data_visualization\/graph.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/data_visualization\/graph.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/data_visualization\/graph.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/data_visualization\/graph.less": {
-		"allowInsecureImports": 0,
-		"createSourceMap": 0,
-		"disableJavascript": 0,
-		"fileType": 1,
-		"ieCompatibility": 1,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/data_visualization\/graph.less",
-		"outputAbbreviatedPath": "\/css\/graph.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"relativeURLS": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"strictImports": 0,
-		"strictMath": 0,
-		"strictUnits": 0
-		},
-	"\/data_visualization\/hover.png": {
+	"\/data_visualization\/img\/hover.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 16104,
-		"inputAbbreviatedPath": "\/data_visualization\/hover.png",
-		"outputAbbreviatedPath": "\/data_visualization\/hover.png",
+		"inputAbbreviatedPath": "\/data_visualization\/img\/hover.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/data_visualization\/img\/income-background.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 508255,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/income-background.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/income-background.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

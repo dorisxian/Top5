@@ -18,8 +18,8 @@ h1 {
   font-size: 26px;
 }
 .circle {
-  height: 125px;
-  width: 125px;
+  height: 110px;
+  width: 110px;
   border-radius: 50%;
   margin: auto;
   cursor: pointer;
@@ -59,7 +59,7 @@ h1 {
 .title {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
   color: #333333;
-  font-size: 18px;
+  font-size: 16px;
   position: relative;
   text-align: center;
   vertical-align: middle;
@@ -77,13 +77,22 @@ h1 {
 .title-ethnicity {
   top: 41%;
 }
-.left {
+.left,
+.right {
   background-color: #fcfcf9;
   border: 4px solid #e1e1d7;
+  height: 380px;
+}
+.right {
+  margin-right: -20px;
+}
+.right img {
   height: 360px;
+  margin-top: 10px;
+  margin-left: 40px;
 }
 .data {
-  margin-top: -26px;
+  margin-top: -10px;
 }
 .hover {
   width: 70px;
