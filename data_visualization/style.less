@@ -36,7 +36,7 @@ h1{
 	color: @deep;
 	font-size: 26px;
 }
-@circle-size: 125px;
+@circle-size: 110px;
 .circle{
 	height: @circle-size;
 	width: @circle-size;
@@ -76,7 +76,7 @@ h1{
 	top: 34%;
 	line-height: 110%;
 }
-@title-size: 18px;
+@title-size: 16px;
 .title{
 	.condense-font;
 	color: @deep;
@@ -97,13 +97,21 @@ h1{
 .title-ethnicity{
 	.oneline;
 }
-.left{
+.left, .right{
 	background-color: @bg-hover;
 	border: 4px solid @bg-medium; 
+	height: 380px;
+}
+.right{
+	margin-right: -20px;
+}
+.right img{
 	height: 360px;
+	margin-top: 10px;
+	margin-left: 40px;
 }
 .data{
-	margin-top: -26px;
+	margin-top: -10px;
 }
 .hover{
 	width: 70px;
