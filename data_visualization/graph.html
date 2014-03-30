@@ -12,6 +12,8 @@
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 	
+	<link rel="stylesheet" href="https://rawgithub.com/novus/nvd3/master/src/nv.d3.css">
+	
 	<link rel="stylesheet" href="graph.css">
 	
 	<style>
@@ -34,6 +36,10 @@
 	<!--
 	<script src="lib/flot/jquery.flot.js"></script>    
 	-->
+	
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="https://rawgithub.com/novus/nvd3/master/nv.d3.js"></script>
+	
 	
 	<script>
 	
@@ -110,6 +116,85 @@ $(function(){
 		var overhead = index === 0 ? 0 : 30;
 		$(this).css('left', len * index + overhead);
 	});	
+	
+	// number chart
+	
+	nv.addGraph(function() {
+	  var chart = nv.models.lineChart()
+	                .margin({left: 75})
+	                .useInteractiveGuideline(true)
+	                .transitionDuration(100)
+	                .showLegend(true)
+	                .showYAxis(true) 
+	                .showXAxis(false)
+					.forceY([0,7000])
+	  ;
+	
+	  //chart.xAxis.tickFormat(d3.format(''));
+	
+	  chart.yAxis
+	      .tickFormat(d3.format('d')).range([0, 10000]);
+      
+	  var myData = people_num();
+	
+	  d3.select('#graph-number svg')  
+	      .datum(myData)
+	      .call(chart);
+	
+	  nv.utils.windowResize(function() { chart.update() });
+	  
+	  // customized x axis
+	  $('#time-axis').clone().appendTo($('#graph-number')).css('top', 303);
+	  
+	  
+	  return chart;
+	});
+	function people_num() {
+	  var num = [];
+	 
+	  for (var i = 0; i < 1000; i++) {
+	  	/*
+	  	var y, wave = 100;
+	  	if (i < 600) {
+	  		var t = i/600;
+			y = 3500 * (1 - t) + 5000 * t + ( Math.random() - 1 ) * wave;	
+	  	}
+	  	else if (i >= 600 && i < 1000) {
+	  		var t = (i - 600)/400;
+			y = 5000 * (1 - t) + 4000 * t + ( Math.random() - 1 ) * wave;	
+	  	}
+	  	*/
+	  	var y;
+	  	if ( i === 0) y = 500;
+	  	else if (i < 200) {
+	  		y = num[i-1].y + (Math.random() - 0.3) * 100;
+	  	} else if (i < 400) {
+	  		y = num[i-1].y + (Math.random() - 0.4) * 50;
+	  	} else if (i < 600) {
+	  		y = num[i-1].y + (Math.random() - 0.5) * 50;
+	  	} else if (i < 700) {
+	  		y = num[i-1].y + (Math.random() - 0.6) * 100;
+	  	} else if (i < 1000) {
+	  		y = num[i-1].y + (Math.random() - 0.6) * 50;
+	  	}
+	  	y = Math.floor(y);
+
+	    num.push({x: i, y: y});
+	  }
+
+	  return [
+	    {
+	      values: num,      //values - represents the array of {x,y} data points
+	      key: 'Number of Volunteers', //key  - the name of the series.
+	      color: '#ff7f0e'  //color - optional: choose your own line color.
+	    }
+	  ];
+	}
+
+	
+	
+	
+	
 	
 });	
 	
@@ -414,6 +499,7 @@ $(function(){
 	  			</div>
 			</div>  		
 	  		<div id='graph-number'>
+	  			<svg></svg>
 			</div>  		
 	  	</div>
 	  	

@@ -98,12 +98,14 @@ h2 {
   line-height: 208px;
   color: #5f5f5f;
 }
+/* overwrite */
 .glyphicon {
   color: gray;
 }
 .label {
   letter-spacing: 1px;
 }
+/* global */
 html,
 body {
   height: 100%;
@@ -116,6 +118,7 @@ body {
 .template {
   display: none;
 }
+/*  filter  */
 #filter {
   padding: 1em;
 }
@@ -191,7 +194,9 @@ body {
   height: 350px;
 }
 #graph-number {
-  border: 1px solid lightgray;
+  /*
+  border:1px solid lightgray;
+  */
 }
 #persons {
   position: absolute;
@@ -246,6 +251,7 @@ body {
 .person:hover {
   height: 24px;
   box-shadow: 0 0 10px gray;
+  z-index: 1000;
 }
 .person-image,
 .person-name,
@@ -339,4 +345,15 @@ body {
   display: inline-block;
   width: 50px;
   text-align: left;
+}
+/* number graph */
+.nvtooltip {
+  position: absolute !important;
+}
+.nvtooltip thead {
+  display: none;
+}
+#graph-number .time-grid {
+  top: -275px;
+  height: 275px;
 }

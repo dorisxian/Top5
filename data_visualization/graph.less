@@ -1,5 +1,6 @@
 @import "style.less";
 
+/* overwrite */
 .glyphicon
 {
   color:gray;
@@ -10,6 +11,7 @@
 }
 
   
+/* global */
 html, body
 {
   height:100%;  
@@ -27,6 +29,10 @@ html, body
   display:none;
 }
 
+
+/*  filter  */
+  
+  
 #filter
 {
   padding:1em;
@@ -64,6 +70,7 @@ html, body
 
 
 /* profile */
+
 #profile
 {
   margin-left:10pt;
@@ -128,8 +135,11 @@ html, body
 }
 #graph-number
 {
+  /*
   border:1px solid lightgray;
+  */
 }
+
 
 #persons
 {
@@ -198,6 +208,7 @@ html, body
 {
   height:24px;  
   box-shadow:0 0 10px gray;
+  z-index:1000;
 }
 .person-image, .person-name, .person-loc, .line-start, .line-end, .line-hour
 {
@@ -309,4 +320,22 @@ html, body
   display:inline-block;
   width:50px;
   text-align:left;  
+}
+
+
+/* number graph */
+
+.nvtooltip
+{
+}
+
+.nvtooltip thead
+{
+  display:none;
+}
+
+#graph-number .time-grid
+{
+  top:-275px;
+  height:275px;
 }
