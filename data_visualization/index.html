@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title></title>
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/grids-min.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/south-street/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
@@ -40,21 +41,40 @@
 				<div class="pure-u-9-24 left">
 					<img src="img/hover.png" alt="" class="hover">
 					<h2>Hover to see the data</h2>
+					<img src="data-fx/ethnicity.png" alt="" class="data data-ethnicity hidden">
 					<img src="data-fx/ms.png" alt="" class="data data-ms hidden">
 					<img src="data-fx/age.png" alt="" class="data data-age hidden">
 					<img src="data-fx/background.png" alt="" class="data data-background hidden">
 					<img src="data-fx/employment.png" alt="" class="data data-employment hidden">
 					<img src="data-fx/income.png" alt="" class="data data-income hidden">
 					<img src="data-fx/gender.png" alt="" class="data data-gender hidden">
+					<img src="data-fx/education.png" alt="" class="data data-education hidden">
 				</div>
 				<div class="pure-u-5-24"></div>
 				<div class="pure-u-10-24 right">
-					<img src="img/income-background.png" alt="">
+					<img src="img/hover.png" alt="" class="hover">
+					<h2 class="line">Click to add & stack the data</h2>
+					<img src="data/ms.png" alt="" class="stack-ms hidden">
+					<img src="data/age.png" alt="" class="stack-age hidden">
+					<img src="data/employment.png" alt="" class="stack-employment hidden">
+					<img src="data/income.png" alt="" class="stack-income hidden">
+					<img src="data/gender.png" alt="" class="stack-gender hidden">
+					<div class="pure-g-r stack-data">
+						<div class="pure-u-22-24">
+							<img src="img/income-background.png" alt="" class="stack hidden">
+						</div>
+						<div class="pure-u-2-24" style="margin-top: 12px; margin-right: -6px;">
+							<a href="img/income-background.png" download="income_background.png"><img src="img/download.png" alt="" class="icon icon-download hidden"></a>
+							<img src="img/zoom.png" alt="" class="icon icon-zoom hidden">
+							<img src="img/delete.png" alt="" class="icon icon-delete hidden">
+						</div>
+					</div>
 				</div>
 			</div>	
 		</div>
 	</div>
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<script>
 		$(".circle")
 		.mouseenter(function () {
@@ -69,6 +89,43 @@
 			$(".left").css( "background-color", "#FCFCF9");
 			$(".left").append("<img src='img/hover.png' class='hover'><h2>Hover to see the data</h2>");
 		});
+		$(".circle").click(function () {
+			var name = ".stack-";
+			name += $(this).attr("class").slice(14);
+			$(name).siblings().not(".line").addClass("hidden");
+			$(".line").css("margin-top", "30px");
+			$(".line").removeClass("hidden");
+			$(name).removeClass("hidden");
+		});
+		$(".circle-background").click(function () {
+			$(".stack-income").siblings().andSelf().addClass("hidden");
+			$(".stack-data").find('*').andSelf().removeClass("hidden");
+		});
+		$(".icon-delete").click(function () {
+			$(".right .line, .right .hover").removeClass("hidden");
+			$(".stack-data").find('*').andSelf().addClass("hidden");
+		});
+		$(".icon-delete").tooltip({
+		    items: "img[alt]",
+		    content: "Clear",
+		    position: { my: "right-25 center", at: "right center" },
+		    tooltipClass: "tooltip"
+		}).tooltip();
+		$(".icon-download").tooltip({
+		    items: "img[alt]",
+		    content: "Download this image",
+		    position: { my: "right-25 center", at: "right center" },
+		    tooltipClass: "tooltip"
+		}).tooltip();
+		$(".icon-zoom").click(function () {
+			window.open('img/income-background.png');
+		});
+		$(".icon-zoom").tooltip({
+		    items: "img[alt]",
+		    content: "Zoom in",
+		    position: { my: "right-25 center", at: "right center" },
+		    tooltipClass: "tooltip"
+		}).tooltip();
 	</script>
 </body>
 </html>
