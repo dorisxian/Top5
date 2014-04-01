@@ -10,6 +10,11 @@
   letter-spacing:1px;
 }
 
+.container
+{
+  width:1400px;  
+}
+
   
 /* global */
 html, body
@@ -20,8 +25,7 @@ html, body
 #body
 {
   height:100%;  
-  margin-top:10pt;
-  margin-bottom:10pt;
+  margin-top:30px;
 }
 
 .template
@@ -36,6 +40,7 @@ html, body
 #filter
 {
   padding:1em;
+  margin-left:15px;
 }
 
 #filter h6
@@ -73,6 +78,18 @@ html, body
   width:100px;
 }
 
+/* map */
+#col-right
+{
+  margin-left:30px;
+  z-index:100;
+}
+
+#map
+{
+  height:350px;
+}
+
 
 /* profile */
 
@@ -88,29 +105,35 @@ html, body
 
 #profile
 {
+  /*
   width:470px;
   margin-left:10pt;
-  padding:2em;
+  */
+  margin-top:10px;
+  padding:1em;
   border:1px solid lightgray;
+  font-size:11px;
+  width:330px;
 }
 
 #profile-head
 {
   position:relative;
-  height:180px;
-  padding-left:200px;
+  height:80px;
+  padding-left:100px;
 }
 #profile-image
 {
   position:absolute;
   left:0; top:0;
-  width: 180px;
-  height:180px;
+  width: 80px;
+  height:80px;
   box-shadow:0 0 10px darkgray;
 }
 #name
 {
-  
+  margin:0;
+  margin-bottom:0.75em;
 }
 
 #profile-attrs
@@ -149,11 +172,17 @@ html, body
 {
   position:absolute;
   left:0;
-  line-height:1.5em;
 }
 
 
 /* graph */
+
+#col-middle
+{
+  margin-left:30px;
+}
+
+
 
 #graph-timeline, #graph-number
 {
@@ -173,7 +202,7 @@ html, body
 {
   position:absolute;
   right:0;
-  width:750px;
+  width:600px;
   height:300px;
   padding-top:18px;
   border-left:1px solid darkgray;
@@ -187,6 +216,7 @@ html, body
   width:200px;
   height:300px;
   background-color:@bg-light; 
+  z-index:10;
 }
 
 #time-axis
@@ -194,7 +224,7 @@ html, body
   position: absolute;
   top:300px;
   right:0;
-  width:750px;
+  width:600px;
   height:20px;
 }
 #time-legend
@@ -295,7 +325,7 @@ html, body
   position:absolute;
   bottom:0;
   display:inline-block;
-  background-color:steelblue;
+  background-color:CornflowerBlue;
   width:100px;
 }
 .line:hover .line-start, .line:hover .line-end, .line:hover .line-hour
