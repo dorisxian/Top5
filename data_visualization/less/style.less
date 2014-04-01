@@ -1,4 +1,4 @@
-@bg-light: #FAFAF0;
+@bg-light: lighten(#FAFAF0, 2%);
 @bg: #F5F5EB;
 @bg-hover: lighten(#F5F5EB, 4%);
 @bg-deep: #C7C7BD;
@@ -16,9 +16,29 @@
 @ocean: #92EFD9;
 @purple: #E2A2FB;
 @pink: #FF7FC7;
+
+@brand-secondary: #F35831;
+@org-1: #F7AC00;
+@org-2: #DB3026;
+@org-3: #F7AC00;
+@org-4: #4FD079;
+@org-5: #2C97DE;
+@org-6: #5A2C7D;
+
 // font
 .condense-font{
 	font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+}
+.condense-black{
+	font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue";
+}
+.condense{
+    transform:scale(1,1.23); /* W3C */
+    -webkit-transform:scale(1,1.23); /* Safari and Chrome */
+    -moz-transform:scale(1,1.23); /* Firefox */
+    -ms-transform:scale(1,1.23); /* IE 9 */
+    -o-transform:scale(1,1.23); /* Opera */
+    letter-spacing: 0.25px;
 }
 body{
 	background-color: @bg-light;

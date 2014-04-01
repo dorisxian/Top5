@@ -14,7 +14,9 @@
 	
 	<link rel="stylesheet" href="https://rawgithub.com/novus/nvd3/master/src/nv.d3.css">
 	
-	<link rel="stylesheet" href="graph.css">
+	<link rel="stylesheet" href="css/graph.css">
+
+	<link href="css/checkbox-ui.css" rel="stylesheet">
 	
 	<style>
 
@@ -40,7 +42,7 @@
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="https://rawgithub.com/novus/nvd3/master/nv.d3.js"></script>
 	
-	
+    <script src="js/flatui-checkbox.js"></script>
 	<script>
 	
 $(function(){
@@ -240,24 +242,15 @@ $(function(){
 	    {
 	      values: num,      //values - represents the array of {x,y} data points
 	      key: 'Number of Volunteers', //key  - the name of the series.
-	      color: '#ff7f0e'  //color - optional: choose your own line color.
+	      color: '#2C97DE'  //color - optional: choose your own line color.
 	    }
 	  ];
 	}
 
-	
-	
-	
-	
-	
 });	
-	
-	
-	
+	$( "#filter" ).scroll();
 	</script>
-    
-    
-    
+
   </head>
   <body>
   	<!--
@@ -283,240 +276,204 @@ $(function(){
 	<!--
 	<span id='test'>fsdsaf</span>
 	-->
-
-
+	<div class="row">
+		<div class="col-lg-2">
+			<img src="img/filter.png" alt="" style="vertical-align: bottom; height: 32px; margin-left: 38px; margin-top: 15px; margin-right: 5px;"><span class="h3 condense-font">Filter</span>
+		</div>
+		<div class="col-lg-7">
+			<img src="img/graph.png" alt="" style="vertical-align: bottom; height: 32px; margin-left: 90px; margin-top: 15px; margin-right: 5px;"><span class="h3 condense-font">Graph</span>
+		</div>
+		<div class="col-lg-2">
+			<img src="img/user.png" alt="" style="vertical-align: bottom; height: 32px; margin-left: 90px; margin-top: 15px; margin-right: 5px;"><span class="h3 condense-font">Profile</span>
+		</div>
+	</div>
+	
 
   	<div id='body' class='container'>
 		<div id='filter' class='col-lg-2 panel panel-default'>
-			
-		    <h6>Age</h6>
-		    <div class='filter-panel'>
-		    	<div>
-			    	<span class='age-op'>
-				    	<input type='checkbox' checked="yes">
-				    	<span>All</span>
-			    	</span>
-			    	<span class='age-op'>
-				    	<input type='checkbox'>
-				    	<span>15-18</span>
-			    	</span>
-			    	<span class='age-op'>
-				    	<input type='checkbox'>
-				    	<span>18-23</span>
-			    	</span>
-		    	</div>
-		    	<div>
-			    	<span class='age-op'>
-				    	<input type='checkbox'>
-				    	<span>23-25</span>
-			    	</span>
-			    	<span class='age-op'>
-				    	<input type='checkbox'>
-				    	<span>25-35</span>
-			    	</span>
-			    	<span class='age-op'>
-				    	<input type='checkbox'>
-				    	<span>35-45</span>
-			    	</span>
-		    	</div>
-		    	<div>
-			    	<span class='age-op'>
-				    	<input type='checkbox'>
-				    	<span>45 or elder</span>
-			    	</span>
-		    	</div>
-		    </div>
-			
-			<h6>Gender</h6>
-			<div class='filter-panel'>
-		    	<span class='gender-op'>
-			    	<input type='checkbox'>
-			    	<span>All</span>
-		    	</span>
-		    	<span class='gender-op'>
-			    	<input type='checkbox'>
-			    	<span>Female</span>
-		    	</span>
-		    	<span class='gender-op'>
-			    	<input type='checkbox'>
-			    	<span>Male</span>
-		    	</span>
-			</div>
-			
-			<h6>Marital Status</h6>
-			<div class='filter-panel'>
-		    	<span class='mar-op'>
-			    	<input type='checkbox'>
-			    	<span>All</span>
-		    	</span>
-		    	<span class='mar-op'>
-			    	<input type='checkbox'>
-			    	<span>Married</span>
-		    	</span>
-		    	<span class='mar-op'>
-			    	<input type='checkbox'>
-			    	<span>Single</span>
-		    	</span>
-			</div>
+			<h6>Age</h6>
+	        <div class='filter-panel'>
+	            <div class="a_row">
+	              <span class="checkbox age-op">
+	                <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	              </span>
+	              <span class="checkbox age-op">
+	                <input type="checkbox" data-toggle="checkbox">15-24
+	              </span>
+	            </div>
+	            <div class="a_row">
+	              <span class="checkbox age-op">
+	                <input type="checkbox" data-toggle="checkbox">25-34
+	              </span>
+	              <span class="checkbox age-op">
+	                <input type="checkbox" data-toggle="checkbox">35-44
+	              </span>
+	            </div>
+	            <div class="a_row">
+	              <span class="checkbox age-op">
+	                <input type="checkbox" data-toggle="checkbox">45-54
+	              </span>
+	              <span class="checkbox age-op">
+	                <input type="checkbox" data-toggle="checkbox">55 or elder
+	              </span>
+	            </div>
+	        </div>
+	        
+	        <h6>Gender</h6>
+	        <div class='filter-panel'>
+	            <div class="a_row">
+	              <span class="checkbox gender-op">
+	                <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	              </span>
+	              <span class="checkbox gender-op">
+	                <input type="checkbox" data-toggle="checkbox">Male
+	              </span>
+	              <span class="checkbox gender-op">
+	                <input type="checkbox" data-toggle="checkbox">Female
+	              </span>
+	            </div>
+	        </div>
+	        
+	        <h6>Marital Status</h6>
+	        <div class='filter-panel'>
+	            <div class="a_row">
+	              <span class="checkbox ms-op">
+	                <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	              </span>
+	              <span class="checkbox ms-op">
+	                <input type="checkbox" data-toggle="checkbox">Other
+	              </span>
+	            </div>
+	            <div class="a_row">
+	              <span class="checkbox ms-op">
+	                <input type="checkbox" data-toggle="checkbox">Married
+	              </span>
+	              <span class="checkbox ms-op">
+	                <input type="checkbox" data-toggle="checkbox">Single
+	              </span>
+	            </div>
+	        </div>
 
-			<h6>Ethnicity</h6>
-			<div class='filter-panel'>
-		    	<span class='eth-op'>
-			    	<input type='checkbox'>
-			    	<span>All</span>
-		    	</span>
-		    	<span class='eth-op'>
-			    	<input type='checkbox'>
-			    	<span>Asian/Pacific Islander</span>
-		    	</span>
-		    	<span class='eth-op'>
-			    	<input type='checkbox'>
-			    	<span>Black or African American</span>
-		    	</span>
-		    	<span class='eth-op'>
-			    	<input type='checkbox'>
-			    	<span>Caucasion</span>
-		    	</span>
-		    	<span class='eth-op'>
-			    	<input type='checkbox'>
-			    	<span>Hispanic or Latino</span>
-		    	</span>
-		    	<span class='eth-op'>
-			    	<input type='checkbox'>
-			    	<span>Native America</span>
-		    	</span>
-		    	<span class='eth-op'>
-			    	<input type='checkbox'>
-			    	<span>Other</span>
-		    	</span>
-			</div>
+	        <h6>Ethnicity</h6>
+	        <div class='filter-panel'>    
+	          <span class="checkbox eth-op">
+	            <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	          </span>
+	          <span class="checkbox eth-op">
+	            <input type="checkbox" data-toggle="checkbox">Asian or Pacific Islander
+	          </span>
+	          <span class='checkbox eth-op'>
+	            <input type='checkbox' data-toggle="checkbox">Black or African American
+	          </span>
+	          <span class='checkbox eth-op'>
+	            <input type='checkbox' data-toggle="checkbox">Caucasion
+	          </span>
+	          <span class='checkbox eth-op'>
+	            <input type='checkbox' data-toggle="checkbox">Hispanic or Latino
+	          </span>
+	          <span class='checkbox eth-op'>
+	            <input type='checkbox' data-toggle="checkbox">Other
+	          </span>
+	        </div>
 
-			<h6>Education</h6>
-			<div class='filter-panel'>
-		    	<span class='edu-op'>
-			    	<input type='checkbox'>
-			    	<span>All</span>
-		    	</span>
-		    	<span class='edu-op'>
-			    	<input type='checkbox'>
-			    	<span>High School</span>
-		    	</span>
-		    	<span class='edu-op'>
-			    	<input type='checkbox'>
-			    	<span>College</span>
-		    	</span>
-		    	<span class='edu-op'>
-			    	<input type='checkbox'>
-			    	<span>Graduate School</span>
-		    	</span>
-		    	<span class='edu-op'>
-			    	<input type='checkbox'>
-			    	<span>Armed Forces</span>
-		    	</span>
-			</div>
+	        <h6>Education</h6>
+	        <div class='filter-panel'>
+	          <span class="checkbox edu-op">
+	            <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	          </span>
+	          <span class="checkbox edu-op">
+	            <input type="checkbox" data-toggle="checkbox">High School
+	          </span>
+	          <span class="checkbox edu-op">
+	            <input type="checkbox" data-toggle="checkbox">College
+	          </span>
+	          <span class="checkbox edu-op">
+	            <input type="checkbox" data-toggle="checkbox">Graduate School
+	          </span>
+	          <span class="checkbox edu-op">
+	            <input type="checkbox" data-toggle="checkbox">Armed Forces
+	          </span>
+	        </div>
 
-			<h6>Employment</h6>
-			<div class='filter-panel'>
-		    	<span class='emp-op'>
-			    	<input type='checkbox'>
-			    	<span>All</span>
-		    	</span>
-		    	<span class='emp-op'>
-			    	<input type='checkbox'>
-			    	<span>Full time</span>
-		    	</span>
-		    	<span class='emp-op'>
-			    	<input type='checkbox'>
-			    	<span>Part time</span>
-		    	</span>
-		    	<span class='emp-op'>
-			    	<input type='checkbox'>
-			    	<span>Retired</span>
-		    	</span>
-		    </div>
+	        <h6>Employment</h6>
+	        <div class='filter-panel'>
+	          <div class="a_row">
+	            <span class="checkbox emp-op">
+	              <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	            </span>
+	            <span class="checkbox emp-op">
+	              <input type="checkbox" data-toggle="checkbox">Full Time
+	            </span>
+	          </div>
+	          <div class="a_row">
+	            <span class="checkbox emp-op">
+	              <input type="checkbox" data-toggle="checkbox">Part Time
+	            </span>
+	            <span class="checkbox emp-op">
+	              <input type="checkbox" data-toggle="checkbox">Retired
+	            </span>
+	          </div>
+	          <div class="a_row">
+	            <span class="checkbox emp-op">
+	              <input type="checkbox" data-toggle="checkbox">Student
+	            </span>
+	          </div>
+	        </div>
 
-			<h6>Annual Income Level</h6>
-			<div class='filter-panel'>
-		    	<span class='income-op'>
-			    	<input type='checkbox'>
-			    	<span>All</span>
-		    	</span>
-		    	<span class='income-op'>
-			    	<input type='checkbox'>
-			    	<span>Less than $10,000</span>
-		    	</span>
-		    	<span class='income-op'>
-			    	<input type='checkbox'>
-			    	<span>$10,000-$29,999</span>
-		    	</span>
-		    	<span class='income-op'>
-			    	<input type='checkbox'>
-			    	<span>$30,000-$49,999</span>
-		    	</span>
-		    	<span class='income-op'>
-			    	<input type='checkbox'>
-			    	<span>$50,000-$79,999</span>
-		    	</span>
-		    	<span class='income-op'>
-			    	<input type='checkbox'>
-			    	<span>$80,000-$109,999</span>
-		    	</span>
-		    	<span class='income-op'>
-			    	<input type='checkbox'>
-			    	<span>$110,000-$149,999</span>
-		    	</span>
-		    	<span class='income-op'>
-			    	<input type='checkbox'>
-			    	<span>$150,000-$199,999</span>
-		    	</span>
-		    	<span class='income-op'>
-			    	<input type='checkbox'>
-			    	<span>More than $200,000</span>
-		    	</span>
-		    </div>
+	        <h6>Annual Income Level</h6>
+	        <div class='filter-panel'>
+	          <span class="checkbox income-op">
+	            <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">Less than $10,000
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">$10,000-$29,999
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">$30,000-$49,999
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">$50,000-$79,999
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">$80,000-$109,999
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">$110,000-$149,999
+	          </span>
+	        </div>
 
-			<h6>Professional Background</h6>
-			<div class='filter-panel'>
-		    	<span class='prof-op'>
-			    	<input type='checkbox'>
-			    	<span>All</span>
-		    	</span>
-		    	<span class='prof-op'>
-			    	<input type='checkbox'>
-			    	<span>Education</span>
-		    	</span>
-		    	<span class='prof-op'>
-			    	<input type='checkbox'>
-			    	<span>Construction</span>
-		    	</span>
-		    	<span class='prof-op'>
-			    	<input type='checkbox'>
-			    	<span>Automotive</span>
-		    	</span>
-		    	<span class='prof-op'>
-			    	<input type='checkbox'>
-			    	<span>Healthcare</span>
-		    	</span>
-		    	<span class='prof-op'>
-			    	<input type='checkbox'>
-			    	<span>Religious</span>
-		    	</span>
-		    	<span class='prof-op'>
-			    	<input type='checkbox'>
-			    	<span>Retail</span>
-		    	</span>
-		    	<span class='prof-op'>
-			    	<input type='checkbox'>
-			    	<span>Government</span>
-		    	</span>
-			</div>
-			
+	        <h6>Professional Background</h6>
+	        <div class='filter-panel'>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' checked="yes" data-toggle="checkbox">All
+	            </span>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' data-toggle="checkbox">Education
+	            </span>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' data-toggle="checkbox">Construction
+	            </span>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' data-toggle="checkbox">Healthcare
+	            </span>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' data-toggle="checkbox">Government
+	            </span>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' data-toggle="checkbox">Others
+	            </span>
+	        </div>
 		</div>
 		
-	  	<div class='col-lg-6' id='col-middle'>
+	  	<div class='col-lg-7' id='col-middle'>
+	  		<!-- 
 	  		<div id='graph-number'>
 	  			<svg></svg>
-			</div>  		
+			</div>   
+			-->		
 	  		<div id='graph-timeline'>
 	  			<div id='persons'>
 	  				
@@ -528,7 +485,7 @@ $(function(){
 	  				<span id='time-start' class='time-label'>
 	  					<span>08/20</span>
 	  					<div>2011</div>
-	  					<label>Hurricane Irene</label>
+	  					<h5>Hurricane Irene</h5>
 	  				</span>
 	  				<span class='time-label'>
 	  					<span>03/31</span>
@@ -553,16 +510,18 @@ $(function(){
 	  				<span class='time-label'>
 	  					<span>03/30</span>
 	  					<div>2014</div>
-	  					<label>NOW</label>
+	  					<h5>Now</h5>
 	  				</span>
 	  			</div>
 			</div>  		
 	  	</div>
 	  	
 	  	
-	  	<div class='col-lg-3' id='col-right'>
+	  	<div class='col-lg-2' id='col-right'>
+		  <!-- 
 		  	<div id='map'>
-		  	</div>
+		  	</div> 
+		  -->
 		  	
 		  	<div id='profile' class='panel panel-default'>
 		  	</div>
@@ -578,8 +537,8 @@ $(function(){
 		  		<img src='img/penny.png' id='profile-image'>
 		  		
 		  		<h5 id='name'>Penny Erdtmann</h5>
-		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span> <span>110 8th Street<span><p> <span>Troy, New York, 12180</span></div>
-		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span> (518) 209-2433</div>
+		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span><span>110 8th Street<span><p><span>Troy, NY, 12180</span></div>
+		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span>(518) 209-2433</div>
 	  		</div>
 	  		
 	  		<table id='profile-attrs'>
@@ -599,16 +558,16 @@ $(function(){
 	  				<td>Education</td><td>College</td>
 	  			</tr>
 	  			<tr>
-	  				<td>Professional background</td><td>Retail</td>
+	  				<td>Background</td><td>Retail</td>
 	  			</tr>
 	  			<tr>
 	  				<td>Employment</td><td>Part time</td>
 	  			</tr>
 	  			<tr>
-	  				<td>Annual Income Level</td><td>$30,000 - 49,999</td>
+	  				<td>Annual Income</td><td>$30,000 - 49,999</td>
 	  			</tr>
 	  			<tr>
-	  				<td>SKILLS AS VOLUNTEER</td>
+	  				<td>Skills</td>
 	  				<td>
 	  					<span class='label label-success'>Painting</span>
 	  					<span class='label label-primary'>Financial Services</span>
@@ -624,8 +583,8 @@ $(function(){
 		  		<img src='img/eric.png' id='profile-image'>
 		  		
 		  		<h4 id='name'>Eric Mehiel</h4>
-		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span> <span>210 Old Loudon Road<span><p> <span>Latham, New York, 12110</span></div>
-		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span> (518) 877-7529</div>
+		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span><span>210 Old Loudon Road<span><p><span>Latham, NY, 12110</span></div>
+		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span>(518) 877-7529</div>
 	  		</div>
 	  		
 	  		<table id='profile-attrs'>
@@ -645,16 +604,16 @@ $(function(){
 	  				<td>Education</td><td>College</td>
 	  			</tr>
 	  			<tr>
-	  				<td>Professional background</td><td>Automotive</td>
+	  				<td>Background</td><td>Automotive</td>
 	  			</tr>
 	  			<tr>
 	  				<td>Employment</td><td>Full time</td>
 	  			</tr>
 	  			<tr>
-	  				<td>Annual Income Level</td><td>$50,000 - 79,999</td>
+	  				<td>Annual Income</td><td>$50,000 - 79,999</td>
 	  			</tr>
 	  			<tr>
-	  				<td>SKILLS AS VOLUNTEER</td>
+	  				<td>Skills</td>
 	  				<td>
 	  					<span class='label label-primary'>Electrical</span>
 	  					<span class='label label-danger'>Heaing</span>

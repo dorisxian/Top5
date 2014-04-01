@@ -1,8 +1,24 @@
 .condense-font {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
 }
+.condense-black {
+  font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue";
+}
+.condense {
+  transform: scale(1, 1.23);
+  /* W3C */
+  -webkit-transform: scale(1, 1.23);
+  /* Safari and Chrome */
+  -moz-transform: scale(1, 1.23);
+  /* Firefox */
+  -ms-transform: scale(1, 1.23);
+  /* IE 9 */
+  -o-transform: scale(1, 1.23);
+  /* Opera */
+  letter-spacing: 0.25px;
+}
 body {
-  background-color: #fafaf0;
+  background-color: #fdfdf8;
   margin: 0;
 }
 .hidden {

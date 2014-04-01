@@ -1,0 +1,187 @@
+//
+// Checkbox & Radio
+// --------------------------------------------------
+@icon-bg: #E1E1D7;
+@brand-secondary: #F35831;
+//title colors
+@deep: #333333;
+@medium: #424242;
+@light: #5f5f5f;
+h6{
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  font-size: 16px;
+  margin: 0 0 4px;
+  color: @deep;
+}
+.a_row{
+  height: 21px;
+}
+.filter-panel {
+  margin-bottom: 1em;
+  font-size: 12px;
+  padding: 0 0.8em 1.1em;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+}
+.inline{
+  display: inline-block;
+}
+.gender-op{
+  width: 52px;
+  .inline;
+}
+.age-op,
+.ms-op,
+.emp-op{
+  width: 82px;
+  .inline;
+}
+.eth-op,
+.income-op,
+.prof-op,
+.edu-op,{
+  margin-bottom: -9px;
+}
+.checkbox,
+.radio {
+  color: @medium;
+  white-space: nowrap;
+  padding-left: 20px;
+  position: relative;
+  .transition(color .25s linear);
+  font-size: 13px;
+  line-height: 1.5; // 21px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  input {
+    outline: none !important;
+    display: none;
+  }
+
+  // Replace icons
+  // --------------------------------------------------
+  .icons {
+    color: #E1E1D7;
+    display: block;
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 14px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+    cursor: pointer;    
+    .transition(color .25s linear);
+
+    .first-icon,
+    .second-icon {
+    	display: inline-table;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: @inverse;
+      margin: 0;
+      .opacity(1);
+    }
+    .second-icon {
+      .opacity(0);
+    }
+  }
+
+  // Alternate States
+  // --------------------------------------------------
+
+  // Hover State
+  &:hover {
+   .transition(color .25s linear);
+
+    .first-icon {
+      .opacity(0);
+    }
+    .second-icon {
+      .opacity(1);
+    }
+  }
+
+  // Checked State
+  &.checked {
+    color: @brand-secondary;
+
+    .first-icon {
+      .opacity(0);
+    }
+    .second-icon {
+      .opacity(1);
+      color: @brand-secondary;
+     .transition(color .25s linear);
+    }
+  }
+
+  // Disabled state
+  &.disabled {
+    cursor: default;
+    color: mix(@gray-light, white, 38%);
+
+    .icons {
+      color: mix(@gray-light, white, 38%);
+    }
+    .first-icon {
+      .opacity(1);
+    }
+    .second-icon {
+      .opacity(0);
+    }
+    &.checked {
+      .icons {
+        color: mix(@gray-light, white, 38%);
+      }
+      .first-icon {
+        .opacity(0);
+      }
+      .second-icon {
+        .opacity(1);
+        color: mix(@gray-light, white, 38%);
+      }
+    }
+  }
+
+  // Alternate Color
+  // --------------------------------------------------
+
+  // Primary
+  &.primary {
+    .icons {
+      color: @brand-primary;
+    }
+    // Checked State
+    &.checked {
+      color: @brand-secondary;
+
+      .icons {
+        color: @brand-secondary;
+      }
+    }
+    // Disabled state
+    &.disabled {
+      cursor: default;
+      color: @gray-light;
+
+      .icons {
+        color: @gray-light;
+      }
+      &.checked {
+        .icons {
+          color: @gray-light;
+        }
+      }
+    }
+  }
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+	margin-top: 10px;
+}
