@@ -486,6 +486,24 @@ body {
   font-family: "Helvetica Neue";
   letter-spacing: 0.2px;
 }
+.line.org-1 {
+  background-color: #f7ac00;
+}
+.line.org-2 {
+  background-color: #db3026;
+}
+.line.org-3 {
+  background-color: #f7ac00;
+}
+.line.org-4 {
+  background-color: #4fd079;
+}
+.line.org-5 {
+  background-color: #2c97de;
+}
+.line.org-6 {
+  background-color: #5a2c7d;
+}
 /* number graph */
 .nv-y text {
   stroke: gray;

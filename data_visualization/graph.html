@@ -61,6 +61,7 @@ $(function(){
 				l.start = Math.floor(Math.random() * (_range - 100));
 				l.len = Math.floor(Math.random() * 200);
 				l.height = Math.floor(Math.random() * 24); 
+				l.org = Math.floor(Math.random() * 6) + 1;
 				p.push(l);
 			}
 			data.push(p);
@@ -74,11 +75,10 @@ $(function(){
 		
 		return data;
 	}
-
-	/*
+/*
 	var data = generate_data();
 	$('#output').val(JSON.stringify(data));
-	*/
+	*/1
 	var data;
 	$.ajax({
 	  url: 'data.json'
@@ -124,7 +124,8 @@ $(function(){
 				_hoverPerson = $(this);
 				_hoverPerson.find('.line').trigger('local-zoom');				
 			}
-		})
+		});
+		
 		
 		var i = Math.floor(Math.random() * 2);
 		person.find('.person-image').attr('src', profiles[i].image);
@@ -160,6 +161,11 @@ $(function(){
 			}).bind('local-zoom-leave', function(){
 				$(this).height(Math.floor((l.height + 1) / 8));
 			}).tooltip({title:tooltipStr, placement:'bottom', html:true});
+			
+			// color code
+			var className = 'org-' + l.org;
+			line.addClass(className); 
+
 		});			   
 		
 		
