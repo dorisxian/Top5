@@ -49,11 +49,11 @@ $(function(){
 	
 	//$.plot($("#graph-timeline"), [ [[0, 0], [1, 1]] ], { yaxis: { max: 1 } });
 	
-	var _range = 600;
+	var _range = 700;
 	
 	function generate_data(){
 		var data = [];
-		for (var i = 0; i < 80; i ++) {
+		for (var i = 0; i < 118; i ++) {
 			var p = [];
 			var num = Math.ceil((Math.random() + Math.random())/2 * 3);
 			for (var j = 0; j < num; j++) {
@@ -74,6 +74,7 @@ $(function(){
 		
 		return data;
 	}
+
 	/*
 	var data = generate_data();
 	$('#output').val(JSON.stringify(data));
@@ -139,7 +140,7 @@ $(function(){
 			_selectedPerson.find('.line').trigger('local-zoom');				 
 			$('#profile').empty();
 			$(profiles[i].sel).clone().appendTo($('#profile'));
-			if (_hoverPerson.get(0) === _selectedPerson.get(0)) _hoverPerson = undefined;
+			if (_hoverPerson && _hoverPerson.get(0) === _selectedPerson.get(0)) _hoverPerson = undefined;
 		});
 		
 		
@@ -165,13 +166,16 @@ $(function(){
 	});
 	
 	
-	$('.person').get(59).click();
+	$('.person').get(79).click();
 	
 	
-	var len = (_range - 150) / 4;
+	var overhead = 10;
+	var len = (_range - overhead) / 5;
 	$('.time-label').each(function(index){
-		var overhead = index === 0 ? 0 : 30;
-		$(this).css('left', len * index + overhead);
+		var left; 
+		if (index === 0) left = 0;
+		else left = len * index + overhead;
+		$(this).css('left', left);
 	});	
 	
 	// number chart
@@ -536,7 +540,7 @@ $(function(){
 	  		<div id='profile-head'>
 		  		<img src='img/penny.png' id='profile-image'>
 		  		
-		  		<h5 id='name'>Penny Erdtmann</h5>
+		  		<h5 id='name'>Penny Klein</h5>
 		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span><span>110 8th Street<span><p><span>Troy, NY, 12180</span></div>
 		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span>(518) 209-2433</div>
 	  		</div>
@@ -583,7 +587,7 @@ $(function(){
 		  		<img src='img/eric.png' id='profile-image'>
 		  		
 		  		<h4 id='name'>Eric Mehiel</h4>
-		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span><span>210 Old Loudon Road<span><p><span>Latham, NY, 12110</span></div>
+		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span><span>210 Old Loudon Road<span><p/><span>Latham, NY, 12110</span></div>
 		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span>(518) 877-7529</div>
 	  		</div>
 	  		
