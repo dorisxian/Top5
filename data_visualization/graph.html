@@ -41,6 +41,8 @@
 	
 	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	<script src="https://rawgithub.com/novus/nvd3/master/nv.d3.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
 	
     <script src="js/flatui-checkbox.js"></script>
 	<script>
@@ -53,9 +55,9 @@ $(function(){
 	
 	function generate_data(){
 		var data = [];
-		for (var i = 0; i < 118; i ++) {
+		var pNum = 118;
+		for (var i = 0; i < pNum; i ++) {
 			var p = {};
-			p.org = Math.floor(Math.random() * 6) + 1;
 			p.lines = [];
 			var num = Math.ceil((Math.random() + Math.random())/2 * 3);
 			for (var j = 0; j < num; j++) {
@@ -70,12 +72,27 @@ $(function(){
 		}
 		
 		function SortByStart(a, b){
-			return a.lines[0].start <= b.lines[0].start;
+			var amin = Math.min.apply(Math, _.map(a.lines, function(l){ return l.start; }));
+			var bmin = Math.min.apply(Math, _.map(b.lines, function(l){ return l.start; }));
+			//return a.lines[0].start <= b.lines[0].start;
+			return amin <= bmin;
 		}
 		data.sort(SortByStart);
 		
+		for (var i = 0; i < pNum; i ++) {
+			var val = Math.floor(Math.random() * 6) + 1;
+			if (i > 70 && i < 90){
+				data[i].org = Math.random() < 0.7 ? 4 : val;
+			} else {
+				data[i].org = val;
+			}
+		}
+		
+		
+		
 		return data;
 	}
+	
 	/*
 	var data = generate_data();
 	$('#output').val(JSON.stringify(data));
@@ -115,6 +132,11 @@ $(function(){
 		, loc: "Latham, NY"
 		, image: 'img/eric.png'
 		,sel:'#profile-2'
+	}, {
+		first_name: "Ivy"
+		, loc: "Albany, NY"
+		, image: 'img/yvette.png'
+		, sel:'#profile-3'
 	}];
 	
 	var _selectedPerson, _hoverPerson;
@@ -131,7 +153,7 @@ $(function(){
 		var className = 'org-' + p.org;
 		person.addClass(className); 
 		
-		var i = Math.floor(Math.random() * 2);
+		var i = Math.floor(Math.random() * 3);
 		person.find('.person-image').attr('src', profiles[i].image);
 		person.find('.person-name').html(profiles[i].first_name);
 		person.find('.person-loc').html(profiles[i].loc);
@@ -173,7 +195,7 @@ $(function(){
 	});
 	
 	
-	$('.person').get(79).click();
+	$('.person').get(39).click();
 	
 	
 	var overhead = 10;
@@ -265,7 +287,7 @@ $(function(){
   </head>
   <body>
 
-	<!--
+<!--
   	<textarea id='output'>
   	</textarea>
   -->
@@ -544,7 +566,7 @@ $(function(){
 
 
 	  	
-  		<div id='profile-1' class='profile'>
+	<div id='profile-1' class='profile'>
 	  		<div id='profile-head'>
 		  		<img src='img/penny.png' id='profile-image'>
 		  		
@@ -636,7 +658,55 @@ $(function(){
 	  		
 	  	</div>
   	
+  	
+  	<div id='profile-3' class='profile'>
+  		
+  		<div id='profile-head'>
+	  		<img src='img/yvette.png' id='profile-image'>
+	  		
+	  		<h4 id='name'>Ivy Smith</h4>
+	  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span><span>420 Madison Ave</span><p><span>Albany, NY 12210</span></div>
+	  		<div id='contact'><span class="glyphicon glyphicon-phone"></span>(518) 787-6904</div>
+  		</div>
+  		
+  		<table id='profile-attrs'>
+  			<tr>
+  				<td>Age</td><td>27</td>
+  			</tr>
+  			<tr>
+  				<td>Gender</td><td>Female</td>
+  			</tr>
+  			<tr>
+  				<td>Marital Status</td><td>Single</td>
+  			</tr>
+  			<tr>
+  				<td>Ethnicity</td><td>African American</td>
+  			</tr>
+  			<tr>
+  				<td>Education</td><td>College</td>
+  			</tr>
+  			<tr>
+  				<td>Background</td><td>Government</td>
+  			</tr>
+  			<tr>
+  				<td>Employment</td><td>Full time</td>
+  			</tr>
+  			<tr>
+  				<td>Annual Income</td><td>$50,000 - 79,999</td>
+  			</tr>
+  			<tr>
+  				<td>Skills</td>
+  				<td>
+  					<span class='label label-info'>Counseling</span>
+  					<span class='label label-primary'>Financial Services</span>
+  				</td>
+  			</tr>
+  		</table>
+  		
+  		
   	</div>
+  	
+
   	
   	
   	

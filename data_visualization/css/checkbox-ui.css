@@ -175,13 +175,13 @@ h6 {
   display: inline-block;
 }
 .gender-op {
-  width: 52px;
+  width: 48px;
   display: inline-block;
 }
 .age-op,
 .ms-op,
 .emp-op {
-  width: 82px;
+  width: 75px;
   display: inline-block;
 }
 .eth-op,
