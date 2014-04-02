@@ -54,31 +54,32 @@ $(function(){
 	function generate_data(){
 		var data = [];
 		for (var i = 0; i < 118; i ++) {
-			var p = [];
+			var p = {};
+			p.org = Math.floor(Math.random() * 6) + 1;
+			p.lines = [];
 			var num = Math.ceil((Math.random() + Math.random())/2 * 3);
 			for (var j = 0; j < num; j++) {
 				var l = {}
 				l.start = Math.floor(Math.random() * (_range - 100));
 				l.len = Math.floor(Math.random() * 200);
 				l.height = Math.floor(Math.random() * 24); 
-				l.org = Math.floor(Math.random() * 6) + 1;
-				p.push(l);
+				p.lines.push(l);
 			}
 			data.push(p);
 			
 		}
 		
 		function SortByStart(a, b){
-			return a[0].start <= b[0].start;
+			return a.lines[0].start <= b.lines[0].start;
 		}
 		data.sort(SortByStart);
 		
 		return data;
 	}
-/*
+	/*
 	var data = generate_data();
 	$('#output').val(JSON.stringify(data));
-	*/1
+	*/
 	var data;
 	$.ajax({
 	  url: 'data.json'
@@ -126,6 +127,9 @@ $(function(){
 			}
 		});
 		
+		// color code
+		var className = 'org-' + p.org;
+		person.addClass(className); 
 		
 		var i = Math.floor(Math.random() * 2);
 		person.find('.person-image').attr('src', profiles[i].image);
@@ -147,7 +151,7 @@ $(function(){
 		
 		var lines = person.find('.lines');
 		
-		$.each(p, function(index, l){
+		$.each(p.lines, function(index, l){
 			var tooltipStr = '<div><b>Start</b><span>3/27</span></div>'
 					   + '<div><b>End</b><span>5/30</span></div>'
 					   + '<div><b>h/Day</b><span>' + l.height + '</span></div>';
@@ -162,9 +166,6 @@ $(function(){
 				$(this).height(Math.floor((l.height + 1) / 8));
 			}).tooltip({title:tooltipStr, placement:'bottom', html:true});
 			
-			// color code
-			var className = 'org-' + l.org;
-			line.addClass(className); 
 
 		});			   
 		
@@ -263,10 +264,11 @@ $(function(){
 
   </head>
   <body>
-  	<!--
+
+	<!--
   	<textarea id='output'>
   	</textarea>
-  	-->
+  -->
 
 	<h1>Salt Recovery Volunteer Statistics</h1>
   	
