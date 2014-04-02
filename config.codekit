@@ -1210,15 +1210,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/data_visualization\/checkbox.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/data_visualization\/checkbox.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/data_visualization\/css\/checkbox-ui.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -1475,6 +1466,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/data_visualization\/img\/graph.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 12398,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/graph.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/graph.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/data_visualization\/img\/hover.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1515,6 +1517,17 @@
 		"initialSize": 32903,
 		"inputAbbreviatedPath": "\/data_visualization\/img\/penny.png",
 		"outputAbbreviatedPath": "\/data_visualization\/img\/penny.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/data_visualization\/img\/user.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17151,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/user.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/user.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1601,7 +1614,7 @@
 		"inputAbbreviatedPath": "\/data_visualization\/less\/graph.less",
 		"outputAbbreviatedPath": "\/data_visualization\/css\/graph.css",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 1,
+		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
@@ -1656,12 +1669,12 @@
 		"disableJavascript": 0,
 		"fileType": 1,
 		"ieCompatibility": 1,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/data_visualization\/less\/style.less",
 		"outputAbbreviatedPath": "\/data_visualization\/css\/style.css",
 		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 1,
+		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,

@@ -219,6 +219,7 @@ body {
   border: 1px solid lightgray;
   font-size: 12px;
   width: 230px;
+  margin-left: 7px;
 }
 #profile-head {
   position: relative;
@@ -228,10 +229,10 @@ body {
 }
 #profile-image {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 100px;
-  height: 100px;
+  right: 3px;
+  top: 5px;
+  width: 108px;
+  height: 108px;
   border-radius: 6px;
   border: 2px solid #c7c7bd;
   box-shadow: none;
@@ -239,7 +240,7 @@ body {
 #name {
   display: inline-block;
   position: absolute;
-  top: 70px;
+  top: 40px;
   width: 100px;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -279,7 +280,7 @@ body {
   line-height: 1.2;
 }
 #loc {
-  margin-top: 5px;
+  margin-top: 30px;
 }
 #loc .glyphicon,
 #contact .glyphicon {
@@ -487,22 +488,22 @@ body {
   letter-spacing: 0.2px;
 }
 .person.org-1 .line {
-  background-color: #f7ac00;
-}
-.person.org-2 .line {
-  background-color: #db3026;
-}
-.person.org-3 .line {
-  background-color: #f7ac00;
-}
-.person.org-4 .line {
   background-color: #4fd079;
 }
+.person.org-2 .line {
+  background-color: #ff4d45;
+}
+.person.org-3 .line {
+  background-color: #ffd300;
+}
+.person.org-4 .line {
+  background-color: #9e4ad7;
+}
 .person.org-5 .line {
-  background-color: #2c97de;
+  background-color: #3fa0e3;
 }
 .person.org-6 .line {
-  background-color: #5a2c7d;
+  background-color: #536574;
 }
 /* number graph */
 .nv-y text {
