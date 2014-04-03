@@ -218,17 +218,19 @@ html, body
 {
   position:relative;
   margin-bottom:10pt;
-  height:350px;
 }
 #graph-number
 {
   /*
   border:1px solid lightgray;
   */
+  height:300px;
+  width:780px;
 }
 #graph-timeline
 {
   margin-top:10px;
+  height:500px;
 }
 
 #persons
@@ -480,12 +482,32 @@ html, body
 
 #graph-number .time-grid
 {
-  top:-275px;
-  height:275px;
+  top:-225px;
+  height:225px;
 }
+#graph-number #time-axis
+{
+  right:22px;
+  top:270px;
+}
+
 svg text{
   .condense-font;
   letter-spacing: 0.2px;
   color: @light;
   font-size: 13px;
 }
+
+
+#time-range-contain
+{
+  position:absolute;
+}
+#time-range
+{
+  height:100%;
+  width:50px;
+  background-color:black;
+  opacity:0.2;  
+}
+

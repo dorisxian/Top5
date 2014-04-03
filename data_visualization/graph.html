@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Visualization Graph</title>
+    
+    <!-- jquery UI -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -31,6 +34,8 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
     
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
@@ -211,7 +216,7 @@ $(function(){
 	
 	nv.addGraph(function() {
 	  var chart = nv.models.lineChart()
-	                .margin({left: 61})
+	                .margin({left: 70})
 	                .useInteractiveGuideline(true)
 	                .transitionDuration(100)
 	                .showLegend(true)
@@ -219,7 +224,6 @@ $(function(){
 	                .showXAxis(false)
 					.forceY([0,7000])
 	  ;
-	
 	
 	  chart.yAxis
 	      .tickFormat(d3.format('d')).range([0, 10000]);
@@ -233,11 +237,31 @@ $(function(){
 	  nv.utils.windowResize(function() { chart.update() });
 	  
 	  // customized x axis
-	  $('#time-axis').clone().appendTo($('#graph-number')).css('top', 303);
+	  $('#time-axis').clone().appendTo($('#graph-number'));
 	  
+	  // time range selector
+	  var offset = $('#graph-number rect').offset();
+	  var height = $('#graph-number rect').attr('height');
+	  var width = $('#graph-number rect').attr('width');
+	  $('#time-range-contain').css({'left': offset.left, 'top': offset.top, 'height':height, 'width':width});
+	  $('#time-range').resizable({
+			containment:'#time-range-contain'
+			, handles: "e, w"
+			, resize: function(evt, ui){
+				//self.renderBand();
+			}
+		}).draggable({
+			containment:'#time-range-contain'
+			, axis: 'x'
+			, drag: function(evt, ui){
+				//self.renderBand();
+			}
+		});
 	  
 	  return chart;
 	});
+	
+	
 	function people_num() {
 	  var num = [];
 	 
@@ -279,6 +303,9 @@ $(function(){
 	    }
 	  ];
 	}
+	
+	
+
 
 });	
 	$( "#filter" ).scroll();
@@ -503,11 +530,6 @@ $(function(){
 		</div>
 		
 	  	<div class='col-lg-7' id='col-middle'>
-	  		<!-- 
-	  		<div id='graph-number'>
-	  			<svg></svg>
-			</div>   
-			-->		
 	  		<div id='graph-timeline'>
 	  			<div id='persons'>
 	  				
@@ -548,6 +570,9 @@ $(function(){
 	  				</span>
 	  			</div>
 			</div>  		
+	  		<div id='graph-number'>
+	  			<svg></svg>
+			</div>   
 	  	</div>
 	  	
 	  	
@@ -565,6 +590,9 @@ $(function(){
 	</div>
 
 
+	<div id='time-range-contain'>
+		<div id='time-range'></div>
+	</div>
 	  	
 	<div id='profile-1' class='profile'>
 	  		<div id='profile-head'>
