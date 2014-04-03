@@ -215,7 +215,36 @@ body {
   z-index: 2000;
 }
 #map {
+  position: relative;
   height: 350px;
+  width: 230px;
+  height: 250px;
+  border: 3px solid #c7c7bd;
+  margin: 100px 0 0 10px;
+  background-image: url(../img/map.png);
+  background-size: 130% 130%;
+}
+#map-control {
+  margin: 7px;
+  height: 60%;
+  opacity: 0.7;
+}
+.map-pt {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: #ff4c35;
+  z-index: 100;
+}
+.map-pt:first-child {
+  left: 150px;
+  top: 100px;
+}
+.map-pt:nth-child(2) {
+  left: 180px;
+  top: 160px;
 }
 /* profile */
 .profile {
@@ -558,6 +587,7 @@ svg text {
 #time-range {
   height: 100%;
   width: 50px;
+  left: 30px;
   background-color: black;
   opacity: 0.2;
 }
