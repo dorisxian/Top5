@@ -1499,6 +1499,50 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/data_visualization\/img\/Jenny Simon.jpeg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 40253,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/Jenny Simon.jpeg",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/Jenny Simon.jpeg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/data_visualization\/img\/justin.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 71300,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/justin.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/justin.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/data_visualization\/img\/map.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 414719,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/map.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/map.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/data_visualization\/img\/mapcontrol.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4393,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/mapcontrol.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/mapcontrol.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/data_visualization\/img\/ny-state.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1528,6 +1572,17 @@
 		"initialSize": 17151,
 		"inputAbbreviatedPath": "\/data_visualization\/img\/user.png",
 		"outputAbbreviatedPath": "\/data_visualization\/img\/user.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/data_visualization\/img\/yvette.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 106646,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/yvette.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/yvette.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

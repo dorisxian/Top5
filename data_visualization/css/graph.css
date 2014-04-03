@@ -5,15 +5,15 @@
   font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue";
 }
 .condense {
-  transform: scale(1, 1.23);
+  transform: scale(1, 1.14);
   /* W3C */
-  -webkit-transform: scale(1, 1.23);
+  -webkit-transform: scale(1, 1.14);
   /* Safari and Chrome */
-  -moz-transform: scale(1, 1.23);
+  -moz-transform: scale(1, 1.14);
   /* Firefox */
-  -ms-transform: scale(1, 1.23);
+  -ms-transform: scale(1, 1.14);
   /* IE 9 */
-  -o-transform: scale(1, 1.23);
+  -o-transform: scale(1, 1.14);
   /* Opera */
   letter-spacing: 0.25px;
 }
@@ -275,18 +275,18 @@ body {
   position: absolute;
   right: 3px;
   top: 5px;
-  width: 108px;
-  height: 108px;
-  border-radius: 6px;
+  width: 88px;
+  height: 88px;
+  border-radius: 7px;
   border: 2px solid #c7c7bd;
   box-shadow: none;
 }
 #name {
   display: inline-block;
   position: absolute;
-  top: 40px;
+  top: 30px;
   width: 75px;
-  text-align: right;
+  text-align: left;
   white-space: nowrap;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -295,11 +295,11 @@ body {
   color: #424242;
 }
 #profile-attrs {
-  margin-top: 4em;
+  margin-top: 3.1em;
   width: 100%;
 }
 #profile-attrs tr > td {
-  line-height: 20px;
+  line-height: 22px;
 }
 #profile-attrs tr > td:first-child {
   width: 83px;
@@ -327,7 +327,7 @@ body {
   line-height: 1.2;
 }
 #loc {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 #loc .glyphicon,
 #contact .glyphicon {
@@ -338,7 +338,7 @@ body {
 }
 #loc p {
   margin-left: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 /* graph */
 #col-middle {
@@ -415,7 +415,7 @@ body {
 .person:hover,
 .person.selected {
   height: 29px;
-  box-shadow: 0 0 5px #8d8d8d;
+  box-shadow: 0 0 4px #929292;
   z-index: 100;
 }
 .person-image,
@@ -445,7 +445,7 @@ body {
 .person-name,
 .person-loc {
   position: absolute;
-  left: -104px;
+  left: -103px;
   width: 100px;
   padding-right: 5px;
   font-size: 12px;
@@ -462,15 +462,15 @@ body {
 .person-loc {
   bottom: 2px;
   font-size: 9px;
-  transform: scale(1, 1.23);
+  transform: scale(1, 1.14);
   /* W3C */
-  -webkit-transform: scale(1, 1.23);
+  -webkit-transform: scale(1, 1.14);
   /* Safari and Chrome */
-  -moz-transform: scale(1, 1.23);
+  -moz-transform: scale(1, 1.14);
   /* Firefox */
-  -ms-transform: scale(1, 1.23);
+  -ms-transform: scale(1, 1.14);
   /* IE 9 */
-  -o-transform: scale(1, 1.23);
+  -o-transform: scale(1, 1.14);
   /* Opera */
   letter-spacing: 0.25px;
 }
