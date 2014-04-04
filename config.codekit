@@ -1201,6 +1201,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/css\/search-result.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/search-result.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/css\/t5-theme.min.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1499,13 +1508,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data_visualization\/img\/Jenny Simon.jpeg": {
-		"fileType": 16384,
+	"\/data_visualization\/img\/income-gender.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 40253,
-		"inputAbbreviatedPath": "\/data_visualization\/img\/Jenny Simon.jpeg",
-		"outputAbbreviatedPath": "\/data_visualization\/img\/Jenny Simon.jpeg",
+		"initialSize": 334766,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/income-gender.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/income-gender.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1572,17 +1581,6 @@
 		"initialSize": 17151,
 		"inputAbbreviatedPath": "\/data_visualization\/img\/user.png",
 		"outputAbbreviatedPath": "\/data_visualization\/img\/user.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/data_visualization\/img\/yvette.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 106646,
-		"inputAbbreviatedPath": "\/data_visualization\/img\/yvette.png",
-		"outputAbbreviatedPath": "\/data_visualization\/img\/yvette.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2000,6 +1998,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/search-icon-hover.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4828,
+		"inputAbbreviatedPath": "\/img\/search-icon-hover.png",
+		"outputAbbreviatedPath": "\/img\/search-icon-hover.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/search-icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4768,
+		"inputAbbreviatedPath": "\/img\/search-icon.png",
+		"outputAbbreviatedPath": "\/img\/search-icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/top5-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2015,9 +2035,20 @@
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 77924,
+		"initialSize": 253142,
 		"inputAbbreviatedPath": "\/img\/top5-title.png",
 		"outputAbbreviatedPath": "\/img\/top5-title.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/top5-title_2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 77924,
+		"inputAbbreviatedPath": "\/img\/top5-title_2.png",
+		"outputAbbreviatedPath": "\/img\/top5-title_2.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2197,6 +2228,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/less\/search-result.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/less\/search-result.less",
+		"outputAbbreviatedPath": "\/css\/search-result.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/less\/style.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -2253,6 +2304,15 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/README.md",
 		"outputAbbreviatedPath": "\/README.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/search-result.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/search-result.html",
+		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		}
