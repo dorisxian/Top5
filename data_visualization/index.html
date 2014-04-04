@@ -38,6 +38,7 @@
 				</div>
 			</div>	
 			<div class="pure-g-r">
+				<div class="pure-u-1-24"></div>
 				<div class="pure-u-9-24 left">
 					<img src="img/hover.png" alt="" class="hover">
 					<h2>Hover to see the data</h2>
@@ -50,7 +51,7 @@
 					<img src="data-fx/gender.png" alt="" class="data data-gender hidden">
 					<img src="data-fx/education.png" alt="" class="data data-education hidden">
 				</div>
-				<div class="pure-u-5-24"></div>
+				<div class="pure-u-3-24"></div>
 				<div class="pure-u-10-24 right">
 					<img src="img/hover.png" alt="" class="hover">
 					<h2 class="line">Click to add & stack the data</h2>
@@ -59,17 +60,28 @@
 					<img src="data/employment.png" alt="" class="stack-employment hidden">
 					<img src="data/income.png" alt="" class="stack-income hidden">
 					<img src="data/gender.png" alt="" class="stack-gender hidden">
-					<div class="pure-g-r stack-data">
+					<div class="pure-g-r stack-data-bg">
 						<div class="pure-u-22-24">
 							<img src="img/income-background.png" alt="" class="stack hidden">
 						</div>
 						<div class="pure-u-2-24" style="margin-top: 12px; margin-right: -6px;">
 							<a href="img/income-background.png" download="income_background.png"><img src="img/download.png" alt="" class="icon icon-download hidden"></a>
-							<img src="img/zoom.png" alt="" class="icon icon-zoom hidden">
+							<img src="img/zoom.png" alt="" class="icon icon-zoom hidden zoom-bg">
+							<img src="img/delete.png" alt="" class="icon icon-delete hidden">
+						</div>
+					</div>
+					<div class="pure-g-r stack-data-gender">
+						<div class="pure-u-22-24">
+							<img src="img/income-gender.png" alt="" class="stack hidden">
+						</div>
+						<div class="pure-u-2-24" style="margin-top: 12px; margin-right: -6px;">
+							<a href="img/income-gender.png" download="income_gender.png"><img src="img/download.png" alt="" class="icon icon-download hidden"></a>
+							<img src="img/zoom.png" alt="" class="icon icon-zoom hidden zoom-gender">
 							<img src="img/delete.png" alt="" class="icon icon-delete hidden">
 						</div>
 					</div>
 				</div>
+				<div class="pure-u-1-24"></div>
 			</div>	
 		</div>
 	</div>
@@ -99,11 +111,16 @@
 		});
 		$(".circle-background").click(function () {
 			$(".stack-income").siblings().andSelf().addClass("hidden");
-			$(".stack-data").find('*').andSelf().removeClass("hidden");
+			$(".stack-data-bg").find('*').andSelf().removeClass("hidden");
+		});
+		$(".circle-gender").click(function () {
+			$(".stack-income").siblings().andSelf().addClass("hidden");
+			$(".stack-data-gender").find('*').andSelf().removeClass("hidden");
 		});
 		$(".icon-delete").click(function () {
 			$(".right .line, .right .hover").removeClass("hidden");
-			$(".stack-data").find('*').andSelf().addClass("hidden");
+			$(".stack-data-bg").find('*').andSelf().addClass("hidden");
+			$(".stack-data-gender").find('*').andSelf().addClass("hidden");
 		});
 		$(".icon-delete").tooltip({
 		    items: "img[alt]",
@@ -117,8 +134,11 @@
 		    position: { my: "right-25 center", at: "right center" },
 		    tooltipClass: "tooltip"
 		}).tooltip();
-		$(".icon-zoom").click(function () {
+		$(".zoom-bg").click(function () {
 			window.open('img/income-background.png');
+		});
+		$(".zoom-gender").click(function () {
+			window.open('img/income-gender.png');
 		});
 		$(".icon-zoom").tooltip({
 		    items: "img[alt]",
