@@ -1530,6 +1530,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/data_visualization\/img\/map copy.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 414719,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/map copy.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/map copy.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/data_visualization\/img\/map-control.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5350,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/map-control.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/map-control.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/data_visualization\/img\/map.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1570,6 +1592,17 @@
 		"initialSize": 32903,
 		"inputAbbreviatedPath": "\/data_visualization\/img\/penny.png",
 		"outputAbbreviatedPath": "\/data_visualization\/img\/penny.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/data_visualization\/img\/pin.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2381,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/pin.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/pin.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1994,28 +2027,6 @@
 		"initialSize": 62751,
 		"inputAbbreviatedPath": "\/img\/PanasonicGF6.jpg",
 		"outputAbbreviatedPath": "\/img\/PanasonicGF6.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/search-icon-hover.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 4828,
-		"inputAbbreviatedPath": "\/img\/search-icon-hover.png",
-		"outputAbbreviatedPath": "\/img\/search-icon-hover.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/search-icon.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 4768,
-		"inputAbbreviatedPath": "\/img\/search-icon.png",
-		"outputAbbreviatedPath": "\/img\/search-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
