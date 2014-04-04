@@ -1228,15 +1228,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/data_visualization\/css\/graph.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/data_visualization\/css\/graph.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/data_visualization\/css\/style.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -1422,15 +1413,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data_visualization\/graph.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/data_visualization\/graph.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/data_visualization\/img\/delete.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1541,13 +1523,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/data_visualization\/img\/map-control.png": {
+	"\/data_visualization\/img\/map-icon.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 5350,
-		"inputAbbreviatedPath": "\/data_visualization\/img\/map-control.png",
-		"outputAbbreviatedPath": "\/data_visualization\/img\/map-control.png",
+		"initialSize": 24102,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/map-icon.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/map-icon.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1559,6 +1541,17 @@
 		"initialSize": 414719,
 		"inputAbbreviatedPath": "\/data_visualization\/img\/map.png",
 		"outputAbbreviatedPath": "\/data_visualization\/img\/map.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/data_visualization\/img\/map_control.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9672,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/map_control.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/map_control.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1679,26 +1672,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/data_visualization\/less\/checkbox-ui.less",
 		"outputAbbreviatedPath": "\/data_visualization\/css\/checkbox-ui.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"relativeURLS": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"strictImports": 0,
-		"strictMath": 0,
-		"strictUnits": 0
-		},
-	"\/data_visualization\/less\/graph.less": {
-		"allowInsecureImports": 0,
-		"createSourceMap": 0,
-		"disableJavascript": 0,
-		"fileType": 1,
-		"ieCompatibility": 1,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/data_visualization\/less\/graph.less",
-		"outputAbbreviatedPath": "\/data_visualization\/css\/graph.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
