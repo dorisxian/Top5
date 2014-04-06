@@ -259,10 +259,19 @@ a.t5-cat-2nd:hover {
   line-height: 20pt;
   border: 1px solid #f13d0b;
 }
+.navbar {
+  margin-bottom: 0;
+}
+.navbar-form .form-control {
+  width: 400px;
+}
+.tt-dropdown-menu,
+h4.t5-sr-title {
+  width: 400px;
+}
 /*  banner */
 #t5-banner {
   position: relative;
-  margin-top: 40pt;
   height: 300pt;
 }
 #t5-banner-row {
@@ -298,11 +307,16 @@ a.t5-cat-2nd:hover {
   border: 2px solid #f13d0b;
   padding: 20pt;
   letter-spacing: 1px;
-  font-weight: lighter;
+  font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
 }
 #t5-login-title {
   margin: 0;
-  font-weight: inherit;
+  font-size: 26px;
+  font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
 }
 #t5-login-table {
   margin-top: 10pt;
@@ -383,7 +397,7 @@ a.t5-cat-2nd:hover {
 }
 #t5-banner-mask {
   background-color: black;
-  opacity: 0.75;
+  opacity: 0.78;
   z-index: -1000;
 }
 #t5-banner-collage {
@@ -405,8 +419,9 @@ a.t5-cat-2nd:hover {
 }
 #t5-login-mask {
   background-color: white;
-  opacity: 0.87;
+  opacity: 0.95;
   z-index: -1000;
+  background-image: url("../img/login-bg.png");
 }
 /*
 #t5-login-collage

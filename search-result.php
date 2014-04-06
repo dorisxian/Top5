@@ -15,7 +15,7 @@
     <!-- Font Awesome -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <!-- Page CSS -->
-    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/search-result.css">
   </head>
 
   <body>
@@ -43,7 +43,7 @@
             </ul>
             <form class="navbar-form navbar-left" role="search" action="/search-result.php" method="POST">
               <div class="form-group t5-nav-search">
-                <input type="text" name="keyword" class="form-control typeahead" placeholder="Search for people, lists, things, etc...">
+                <input type="text" name="keyword" class="form-control typeahead" placeholder="Search for people, lists, things, etc..." value="<?php echo $_POST['keyword']; ?>">
 				<button type="submit"></button>
               </div>
             </form>
@@ -52,7 +52,7 @@
             </ul>
             
             <!-- ***User - Name & Setting button*** -->
-<!--             <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right">
               <li class="username light">dorisxian</li>
 
               <li class="dropdown user-menu">
@@ -63,9 +63,10 @@
                   <li><a href="#"><i class="fa fa-sign-out fa-lg"></i><span class="user-menu-text">Logout</span></a></li>
                 </ul>
               </li>
-            </ul> -->
+            </ul>
 
             <!--  ***Guest - Login & Sign Up*** -->
+<!--
 
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
@@ -132,6 +133,7 @@
                  </ul>
               </li>
             </ul>
+-->
 
             <div class="col-md-1"></div>
           </div><!-- /.navbar-collapse -->
@@ -141,141 +143,42 @@
 
     <!-- Category Menu -->
     <section id='t5-cat-menu'></section>
-
-    <h2>Electronics</h2>
-    <section class="topic-filters" >
-      <div class="row">
-        <div id="filters" class="col-sm-8 centered text-center">
-          <button class="btn btn-info active" data-filter="*">Show All</button>
-          <button class="btn btn-info" data-filter=".laptop">Laptop</button>
-          <button class="btn btn-info" data-filter=".cellphone">Cell Phone</button>
-          <button class="btn btn-info" data-filter=".camera">Camera</button>
-          <button class="btn btn-info" data-filter=".desktop">Desktop</button>
-          <button class="btn btn-info" data-filter=".apple">Apple</button>
-          <button class="btn btn-info" data-filter=".tablet">Tablet</button>
-          <button class="btn btn-info" data-filter=".headphone">Headphone</button>
-          <button class="btn btn-info" data-filter=".printer">Printer</button>
-          <button class="btn btn-info" data-filter=".DSLR">DSLR</button>
-          <button class="btn btn-info" data-filter=".speaker">Speaker</button>
-        </div>
-      </div>
-    </section>
+    <h3><span class="highlight">Share</span> and <span class="highlight">discover</span> Top 5 things in your life, 
+    or inspired by awesome people!</h3>
+    <div class="row">
+	    <section class="col-md-9 search-result centered">
+	        <div class="row t5-header">
+	        	
+		        <div class="col-sm-4 col-md-4">
+		            <p class="h2">Search Result</p>
+		        </div>
+		        <div class="col-sm-8 col-md-8">
+			        <form class="t5-search-box" action="/search-result.php" method="POST">
+		                <input type="text" name="keyword" class="form-control typeahead" placeholder="Search for people, lists, things, etc..." value="<?php echo $_POST['keyword']; ?>">
+		                <button type="submit"></button>
+		            </form>
+		        </div>
+	        </div><!-- end of header -->
+			<div class="row t5-result">
+				<ul class="nav nav-tabs" id="result-tabs">
+					<li class="t5-tab-title"><a href="#result-people">People (0)</a></li>
+					<li class="t5-tab-title active"><a href="#result-lists">Lists (3)</a></li>
+					<li class="t5-tab-title"><a href="#result-items">List Items (7)</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade in" id="result-people">
+						<div class="col-md-10 centered">
+							<p class="t5-no-result">No matches</p>
+						</div>
+					</div>
+					<div class="tab-pane fade active" id="result-lists">lists</div>
+					<div class="tab-pane fade" id="result-items">items</div>
+				</div>
+			</div>
+	      
+	    </section>
+    </div>
     
-    <section class="feed-area" >
-      <div class="container-fluid">
-        <div class="row">
-            <div id="feed" class="col-md-8 col-md-offset-2">
-              <div class="list-item camera">
-                <div class="row">
-                  <div class="col-sm-11">
-                    <h3><i class="fa fa-heart-o" style="margin-right: 10px;"></i>Top 5 Cameras</h3>
-                  </div>
-                  <div class="col-sm-1">
-                    <i class="fa fa-camera-retro t5-cateicon"></i>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-1"></div>
-                  <!-- User -->
-                  <div class="col-sm-2" style="margin-left: -28px; margin-top: 3px;">
-                      <img src="img/dolly.png" alt="" class="t5-user-pic">
-                      <h4 class="text-center thin">Dolly</h4>
-                  </div>
-                  <!-- Image View -->
-                  <div class="col-sm-4">
-                    <ul class="list-unstyled">
-                      <li class="t5-pic t5-1st-pic">
-                        <div class="t5-ranking-box t5-1st"><span class="t5-ranking-num">1</span></div>
-                        <div class="t5-item-image-wrap">
-                          <img src="img/6D.jpg" alt="" class="t5-item-image">
-                        </div>
-                      </li>
-                      <li class="t5-pic t5-2nd-pic hidden">
-                        <div class="t5-ranking-box t5-2nd"><span class="t5-ranking-num">2</span></div>
-                        <div class="t5-item-image-wrap">
-                          <img src="img/XQ1.jpg" alt="" class="t5-item-image">
-                        </div>
-                      </li>
-                      <li class="t5-pic t5-3rd-pic hidden">
-                        <div class="t5-ranking-box t5-3rd"><span class="t5-ranking-num">3</span></div>
-                        <div class="t5-item-image-wrap">
-                          <img src="img/PanasonicGF6.jpg" alt="" class="t5-item-image">
-                        </div>
-                      </li>
-                      <li class="t5-pic t5-4th-pic hidden">
-                        <div class="t5-ranking-box t5-4th"><span class="t5-ranking-num">4</span></div>
-                        <div class="t5-item-image-wrap">
-                          <img src="img/G16.jpg" alt="" class="t5-item-image">
-                        </div>
-                      </li>
-                      <li class="t5-pic t5-5th-pic hidden">
-                        <div class="t5-ranking-box t5-5th"><span class="t5-ranking-num">5</span></div>
-                        <div class="t5-item-image-wrap">
-                          <img src="img/DSC-RX100.jpg" alt="" class="t5-item-image">
-                        </div>
-                      </li>
-                  </div>
-                  <!-- List -->
-                  <div class="col-sm-5">
-                    <ul class="list-unstyled">
-                      <li>
-                        <div class="t5-ranking-box t5-1st"><span class="t5-ranking-num">1</span></div>
-                        <div class="t5-list-item">Canon 6D</div>
-                      </li>
-                      <li>
-                        <div class="t5-ranking-box t5-2nd"><span class="t5-ranking-num">2</span></div>
-                        <div class="t5-list-item">Fujifilm XQ1</div>
-                      </li>
-                      <li>
-                        <div class="t5-ranking-box t5-3rd"><span class="t5-ranking-num">3</span></div>
-                        <div class="t5-list-item">Panasonic Lumix DMC-GF6</div>
-                      </li>
-                      <li>
-                        <div class="t5-ranking-box t5-4th"><span class="t5-ranking-num">4</span></div>
-                        <div class="t5-list-item">Canon PowerShot G16</div>
-                      </li>
-                      <li>
-                        <div class="t5-ranking-box t5-5th"><span class="t5-ranking-num">5</span></div>
-                        <div class="t5-list-item">Sony Cyber-shot DSC-RX100 II</div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <!-- <div class="row">
-                  <div class="col-sm-8 centered" style="background-color: #5CB85C;">
-                    <p class="text-center">center</p>
-                  </div>
-                </div> -->
-              </div>
-              <div class="list-item desktop">desktop</div>
-              <div class="list-item apple cellphone">iPhone - both apple & cellphone</div>
-              <div class="list-item tablet">tablet</div>
-              <div class="list-item cellphone">cellphone</div>
-              <div class="list-item camera">camera</div>
-              <div class="list-item laptop">laptop</div> 
-              <div class="list-item cellphone">cellphone</div> 
-              <div class="list-item apple tablet">iPad - both apple & tablet</div>
-              <div class="list-item desktop">desktop</div>
-              <div class="list-item headphone">headphone</div>
-              <div class="list-item tablet">tablet</div>
-              <div class="list-item desktop">desktop</div>
-              <div class="list-item apple laptop">Macbook - both apple & laptop</div>
-            </div>
-        </div>
-      </div>
-    </section>
-
-<!--     
-    <a class="btn" href="" >Default</a>
-    <a class="btn btn-primary" href="" >Default</a>
-
-
-    <ul class="nav nav-tabs nav-justified">
-      <li><a href="#">People</a></li>
-      <li class="active"><a href="#">Lists</a></li>
-      <li><a href="#">List Items</a></li>
-    </ul>
- -->
     <!-- Latest jQuery -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- Bootstrap js -->
@@ -283,9 +186,15 @@
     <!-- Search bar autocomplete -->
     <script src="js/min/search-ck.js" type="text/javascript"></script>
     <!-- Page js -->
-    <script src="js/min/category-ck.js" type="text/javascript"></script>
     <script>
-      $("#t5-cat-menu").load("parts/menu.html");
+	$("#t5-cat-menu").load("parts/menu.html");
+	
+	$(document).ready(function () {
+		$('#result-tabs a').click(function (e) {
+			e.preventDefault();
+			$(this).tab('show');
+		});
+	});
     </script>
   </body>
 </html>

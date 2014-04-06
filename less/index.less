@@ -47,13 +47,21 @@
   border:1px solid @brand-primary;
 }
 
-
+//top nav bar
+.navbar{
+	margin-bottom: 0;
+}
+.navbar-form .form-control{
+	width: 400px;
+}
+.tt-dropdown-menu, h4.t5-sr-title{
+	width: 400px;
+}
 /*  banner */
 
 #t5-banner
 {
   position:relative;
-  margin-top:40pt;
   height:300pt;
 }
 
@@ -102,13 +110,14 @@
   border:2px solid @brand-primary;
   padding:20pt;
   letter-spacing:1px;
-  font-weight:lighter;
+  .thin;
 }
 
 #t5-login-title
 {
   margin:0;
-  font-weight:inherit;
+  font-size:26px;
+  .thin;
 }
 
 #t5-login-table
@@ -121,7 +130,6 @@
 {
   vertical-align:bottom;
 }
-
 #t5-login-table small
 {
   font-size:@font-size-xs;
@@ -213,7 +221,7 @@
 #t5-banner-mask
 {
   background-color:black;
-  opacity:0.75;
+  opacity:0.78;
   z-index:-1000;
 }
 
@@ -233,14 +241,14 @@
   position:absolute;
   top:0;left:0;
   width:100%;
-  height:100%;  
+  height:100%;
 }
-
 #t5-login-mask
 {
   background-color:white;
-  opacity:0.87;
+  opacity:0.95;
   z-index:-1000;
+  background-image: url("../img/login-bg.png");
 }
 /*
 #t5-login-collage

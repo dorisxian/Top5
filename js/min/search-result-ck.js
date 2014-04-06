@@ -1,1 +1,0 @@
-$(document).ready(function(){$("#result-tabs a").click(function(t){t.preventDefault(),$(this).tab("show")})});
