@@ -22,7 +22,36 @@ h3{
 .h2{
 	font-family: @font-family-serif;
 	.centered;
+	font-size: 38px;
+	font-weight: 600;
+	
 }
+.t5-search-box .form-control{
+	border: none;
+	border-bottom: 1px solid #BBB;
+	width: 325px;
+	line-height: 26px;
+	font-size: 16px;
+	background-color: transparent;
+	&:focus{
+		border-color: @gray;
+	}
+}
+.t5-search-box button{
+	height: 36px;
+	width: 36px;
+	position: absolute;
+	top: 0;
+	left: 300px;
+	border: none;
+	background-image: url("../img/search.png");
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: 32px;
+	background-color: transparent;
+	outline: none;
+}
+
 .t5-result{
 	background-color: white;
 	min-height: 400px;
@@ -48,3 +77,11 @@ h3{
 .t5-tab-title:nth-of-type(1){
 	margin-left: 10%;
 }
+.t5-no-result{
+	text-align: center;
+	font-size: x-large;
+	.light;
+	color: @gray;
+	margin-top: 40px;
+}
+

@@ -29,7 +29,7 @@ body{
 }
 input:focus { 
 	color: @gray;
-	font-weight: 500;
+	background-image: none;
 }
 .username{
 	line-height: @navbar-height;
@@ -50,6 +50,75 @@ input:focus {
 }
 .btn-social:hover{
 	color: #ffffff;
+}
+.t5-nav-search input::-webkit-input-placeholder {
+	.light;
+}
+.t5-nav-search input:-moz-placeholder { /* Firefox 18- */
+	.light;
+}
+
+.t5-nav-search input::-moz-placeholder {  /* Firefox 19+ */
+	.light; 
+}
+
+.t5-nav-search input:-ms-input-placeholder {
+	.light;
+}
+.t5-nav-search{
+	position: relative;
+}
+.t5-nav-search button{
+	height: 34px;
+	width: 34px;
+	position: absolute;
+	top: 0;
+	right: 5px;
+	margin: 0;
+	border: none;
+	background-image: url("../img/search-brand.png");
+	background-position: right center;
+	background-repeat: no-repeat;
+	background-size: 24px;
+	background-color: transparent;
+	outline: none;
+}
+
+/* custom styles for the typeahead */
+
+h4.t5-sr-title{
+	color: @gray;
+	background-color: @gray-lighter;
+	padding: 6px 0px 3px 13px;
+	margin: 0;
+	font-size: 16px;
+	.light;
+	width: 300px;
+	
+}
+.tt-dropdown-menu {
+	text-align: left;
+	background-color: white;
+	width: 300px;
+	border: 1px solid @gray-lighter;
+	max-height: 160px;
+	overflow-y: auto;
+	opacity: 0.97;
+}
+.tt-suggestion{
+	cursor: pointer;
+	padding-left: 14px;
+	&:hover{
+		color: @brand-primary;
+	}
+}
+.tt-suggestion p {
+	margin: 3px 0;
+	font-size: 13.5px;
+}
+.empty-message{
+	text-align: center;
+	margin: 3px auto;
 }
 
 /*  Category Menu   */
@@ -86,12 +155,10 @@ input:focus {
   max-height: 100%;
   width: 44%;
   vertical-align: text-bottom;
+  cursor: pointer;
 }
 .t5-cat-bf{
   width: 53%;
-}
-.t5-cat-icon:hover{
-  cursor: pointer;
 }
 .t5-cat-1st:not(:last-child)  > span
 {
@@ -122,10 +189,15 @@ input:focus {
   white-space:nowrap;
   vertical-align:top;
   .light;
+  &:hover{
+	  color: @brand-primary;
+  }
 }
-.t5-cat-2nd:hover
-{
-  color: @brand-primary;
+a.t5-cat-2nd{
+	color: @gray-dark;
+	&:hover {
+		text-decoration:none; 
+	}
 }
 .t5-cat-1st:hover > div
 {

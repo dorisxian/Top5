@@ -49,7 +49,7 @@ body {
 }
 input:focus {
   color: #5e5e5e;
-  font-weight: 500;
+  background-image: none;
 }
 .username {
   line-height: 70px;
@@ -70,6 +70,82 @@ input:focus {
 }
 .btn-social:hover {
   color: #ffffff;
+}
+.t5-nav-search input::-webkit-input-placeholder {
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.t5-nav-search input:-moz-placeholder {
+  /* Firefox 18- */
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.t5-nav-search input::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.t5-nav-search input:-ms-input-placeholder {
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.t5-nav-search {
+  position: relative;
+}
+.t5-nav-search button {
+  height: 34px;
+  width: 34px;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  margin: 0;
+  border: none;
+  background-image: url("../img/search-brand.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-color: transparent;
+  outline: none;
+}
+/* custom styles for the typeahead */
+h4.t5-sr-title {
+  color: #5e5e5e;
+  background-color: #eeeeee;
+  padding: 6px 0px 3px 13px;
+  margin: 0;
+  font-size: 16px;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  width: 300px;
+}
+.tt-dropdown-menu {
+  text-align: left;
+  background-color: white;
+  width: 300px;
+  border: 1px solid #eeeeee;
+  max-height: 160px;
+  overflow-y: auto;
+  opacity: 0.97;
+}
+.tt-suggestion {
+  cursor: pointer;
+  padding-left: 14px;
+}
+.tt-suggestion:hover {
+  color: #f13d0b;
+}
+.tt-suggestion p {
+  margin: 3px 0;
+  font-size: 13.5px;
+}
+.empty-message {
+  text-align: center;
+  margin: 3px auto;
 }
 /*  Category Menu   */
 #t5-cat-menu {
@@ -99,12 +175,10 @@ input:focus {
   max-height: 100%;
   width: 44%;
   vertical-align: text-bottom;
+  cursor: pointer;
 }
 .t5-cat-bf {
   width: 53%;
-}
-.t5-cat-icon:hover {
-  cursor: pointer;
 }
 .t5-cat-1st:not(:last-child) > span {
   border-bottom: 1px solid #cf3409;
@@ -136,6 +210,12 @@ input:focus {
 }
 .t5-cat-2nd:hover {
   color: #f13d0b;
+}
+a.t5-cat-2nd {
+  color: #353535;
+}
+a.t5-cat-2nd:hover {
+  text-decoration: none;
 }
 .t5-cat-1st:hover > div {
   display: block;
@@ -171,6 +251,33 @@ h3 {
   font-family: 'Playball', 'Monotype Corsiva', 'Gabriola', cursive, script;
   float: none;
   margin: 0 auto;
+  font-size: 38px;
+  font-weight: 600;
+}
+.t5-search-box .form-control {
+  border: none;
+  border-bottom: 1px solid #BBB;
+  width: 325px;
+  line-height: 26px;
+  font-size: 16px;
+  background-color: transparent;
+}
+.t5-search-box .form-control:focus {
+  border-color: #5e5e5e;
+}
+.t5-search-box button {
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  top: 0;
+  left: 300px;
+  border: none;
+  background-image: url("../img/search.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-color: transparent;
+  outline: none;
 }
 .t5-result {
   background-color: white;
@@ -197,4 +304,13 @@ h3 {
 }
 .t5-tab-title:nth-of-type(1) {
   margin-left: 10%;
+}
+.t5-no-result {
+  text-align: center;
+  font-size: x-large;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  color: #5e5e5e;
+  margin-top: 40px;
 }
