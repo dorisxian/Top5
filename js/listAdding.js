@@ -1,5 +1,10 @@
-if (!$.top5) $.top5 = {};   
-else if ($.top5.listAdding) return;
+/*global alert */
+if (!$.top5){
+	$.top5 = {};
+}
+else if ($.top5.listAdding){
+	return;
+}
 
 $(function(){
 
@@ -13,6 +18,7 @@ $(function(){
 			$('#t5-list-adding-btn').click(function(){
 				_open = !_open;
 				render_open();
+				$("#t5-list-title-input").focus();
 			});
 			
 			// cat menu
@@ -39,14 +45,14 @@ $(function(){
 			
 			$('#t5-la-item-btn').click(function(){
 				append_item_data({
-					title: $('#t5-la-item-input').val()
-					, comment: $('#t5-la-item-comment').val() 
+					title: $('#t5-la-item-input').val(),
+					comment: $('#t5-la-item-comment').val()
 				});
 				// move to next item
 				if (_item.index() === 4) {
 					set_item(_item.siblings().eq(0));
 				} else {
-					set_item(_item.next());					
+					set_item(_item.next());
 				}
 			});
 			
@@ -55,21 +61,26 @@ $(function(){
 			
 			$('#t5-save-list-btn').click(function(){
 				_data.title = $('#t5-list-title-input').val();
-				if (!_cat) {
-					alert("Must select category!");	
+				if( !$('#t5-list-title-input').val() ) {
+					alert("Must enter list title!");
+					$("#t5-list-title-input").focus();
+					$('#t5-list-title-input').addClass('warning');
+			    }
+				else if (!_cat) {
+					alert("Must select category!");
 					return;
 				}
 				_data.category = _cat.html();
 				
 				// send data
 				
-				reset(); 
+				reset();
 				
 				_open = false;
 				render_open();
 			});
 			
-			reset(); 
+			reset();
 			render();
 			
 			//$('#t5-list-title-input').focus();
@@ -78,7 +89,7 @@ $(function(){
 		function reset(){
 			$('#t5-list-title-input').val('');
 			set_cat();
-			_data = {title:undefined, category:undefined, items:[]};			
+			_data = {title:undefined, category:undefined, items:[]};		
 			$('.t5-la-item > div').html('');
 			set_item($('.t5-la-item').eq(0));
 		}
