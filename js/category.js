@@ -2,11 +2,13 @@
 /*global $, jQuery*/
 $(document).ready(function () {
     "use strict";
+    /*
     $('.t5-ranking-box').hover(function () {
         var specific = "." + $(this).attr('class').slice(15) + "-pic";
         $("li").siblings(".t5-pic").addClass('hidden');
         $(specific).removeClass('hidden');
     });
+    */
 
     // init Isotope
     var $feed = $('#feed').isotope({

@@ -30,7 +30,6 @@ $(function(){
 			
 			ele.find('.t5-list-title').html(_data.title);
 			ele.find('.t5-user-pic').attr('src', _data.user.image);
-			//debugger;
 			ele.find('.t5-user-name').html(_data.user.username);
 			var itemImages = ele.find('.t5-item-image');
 			var itemTitles = ele.find('.t5-list-item');
@@ -38,6 +37,12 @@ $(function(){
 				itemImages.eq(index).attr('src', item.image);
 				itemTitles.eq(index).html(item.title);
 			});
+
+		    ele.find('.t5-ranking-box').hover(function () {
+		        var specific = "." + $(this).attr('class').slice(15) + "-pic";
+		        ele.find('li').siblings(".t5-pic").addClass('hidden');
+		        ele.find(specific).removeClass('hidden');
+		    });
 	
 		}
 		
