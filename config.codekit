@@ -352,6 +352,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/bower_components\/bootstrap\/less\/bootstrap-social.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/bower_components\/bootstrap\/less\/bootstrap-social.less",
+		"outputAbbreviatedPath": "\/bower_components\/bootstrap\/css\/bootstrap-social.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/bower_components\/bootstrap\/less\/bootstrap.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -1629,6 +1649,37 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/data_visualization\/js\/flatui-checkbox.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data_visualization\/js\/flatui-checkbox.js",
+		"outputAbbreviatedPath": "\/data_visualization\/js\/min\/flatui-checkbox-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/data_visualization\/less\/checkbox-and-radio.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data_visualization\/less\/checkbox-and-radio.less",
+		"outputAbbreviatedPath": "\/data_visualization\/css\/checkbox-and-radio.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/data_visualization\/less\/checkbox-ui.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -1748,17 +1799,6 @@
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
-		},
-	"\/img\/6D.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 121811,
-		"inputAbbreviatedPath": "\/img\/6D.jpg",
-		"outputAbbreviatedPath": "\/img\/6D.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		},
 	"\/img\/cat-icon.png": {
 		"fileType": 32768,
@@ -1958,24 +1998,90 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/DSC-RX100.jpg": {
+	"\/img\/items\/Canon6D.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 186411,
-		"inputAbbreviatedPath": "\/img\/DSC-RX100.jpg",
-		"outputAbbreviatedPath": "\/img\/DSC-RX100.jpg",
+		"initialSize": 121811,
+		"inputAbbreviatedPath": "\/img\/items\/Canon6D.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/Canon6D.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/G16.jpg": {
+	"\/img\/items\/CanonG16.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 116201,
-		"inputAbbreviatedPath": "\/img\/G16.jpg",
-		"outputAbbreviatedPath": "\/img\/G16.jpg",
+		"inputAbbreviatedPath": "\/img\/items\/CanonG16.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/CanonG16.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/items\/DSC-RX100.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 186411,
+		"inputAbbreviatedPath": "\/img\/items\/DSC-RX100.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/DSC-RX100.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/items\/Fujifilm_X20.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 46795,
+		"inputAbbreviatedPath": "\/img\/items\/Fujifilm_X20.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/Fujifilm_X20.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/items\/Fujifilm_XQ1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 23752,
+		"inputAbbreviatedPath": "\/img\/items\/Fujifilm_XQ1.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/Fujifilm_XQ1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/items\/Nikon_AW1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 330584,
+		"inputAbbreviatedPath": "\/img\/items\/Nikon_AW1.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/Nikon_AW1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/items\/Olympus_TG2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 60482,
+		"inputAbbreviatedPath": "\/img\/items\/Olympus_TG2.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/Olympus_TG2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/items\/PanasonicGF6.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 62751,
+		"inputAbbreviatedPath": "\/img\/items\/PanasonicGF6.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/PanasonicGF6.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2013,13 +2119,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/PanasonicGF6.jpg": {
-		"fileType": 16384,
+	"\/img\/sara.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 62751,
-		"inputAbbreviatedPath": "\/img\/PanasonicGF6.jpg",
-		"outputAbbreviatedPath": "\/img\/PanasonicGF6.jpg",
+		"initialSize": 550424,
+		"inputAbbreviatedPath": "\/img\/sara.png",
+		"outputAbbreviatedPath": "\/img\/sara.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/Screen Shot 2014-04-08 at 6.58.49 PM.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 477416,
+		"inputAbbreviatedPath": "\/img\/Screen Shot 2014-04-08 at 6.58.49 PM.png",
+		"outputAbbreviatedPath": "\/img\/Screen Shot 2014-04-08 at 6.58.49 PM.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2097,17 +2214,6 @@
 		"initialSize": 253142,
 		"inputAbbreviatedPath": "\/img\/top5-title1.png",
 		"outputAbbreviatedPath": "\/img\/top5-title1.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/XQ1.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 23752,
-		"inputAbbreviatedPath": "\/img\/XQ1.jpg",
-		"outputAbbreviatedPath": "\/img\/XQ1.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
