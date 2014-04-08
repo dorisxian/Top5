@@ -225,6 +225,10 @@ a.t5-cat-2nd:hover {
   color: black;
   border-right: 1px solid #eeeeee;
 }
+/* template */
+.t5-template {
+  display: none;
+}
 body {
   background-color: #282828;
 }

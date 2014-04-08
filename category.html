@@ -165,10 +165,11 @@
       <div class="container-fluid">
         <div class="row">
             <div id="feed" class="col-md-8 col-md-offset-2">
+            	<!--
               <div class="list-item camera">
                 <div class="row">
                   <div class="col-sm-11">
-                    <h3><i class="fa fa-heart-o" style="margin-right: 10px;"></i>Top 5 Cameras</h3>
+                    <h3><i class="fa fa-heart-o" style="margin-right: 10px;"></i><span class='t5-list-title'>Top 5 Cameras</span></h3>
                   </div>
                   <div class="col-sm-1">
                     <i class="fa fa-camera-retro t5-cateicon"></i>
@@ -176,12 +177,10 @@
                 </div>
                 <div class="row">
                   <div class="col-sm-1"></div>
-                  <!-- User -->
                   <div class="col-sm-2" style="margin-left: -28px; margin-top: 3px;">
                       <img src="img/dolly.png" alt="" class="t5-user-pic">
-                      <h4 class="text-center thin">Dolly</h4>
+                      <h4 class="text-center thin" class='t5-user-name'>Dolly</h4>
                   </div>
-                  <!-- Image View -->
                   <div class="col-sm-4">
                     <ul class="list-unstyled">
                       <li class="t5-pic t5-1st-pic">
@@ -215,7 +214,6 @@
                         </div>
                       </li>
                   </div>
-                  <!-- List -->
                   <div class="col-sm-5">
                     <ul class="list-unstyled">
                       <li>
@@ -241,12 +239,9 @@
                     </ul>
                   </div>
                 </div>
-                <!-- <div class="row">
-                  <div class="col-sm-8 centered" style="background-color: #5CB85C;">
-                    <p class="text-center">center</p>
-                  </div>
-                </div> -->
               </div>
+              -->
+              
               <div class="list-item desktop">desktop</div>
               <div class="list-item apple cellphone">iPhone - both apple & cellphone</div>
               <div class="list-item tablet">tablet</div>
@@ -264,6 +259,7 @@
         </div>
       </div>
     </section>
+    
 
 <!--     
     <a class="btn" href="" >Default</a>
@@ -284,8 +280,25 @@
     <script src="js/min/search-ck.js" type="text/javascript"></script>
     <!-- Page js -->
     <script src="js/min/category-ck.js" type="text/javascript"></script>
+    
+    <script src="js/list.js" type="text/javascript"></script>
+    
     <script>
       $("#t5-cat-menu").load("parts/menu.html");
+      
+$(function(){
+	
+	
+	$.getJSON("data/lists.json", function(listsData){
+		$.each(listsData, function(index, listData){
+			var list = new $.top5.List(listData, $('#feed'));
+		});
+	})	
+	
+});
+      
     </script>
   </body>
 </html>
+
+ 
