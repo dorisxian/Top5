@@ -1998,35 +1998,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/items\/Canon6D.jpg": {
+	"\/img\/items\/Canon_6D.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 121811,
-		"inputAbbreviatedPath": "\/img\/items\/Canon6D.jpg",
-		"outputAbbreviatedPath": "\/img\/items\/Canon6D.jpg",
+		"inputAbbreviatedPath": "\/img\/items\/Canon_6D.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/Canon_6D.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/items\/CanonG16.jpg": {
+	"\/img\/items\/Canon_G16.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 116201,
-		"inputAbbreviatedPath": "\/img\/items\/CanonG16.jpg",
-		"outputAbbreviatedPath": "\/img\/items\/CanonG16.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/items\/DSC-RX100.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 186411,
-		"inputAbbreviatedPath": "\/img\/items\/DSC-RX100.jpg",
-		"outputAbbreviatedPath": "\/img\/items\/DSC-RX100.jpg",
+		"inputAbbreviatedPath": "\/img\/items\/Canon_G16.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/Canon_G16.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2064,6 +2053,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/items\/Nikon_J1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 702618,
+		"inputAbbreviatedPath": "\/img\/items\/Nikon_J1.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/Nikon_J1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/items\/Olympus_TG2.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -2075,13 +2075,24 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/items\/PanasonicGF6.jpg": {
+	"\/img\/items\/Panasonic_GF6.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 62751,
-		"inputAbbreviatedPath": "\/img\/items\/PanasonicGF6.jpg",
-		"outputAbbreviatedPath": "\/img\/items\/PanasonicGF6.jpg",
+		"inputAbbreviatedPath": "\/img\/items\/Panasonic_GF6.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/Panasonic_GF6.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/items\/SONY_DSC-RX100.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 186411,
+		"inputAbbreviatedPath": "\/img\/items\/SONY_DSC-RX100.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/SONY_DSC-RX100.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2214,6 +2225,28 @@
 		"initialSize": 253142,
 		"inputAbbreviatedPath": "\/img\/top5-title1.png",
 		"outputAbbreviatedPath": "\/img\/top5-title1.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/upload.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4046,
+		"inputAbbreviatedPath": "\/img\/upload.png",
+		"outputAbbreviatedPath": "\/img\/upload.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/url.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7674,
+		"inputAbbreviatedPath": "\/img\/url.png",
+		"outputAbbreviatedPath": "\/img\/url.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

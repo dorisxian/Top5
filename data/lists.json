@@ -1,25 +1,25 @@
 [{
 	"title": "Cameras"
-	, "filterClass": "camera"
+	, "filterClass": "camera DSLR"
 	, "user": {
 		"username": "Dolly"
 		, "image":"img/dolly.png"
 	}
 	, "items": [{
 			"title": "Canon 6D"
-			, "image": "img/items/Canon6D.jpg"
+			, "image": "img/items/Canon_6D.jpg"
 		}, {
 			"title": "Fujifilm X20"
 			, "image": "img/items/Fujifilm_X20.jpg"
 		}, {
 			"title": "Panasonic Lumix DMC-GF6"
-			, "image": "img/items/PanasonicGF6.jpg"
+			, "image": "img/items/Panasonic_GF6.jpg"
 		}, {
 			"title": "Canon PowerShot G16"
-			, "image": "img/items/CanonG16.jpg"
+			, "image": "img/items/Canon_G16.jpg"
 		}, {
 			"title": "Sony Cyber-shot DSC-RX100 II"
-			, "image": "img/items/DSC-RX100.jpg"
+			, "image": "img/items/SONY_DSC-RX100.jpg"
 	}]
 }, {
 	"title": "Digital Cameras"
@@ -35,13 +35,13 @@
 			"title": "Fujifilm XQ1"
 			, "image": "img/items/Fujifilm_XQ1.jpg"
 		}, {
-			"title": "Panasonic Lumix DMC-GF6"
-			, "image": "img/items/PanasonicGF6.jpg"
+			"title": "Nikon 1 J1"
+			, "image": "img/items/Nikon_J1.jpg"
+		}, {
+			"title": "Sony Cyber-shot DSC-RX100 II"
+			, "image": "img/items/SONY_DSC-RX100.jpg"
 		}, {
 			"title": "Olympus Tough TG-2 iHS"
 			, "image": "img/items/Olympus_TG2.jpg"
-		}, {
-			"title": "Sony Cyber-shot DSC-RX100 II"
-			, "image": "img/items/DSC-RX100.jpg"
 	}]
 }]

@@ -259,19 +259,7 @@
         </div>
       </div>
     </section>
-    
 
-<!--     
-    <a class="btn" href="" >Default</a>
-    <a class="btn btn-primary" href="" >Default</a>
-
-
-    <ul class="nav nav-tabs nav-justified">
-      <li><a href="#">People</a></li>
-      <li class="active"><a href="#">Lists</a></li>
-      <li><a href="#">List Items</a></li>
-    </ul>
- -->
     <!-- Latest jQuery -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!-- Bootstrap js -->
@@ -285,18 +273,14 @@
     
     <script>
       $("#t5-cat-menu").load("parts/menu.html");
-      
-$(function(){
-	
-	
-	$.getJSON("data/lists.json", function(listsData){
-		$.each(listsData, function(index, listData){
-			var list = new $.top5.List(listData, $('#feed'));
-		});
-	})	
-	
-});
-      
+
+      $(function(){
+      	$.getJSON("data/lists.json", function(listsData){
+      		$.each(listsData, function(index, listData){
+      			var list = new $.top5.List(listData, $('#feed'));
+      		});
+      	})	
+      });
     </script>
   </body>
 </html>
