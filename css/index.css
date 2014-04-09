@@ -389,6 +389,32 @@ h4.t5-sr-title {
   margin: 3px;
   border: 1px solid #959595;
   border-radius: 2em;
+  cursor: pointer;
+  background-position: center;
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+}
+.t5-social:hover {
+  border: 1px solid #f13d0b;
+  background-color: #f13d0b;
+}
+.t5-social:nth-child(1) {
+  background-image: url(../img/facebook-icon.png);
+}
+.t5-social:nth-child(1):hover {
+  background-image: url(../img/facebook-icon-hover.png);
+}
+.t5-social:nth-child(2) {
+  background-image: url(../img/twitter-icon.png);
+}
+.t5-social:nth-child(2):hover {
+  background-image: url(../img/twitter-icon-hover.png);
+}
+.t5-social:nth-child(3) {
+  background-image: url(../img/gplus-icon.png);
+}
+.t5-social:nth-child(3):hover {
+  background-image: url(../img/gplus-icon-hover.png);
 }
 /*  collage  */
 #t5-banner-mask,
@@ -420,11 +446,11 @@ h4.t5-sr-title {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1000;
 }
 #t5-login-mask {
   background-color: white;
   opacity: 0.95;
-  z-index: -1000;
   background-image: url("../img/login-bg.png");
 }
 /*
