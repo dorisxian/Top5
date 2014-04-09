@@ -1,5 +1,6 @@
 [{
 	"title": "Cameras"
+	, "filterClass": "camera"
 	, "user": {
 		"username": "Dolly"
 		, "image":"img/dolly.png"
@@ -22,6 +23,7 @@
 	}]
 }, {
 	"title": "Digital Cameras"
+	, "filterClass": "camera"
 	, "user": {
 		"username": "Sara"
 		, "image":"img/sara.png"

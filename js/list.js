@@ -28,6 +28,7 @@ $(function(){
 			ele.prependTo(_container);
 			_container.isotope('prepended', ele);
 			
+			ele.addClass(_data.filterClass);
 			ele.find('.t5-list-title').html(_data.title);
 			ele.find('.t5-user-pic').attr('src', _data.user.image);
 			ele.find('.t5-user-name').html(_data.user.username);
