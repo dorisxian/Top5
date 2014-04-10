@@ -38,6 +38,9 @@ body {
 .t5-container {
   max-width: 750px;
 }
+.navbar {
+  margin-bottom: 0;
+}
 .fa-lg {
   font-size: 1.7em;
 }
@@ -567,4 +570,13 @@ img.t5-la-cat-icon {
 }
 .t5-la-item.t5-selected:nth-child(6) span {
   outline: 1px solid #f9967a;
+}
+#t5-la-closing {
+  height: 2em;
+  background-color: #eeeeee;
+  text-align: center;
+  color: #cccccc;
+  line-height: 2em;
+  vertical-align: middle;
+  cursor: pointer;
 }

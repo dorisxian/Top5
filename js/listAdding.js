@@ -15,8 +15,8 @@ $(function(){
 		
 		function init(){
 			$.ajax({
-				//url: 'parts/list_adding.html'
-				url: '../parts/list_adding.html'
+				url: 'parts/list_adding.html'
+				//url: '../parts/list_adding.html'
 				, success: function(res){
 					$(res).appendTo($('#t5-list-adding'));
 				}
@@ -89,8 +89,15 @@ $(function(){
 				
 				// send data
 				
-				reset();
 				
+				_open = false;
+				render_open(function(){
+					reset();					
+				});
+			});
+			
+			// close
+			$('#t5-la-closing').click(function(){
 				_open = false;
 				render_open();
 			});
@@ -114,11 +121,11 @@ $(function(){
 			render_open();
 		}
 		
-		function render_open(){
+		function render_open(cb){
 			if (_open) {
 				$('#t5-list-adding').slideDown();
 			} else {
-				$('#t5-list-adding').slideUp();					
+				$('#t5-list-adding').slideUp({complete: cb});					
 			}
 		}
 		
