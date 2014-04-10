@@ -12,6 +12,7 @@ $(function(){
 	
 	var _templateStr;
 	$.ajax({
+		//url: 'parts/list_template.html'
 		url: '../parts/list_template.html'
 		, success: function(res){
 			$(res).appendTo($('body'));
@@ -43,6 +44,17 @@ $(function(){
 				var specific = "." + $(this).attr('class').slice(15) + "-pic";
 				ele.find('li').siblings(".t5-pic").addClass('hidden');
 				ele.find(specific).removeClass('hidden');
+			});
+			
+			
+			var selected = false;
+			ele.find('.t5-list-heart').click(function(){
+				selected = !selected;
+				if (selected) {
+					$(this).addClass('t5-selected');
+				} else {
+					$(this).removeClass('t5-selected');					
+				}
 			});
 		}
 		init();
