@@ -229,55 +229,61 @@ a.t5-cat-2nd:hover {
 .t5-template {
   display: none;
 }
-/* body */
-body {
-  background-color: #333333;
-}
 /*  topbar  */
-#t5-topbar {
-  position: fixed;
-  top: 0;
-  height: 40pt;
-  width: 100%;
-  background-color: white;
-  text-align: center;
-  z-index: 9999;
+/*
+#t5-topbar
+{
+  position:fixed;
+  top:0;
+  height:40pt;
+  width:100%;
+  background-color:white;
+  text-align:center;
+  z-index:9999;
 }
-#t5-logo {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 30pt;
-  margin: 5pt 10pt;
+
+
+#t5-logo
+{
+  position:absolute;
+  left:0;
+  top:0;
+  height:30pt;
+  margin:5pt 10pt;
 }
-#t5-search {
-  width: 240px;
-  line-height: 20pt;
-  margin: 9pt 0;
-  border: 1px solid #f13d0b;
+
+#t5-search
+{
+  width:240px;
+  line-height:20pt;
+  margin:9pt 0;
+  border:1px solid @brand-primary;
 }
-.t5-topbar-btn {
-  display: inline-block;
-  width: 30pt;
-  height: 100%;
-  margin: 0 10pt;
-  cursor: default;
-  color: #f13d0b;
-  font-size: 18px;
-  font-weight: bolder;
-  vertical-align: top;
-  line-height: 40pt;
+
+.t5-topbar-btn
+{
+  display:inline-block;
+  width:30pt;
+  height:100%;
+  margin:0 10pt;
+  cursor:default;
+  
+  color:@brand-primary;
+  font-size:@font-size-large;
+  font-weight:bolder;
+  vertical-align:top;
+  line-height:40pt;
 }
-.t5-topbar-btn.selected,
-.t5-topbar-btn:hover {
-  background-color: #f13d0b;
-  color: white;
+.t5-topbar-btn.selected, .t5-topbar-btn:hover 
+{
+  background-color:@brand-primary;
+  color:white;
 }
+*/
 /*  list adding */
 /* list adding title */
 #t5-list-adding {
   position: relative;
-  margin-top: 40pt;
   background-color: white;
   display: none;
   font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;

@@ -14,6 +14,14 @@ $(function(){
 		var _data;
 		
 		function init(){
+			$.ajax({
+				//url: 'parts/list_adding.html'
+				url: '../parts/list_adding.html'
+				, success: function(res){
+					$(res).appendTo($('#t5-list-adding'));
+				}
+				,async: false
+			});
 			
 			$('#t5-list-adding-btn').click(function(){
 				_open = !_open;
@@ -67,12 +75,13 @@ $(function(){
 			
 			$('#t5-save-list-btn').click(function(){
 				_data.title = $('#t5-list-title-input').val();
-				if( !$('#t5-list-title-input').val() ) {
+				if( !_data.title ) {
 					alert("Must enter list title!");
 					$("#t5-list-title-input").focus();
 					$('#t5-list-title-input').addClass('warning');
+					return;
 			    }
-				else if (!_cat) {
+				if (!_cat) {
 					alert("Must select category!");
 					return;
 				}
