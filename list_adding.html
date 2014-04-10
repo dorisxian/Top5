@@ -8,6 +8,7 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <!-- DIY Theme -->
@@ -26,6 +27,8 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
 
@@ -136,12 +139,16 @@
 				<div class='col-sm-6'>
 					<input id='t5-la-item-input' placeholder='Item Title'>
 					<div id='t5-la-item-wrap'>
-						<div id='t5-la-item-image'><img></div>
+						<div id='t5-la-item-image'>
+							<span class='t5-la-image-icon'></span>
+							<span class='t5-la-image-icon'></span>
+							<img src='img/alt-item.png'>
+						</div>
 						<textarea id='t5-la-item-comment' placeholder='Enter Comment Here...' ></textarea>
 					</div>
 					<button class='btn btn-primary' id='t5-la-item-btn'>Add/Save Item</button>
 				</div>
-				<div class='col-sm-5'>
+				<div class='col-sm-5' id='t5-la-items'>
 					<div class='t5-la-item'>
 						<span>1</span>
 						<div></div>

@@ -40,6 +40,12 @@ $(function(){
 				set_item($(this).parent('.t5-la-item'));
 			});
 			
+			$('#t5-la-items').sortable({change: function(evt, ui){
+				//debugger;
+				//console.log('here');
+			}, update: function(evt, ui){
+				render_items_order();
+			}});
 			
 			// item form
 			
@@ -118,8 +124,18 @@ $(function(){
 		}
 		
 		function render_item_data(item){
+			/*
 			var index = item.index();
 			item.children('div').html(_data.items[index].title);
+			*/
+			var data = item.data('t5-item');
+			if (data) item.children('div').html(data.title);
+		}
+		
+		function render_items_order(){
+			$('.t5-la-item span').each(function(index){
+				$(this).html(index + 1);
+			});
 		}
 		
 		function set_cat(cat){
@@ -142,17 +158,28 @@ $(function(){
 			
 			var index = _item.index();
 			var title = '', comment = '';
+			/*
 			if (_data.items[index]) {
 				title = _data.items[index].title;
 				comment = _data.items[index].comment
 			}
+			*/
+			var data = _item.data('t5-item');
+			if (data) {
+				title = data.title;
+				comment = data.comment				
+			}
+			
 			$('#t5-la-item-input').val(title).focus();
 			$('#t5-la-item-comment').val(comment);
 		}
 		
 		function append_item_data(itemData){
+			/*
 			var index = _item.index();
 			_data.items[index] = itemData;
+			*/
+			_item.data('t5-item', itemData);
 			render_item_data(_item);
 		}
 		

@@ -438,7 +438,52 @@ img.t5-la-cat-icon {
   height: 100%;
 }
 #t5-la-item-image {
+  position: relative;
   width: 130pt;
+}
+#t5-la-item-image img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.t5-la-image-icon {
+  position: absolute;
+  display: inline-block;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  z-index: 1000;
+  cursor: pointer;
+}
+.t5-la-image-icon:nth-child(1) {
+  background-image: url(../img/upload.png);
+  width: 50px;
+  height: 50px;
+  /*
+  right:5px;
+  bottom:35px;
+  */
+  left: 20%;
+  bottom: 30%;
+}
+.t5-la-image-icon:nth-child(1):hover {
+  background-image: url(../img/upload-hover.png);
+}
+.t5-la-image-icon:nth-child(2) {
+  background-image: url(../img/url.png);
+  width: 45px;
+  height: 45px;
+  /*
+  right:5px;
+  bottom:5px;
+  */
+  right: 20%;
+  bottom: 30%;
+}
+.t5-la-image-icon:nth-child(2):hover {
+  background-image: url(../img/url-hover.png);
 }
 #t5-la-item-comment {
   width: 110pt;
@@ -508,5 +553,12 @@ img.t5-la-cat-icon {
   background-color: #f9967a;
 }
 .t5-la-item.t5-selected:nth-child(5) span {
+  outline: 1px solid #f9967a;
+}
+/* work with sortable */
+.t5-la-item:nth-child(6) span {
+  background-color: #f9967a;
+}
+.t5-la-item.t5-selected:nth-child(6) span {
   outline: 1px solid #f9967a;
 }
