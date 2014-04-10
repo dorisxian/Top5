@@ -38,6 +38,9 @@ body {
 .t5-container {
   max-width: 750px;
 }
+.navbar {
+  margin-bottom: 0;
+}
 .fa-lg {
   font-size: 1.7em;
 }

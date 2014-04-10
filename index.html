@@ -46,7 +46,7 @@
             <form class="navbar-form navbar-left" role="search" action="/search-result.php" method="POST">
               <div class="form-group t5-nav-search">
                 <input type="text" name="keyword" class="form-control typeahead" placeholder="Search for people, lists, things, etc...">
-				<button type="submit"></button>
+				        <button type="submit"></button>
               </div>
             </form>
 <!--
@@ -55,24 +55,11 @@
             </ul>
 -->
             
-            <!-- ***User - Name & Setting button*** -->
-<!--
             <ul class="nav navbar-nav navbar-right">
-              <li class="username light">dorisxian</li>
-
-              <li class="dropdown user-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-user"></i><b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#"><i class="fa fa-gear fa-lg"></i><span class="user-menu-text">Settings</span></a></li>
-                  <li class="divider"></li>
-                  <li><a href="#"><i class="fa fa-sign-out fa-lg"></i><span class="user-menu-text">Logout</span></a></li>
-                </ul>
-              </li>
+              <li class="username light" style="color: #F13D0B;">Welcome, guest!</li>
             </ul>
--->
-
             <!--  ***Guest - Login & Sign Up*** -->
-            <ul class="nav navbar-nav navbar-right">
+<!--             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
                <a href="" class="dropdown-toggle" data-toggle="dropdown">Sign Up<b class="caret"></b></a>
                <ul class="dropdown-menu" style="padding: 15px;min-width: 250px;">
@@ -136,7 +123,7 @@
                     </a>
                  </ul>
               </li>
-            </ul>
+            </ul> -->
 
             <div class="col-md-1"></div>
           </div><!-- /.navbar-collapse -->
@@ -144,33 +131,21 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-<!--
-	<div id='t5-topbar'>
-		<img id='t5-logo' src='img/top5-logo.png'>
-		<div class='container'>
-			<div id='t5-search-wrap'>
-				<input id='t5-search'>
-			</div>
-			<span id='t5-welcome'>Welcome, guest !</span>
-		</div>
-	</div>   
--->
-
 	<div id='t5-banner'>
 		<div id='t5-banner-mask'></div>			
 		<div id='t5-banner-collage'></div>
 		
 		<div class='container'>
 			<div class='row' id='t5-banner-row'>
-				<div class='col-lg-2 col-md-2'>
+				<div class='col-lg-2 col-md-2 col-sm-3 col-xs-2'>
 					<img id='t5-title' src='img/top5-title.png'>
 				</div>
 				
-				<div class='col-lg-5 col-md-4' id='t5-headline-col'>
+				<div class='col-lg-5 col-md-4 col-sm-8 col-xs-6' id='t5-headline-col'>
 					<div id='t5-headline'>A Top 5 List Community that sets out <p> to know the best in life !</div>
 				</div>
 			
-				<div id='t5-login-col'>
+				<div id='t5-login-col' class="hidden-sm hidden-xs">
 					<div id='t5-login'>
 						<div id='t5-login-mask'></div>			
 						<div id='t5-login-collage'></div>
@@ -178,13 +153,13 @@
 						<h3 id='t5-login-title'>Sign in to your account</h3>
 						<table id='t5-login-table'>
 							<tr>
-								<td>Email : </td>
-								<td><input id='t5-username'></td>
+								<td>Username : </td>
+								<td><input id='t5-username' type="text" required></td>
 								<td>Login with</td>
 							</tr>
 							<tr>
 								<td>Password : </td>
-								<td><input id='t5-password'></td>
+								<td><input id='t5-password' type="password" required></td>
 								<td>
 									<span class='t5-social'></span>
 									<span class='t5-social'></span>

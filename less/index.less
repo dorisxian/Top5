@@ -88,10 +88,14 @@
   color:white;
   text-align:center;
   font-size:26px;
-  font-weight:lighter;
+  .thin;
   letter-spacing:1px;
 }
-
+@media (max-width: @screen-xs-max) {
+  #t5-headline{
+    font-size: 20px;
+  }
+}
 #t5-login-col
 {
   position:absolute;
@@ -168,6 +172,12 @@
   background-color:transparent;
   border:none;
   border-bottom:1px solid @gray-light;
+  outline: none;
+  &:focus{
+    border-color: @brand-primary;
+    .light;
+    color: @gray-dark;
+  }
 }
 #t5-remember
 {
@@ -188,9 +198,10 @@
 }
 #t5-register-btn
 {
-  background-color:transparent;
+  background-color:white;
   border:1px solid @brand-primary;
-  color:;
+  opacity: 0.85;
+  .light;
 }
 
 .t5-social
@@ -283,7 +294,7 @@
 #t5-login-mask
 {
   background-color:white;
-  opacity:0.95;
+  opacity:0.99;
   background-image: url("../img/login-bg.png");
 }
 /*

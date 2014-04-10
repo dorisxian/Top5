@@ -38,6 +38,9 @@ body {
 .t5-container {
   max-width: 750px;
 }
+.navbar {
+  margin-bottom: 0;
+}
 .fa-lg {
   font-size: 1.7em;
 }
@@ -295,8 +298,15 @@ h4.t5-sr-title {
   color: white;
   text-align: center;
   font-size: 26px;
-  font-weight: lighter;
+  font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
   letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+  #t5-headline {
+    font-size: 20px;
+  }
 }
 #t5-login-col {
   position: absolute;
@@ -359,6 +369,15 @@ h4.t5-sr-title {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #959595;
+  outline: none;
+}
+#t5-username:focus,
+#t5-password:focus {
+  border-color: #f13d0b;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  color: #353535;
 }
 #t5-remember {
   /*
@@ -376,9 +395,12 @@ h4.t5-sr-title {
   font-weight: inherit;
 }
 #t5-register-btn {
-  background-color: transparent;
+  background-color: white;
   border: 1px solid #f13d0b;
-  color: ;
+  opacity: 0.85;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
 }
 .t5-social {
   position: relative;
@@ -450,7 +472,7 @@ h4.t5-sr-title {
 }
 #t5-login-mask {
   background-color: white;
-  opacity: 0.95;
+  opacity: 0.99;
   background-image: url("../img/login-bg.png");
 }
 /*
