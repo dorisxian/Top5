@@ -75,10 +75,12 @@ $(function(){
 			});
 			
 			$('#t5-la-item-btn').click(function(){
+				var src = $('#t5-la-item-image img').attr('src');
+				src = src.indexOf("alt-item.png") === -1 ? src : undefined;
 				append_item_data({
 					title: $('#t5-la-item-input').val(),
 					comment: $('#t5-la-item-comment').val()
-					, image: $('#t5-la-item-image img').attr('src')
+					, image: src
 				});
 				// move to next item
 				if (_item.index() === 4) {
@@ -194,11 +196,9 @@ $(function(){
 			
 			$('#t5-la-item-input').val(data ? data.title : '').focus();
 			$('#t5-la-item-comment').val(data ? data.comment : '');
-			/*
-			$('#t5-la-item-image img').attr('src', data ? data.image : 'img/alt-item.png');
-			debugger;
-			if(!data || !data.image) $('#t5-la-item-image img').removeClass('t5-filled'); 
-			*/
+			$('#t5-la-item-image img').attr('src', data && data.image ? data.image: 'img/alt-item.png')
+			$('#t5-la-item-image').removeClass('t5-filled');
+			if(data && data.image) $('#t5-la-item-image').addClass('t5-filled'); 
 		}
 		
 		function append_item_data(itemData){
