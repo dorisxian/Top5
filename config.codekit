@@ -2009,6 +2009,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/dior-addict-gloss-300.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 28546,
+		"inputAbbreviatedPath": "\/img\/dior-addict-gloss-300.jpg",
+		"outputAbbreviatedPath": "\/img\/dior-addict-gloss-300.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/dolly.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2390,6 +2401,17 @@
 		"initialSize": 19977,
 		"inputAbbreviatedPath": "\/img\/url.png",
 		"outputAbbreviatedPath": "\/img\/url.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/yves-saint-laurent-rouge-volupte-lipstick13.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.35409e+06,
+		"inputAbbreviatedPath": "\/img\/yves-saint-laurent-rouge-volupte-lipstick13.jpg",
+		"outputAbbreviatedPath": "\/img\/yves-saint-laurent-rouge-volupte-lipstick13.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
