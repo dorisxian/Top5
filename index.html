@@ -168,21 +168,40 @@
 							</tr>
 							<tr>
 								<td></td>
-								<td class='text-right'><small>Forgot Password ?</small></td>
+								<td class='text-right'><small><a href="">Forgot Password?</a></small></td>
 								<td></td>
 							</tr>
 							<tr>
 								<td><input id='t5-remember' type='checkbox'></td>
-								<td><small>Remember my password<small></td>
+								<td><small>Remember my password</small></td>
 								<td><small>Not a member yet?</small></td>
 							</tr>
 							<tr>
 								<td></td>
 								<td class='text-right'><button id='t5-login-btn' class='btn'>Sign in</button></td>
-								<td><button id='t5-register-btn' class='btn'>Join us</button></td>
+								<td class="change_link"><a href="#t5-register" class="toregister light"><button id='t5-register-btn' class='btn'>Join us</button></a></td>
 							</tr>
 						</table>
 					</div>
+
+          <div id='t5-register' class="hidden">
+            <div id='t5-login-mask'></div>      
+            <div id='t5-login-collage'></div>
+            
+            <h3 id='t5-login-title'>Create your account</h3>
+            <div id='t5-login-table'>
+              <input class="t5-signup" type="text" name="username" placeholder="Username" required>
+              <input class="t5-signup" type="email" name="email" placeholder="Email" required>
+              <input class="t5-signup" type="password" name="password" placeholder="Password" required>
+              <input class="t5-signup" type="password" name="passwordconfirm" placeholder="Confirm Password" required>
+              <tr>
+                <td></td>
+                <td><button id='t5-login-btn' class='btn'>Sign up</button></td>
+                <td><div class="change_link"><a href="#t5-login" class="tologin light"><button id='t5-register-btn' class='btn'>Login</button></a></div></td>
+              </tr>
+            </div>
+          </div>
+
 				</div>
 			</div>
 		</div>
@@ -204,22 +223,40 @@
     <script>
     $("#t5-cat-menu").load("parts/menu.html");
       	
-	$(function(){
-		
-		var width = $("#t5-banner-collage").width();
-		function move_collage(){
-			$('#t5-banner-collage').css('background-position', 0);
-			$('#t5-banner-collage').animate({'background-position': - width + 'px'}, {
-				duration: 30000
-				, easing: 'linear'
-				, complete: function(){
-					move_collage();
-				}
-			});
-		}
-		move_collage();
-		
-	});
+  	$(function(){
+  		
+  		var width = $("#t5-banner-collage").width();
+  		function move_collage(){
+  			$('#t5-banner-collage').css('background-position', 0);
+  			$('#t5-banner-collage').animate({'background-position': - width + 'px'}, {
+  				duration: 35000
+  				, easing: 'linear'
+  				, complete: function(){
+  					move_collage();
+  				}
+  			});
+  		}
+  		move_collage();
+  		
+  	});
+
+    $(document).ready(function() {
+      $('.change_link a').on('click', function(e){
+        e.preventDefault();
+        var oldcontent;
+        var newcontent = $(this).attr('href');
+        if($(this).hasClass('toregister')) {
+          oldcontent = $('#t5-login');
+        }
+        else if($(this).hasClass('tologin')) {
+          oldcontent = $('#t5-register');
+        }
+        $(oldcontent).fadeOut('fast', function(){
+          $(newcontent).fadeIn().removeClass('hidden');
+          $(oldcontent).addClass('hidden');
+        });
+      });
+    });
 
     </script>
 

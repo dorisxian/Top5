@@ -232,6 +232,9 @@ a.t5-cat-2nd:hover {
 .t5-template {
   display: none;
 }
+.hidden {
+  display: none;
+}
 /*  topbar  */
 #t5-topbar {
   position: fixed;
@@ -315,7 +318,8 @@ h4.t5-sr-title {
   height: 100%;
 }
 /* login */
-#t5-login {
+#t5-login,
+#t5-register {
   position: relative;
   height: 100%;
   border: 2px solid #f13d0b;
@@ -364,7 +368,8 @@ h4.t5-sr-title {
   height: 35pt;
 }
 #t5-username,
-#t5-password {
+#t5-password,
+.t5-signup {
   width: 10em;
   background-color: transparent;
   border: none;
@@ -372,12 +377,17 @@ h4.t5-sr-title {
   outline: none;
 }
 #t5-username:focus,
-#t5-password:focus {
+#t5-password:focus,
+.t5-signup:focus {
   border-color: #f13d0b;
   font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-weight: 300;
   letter-spacing: 0.4px;
   color: #353535;
+}
+.t5-signup {
+  width: 220px;
+  line-height: 30px;
 }
 #t5-remember {
   /*

@@ -1,5 +1,8 @@
 @import "style.less";
 
+.hidden {
+  display: none;
+}
 
 /*  topbar  */
 
@@ -107,7 +110,7 @@
 
 /* login */
 
-#t5-login
+#t5-login, #t5-register
 {
   position:relative;
   height:100%;
@@ -166,7 +169,7 @@
   height:35pt;
 }
 
-#t5-username, #t5-password
+#t5-username, #t5-password, .t5-signup
 {
   width:10em;
   background-color:transparent;
@@ -178,6 +181,10 @@
     .light;
     color: @gray-dark;
   }
+}
+.t5-signup{
+  width: 220px;
+  line-height: 30px;
 }
 #t5-remember
 {
