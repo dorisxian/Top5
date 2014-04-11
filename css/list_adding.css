@@ -48,7 +48,7 @@ body {
   border: 2px solid #f13d0b;
 }
 .navbar-form .form-control {
-  width: 300px;
+  width: 330px;
 }
 input:focus {
   color: #5e5e5e;
@@ -124,7 +124,7 @@ h4.t5-sr-title {
   font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-weight: 300;
   letter-spacing: 0.4px;
-  width: 300px;
+  width: 330px;
 }
 .tt-dropdown-menu {
   text-align: left;
@@ -337,7 +337,12 @@ a.t5-cat-2nd:hover {
   background-color: white;
 }
 #t5-save-list-btn {
-  line-height: 10pt;
+  line-height: 14.3pt;
+  background-color: #f44819;
+  vertical-align: 1px;
+}
+#t5-save-list-btn:hover {
+  background-color: white;
 }
 /* list adding category menu */
 #t5-la-cat-title {
@@ -426,8 +431,8 @@ img.t5-la-cat-icon {
   border: 2px solid #d9d9d9;
   outline: none;
 }
-#t5-la-item-input {
-  width: 100%;
+#t5-la-item-input.tt-input {
+  width: 330px;
   height: 32px;
   margin: 3px 0;
   padding-left: 2.2em;
@@ -436,6 +441,15 @@ img.t5-la-cat-icon {
   background-repeat: no-repeat;
   background-size: 25px;
   background-color: transparent;
+}
+#t5-la-item-input.tt-dropdown-menu {
+  z-index: 2;
+}
+.tt-dropdown-menu {
+  width: 330px;
+}
+.tt-hint {
+  display: none;
 }
 #t5-la-item-wrap {
   margin: 5pt 0;
@@ -446,6 +460,7 @@ img.t5-la-cat-icon {
   display: inline-block;
   vertical-align: top;
   height: 100%;
+  z-index: 1;
 }
 #t5-la-item-image {
   position: relative;
@@ -511,7 +526,7 @@ img.t5-la-cat-icon {
 #t5-la-item-comment {
   width: 110pt;
   float: right;
-  padding: 0 0.5em;
+  padding: 3px 0.5em;
   resize: none;
   font-size: 12px;
 }

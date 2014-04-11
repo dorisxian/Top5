@@ -48,7 +48,7 @@ body {
   border: 2px solid #f13d0b;
 }
 .navbar-form .form-control {
-  width: 300px;
+  width: 330px;
 }
 input:focus {
   color: #5e5e5e;
@@ -124,7 +124,7 @@ h4.t5-sr-title {
   font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-weight: 300;
   letter-spacing: 0.4px;
-  width: 300px;
+  width: 330px;
 }
 .tt-dropdown-menu {
   text-align: left;
@@ -352,4 +352,13 @@ h3 {
   letter-spacing: 0.4px;
   color: #5e5e5e;
   vertical-align: middle;
+}
+.t5-functions {
+  float: right;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.t5-functions .fa {
+  color: #a9a9a9;
+  margin-left: 5px;
 }

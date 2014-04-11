@@ -72,8 +72,22 @@ $(document).ready(function () {
 		displayKey: 'value',
 		source: substringMatcher(item),
 		templates: {
-			header: '<h4 class="t5-sr-title">Items</h4>'
+			header: '<h4 class="t5-sr-title">Items</h4>',
+			empty: [
+			'<div class="empty-message">','no matches','</div>'
+			].join('\n')
 		}
-
 	});
+
+	$('.item_typeahead').typeahead({
+	hint: true,
+	highlight: true,
+	minLength: 1
+	},
+	{
+		name: 'items_title',
+		displayKey: 'value',
+		source: substringMatcher(item)
+	});
+
 });
