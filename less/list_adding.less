@@ -68,6 +68,7 @@
   background-color:white;
   display:none;
   .light;
+  margin-bottom:30px;
 }
 
 
@@ -260,6 +261,7 @@ img.t5-la-cat-icon{
 {
   position:relative;
 	width:130pt;
+	background-color:black;
 }
 #t5-la-item-image img
 {
@@ -281,6 +283,19 @@ img.t5-la-cat-icon{
   z-index:1000;
   cursor:pointer;
 }
+.t5-filled .t5-la-image-icon
+{
+  display:none;
+}
+.t5-filled:hover .t5-la-image-icon
+{
+  display:inline-block;
+}
+.t5-filled:hover img
+{
+  opacity:0.5;
+}
+
 .t5-la-image-icon:nth-child(1)
 {
   background-image:url(../img/upload.png);
@@ -310,6 +325,11 @@ img.t5-la-cat-icon{
 .t5-la-image-icon:nth-child(2):hover
 {
   background-image:url(../img/url-hover.png);  
+}
+
+#t5-la-image-file
+{
+  display:none;
 }
 
 
