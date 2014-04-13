@@ -355,7 +355,7 @@ h4.t5-sr-title {
   vertical-align: bottom;
 }
 #t5-login-table small {
-  font-size: 10px;
+  font-size: 11px;
 }
 #t5-login-table tr td:first-child {
   text-align: right;
@@ -379,7 +379,7 @@ h4.t5-sr-title {
 }
 #t5-username,
 #t5-password,
-.t5-signup {
+#t5-register-table input {
   width: 10em;
   background-color: transparent;
   border: none;
@@ -388,7 +388,7 @@ h4.t5-sr-title {
 }
 #t5-username:focus,
 #t5-password:focus,
-.t5-signup:focus {
+#t5-register-table input:focus {
   border-color: #f13d0b;
   font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-weight: 300;
@@ -457,6 +457,23 @@ h4.t5-sr-title {
 }
 .t5-social:nth-child(3):hover {
   background-image: url(../img/gplus-icon-hover.png);
+}
+#t5-register-table {
+  margin: 5pt 0 20pt 0;
+}
+#t5-register-table td {
+  height: 2em;
+  vertical-align: bottom;
+}
+#t5-register-table td:nth-child(1) {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin-right: 0.5em;
+  padding-top: 0.8em;
+}
+.change_link {
+  margin-left: 5pt;
 }
 /*  collage  */
 #t5-banner-mask,
