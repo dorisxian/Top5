@@ -6,7 +6,33 @@ else if ($.top5.listAdding){
 	return;
 }
 
+
 $(function(){
+	/*jslint browser: true*/
+	var substringMatcher = function(strs) {
+	  return function findMatches(q, cb) {
+	    var matches, substrRegex;
+	 
+	    // an array that will be populated with substring matches
+	    matches = [];
+	 
+	    // regex used to determine if a string contains the substring `q`
+	    substrRegex = new RegExp(q, 'i');
+	 
+	    // iterate through the pool of strings and for any string that
+	    // contains the substring `q`, add it to the `matches` array
+	    $.each(strs, function(i, str) {
+	      if (substrRegex.test(str)) {
+	        // the typeahead jQuery plugin expects suggestions to a
+	        // JavaScript object, refer to typeahead docs for more info
+	        matches.push({ value: str });
+	      }
+	    });
+	 
+	    cb(matches);
+	  };
+	};
+	
 
 	$.top5.listAdding = (function(){
 		var _open = false, _catMenuOpen = false;
@@ -45,6 +71,7 @@ $(function(){
 			// item
 			
 			$('.t5-la-item > span').click(function(){
+				save_curr_item();
 				set_item($(this).parent('.t5-la-item'));
 			});
 			
@@ -56,6 +83,29 @@ $(function(){
 			}});
 			
 			
+			var item = (function () {
+				$.ajax({
+			        'async': false,
+			        'global': false,
+			        'url': "data/items.json",
+			        'dataType': "json",
+			        'success': function (data) {
+			            item = data;
+			        }
+			    });
+				return item;
+			})();
+			// applied typeahead to the text input box
+		
+			$('#t5-la-item-input').typeahead({
+				hint: true,
+				highlight: true,
+				minLength: 1
+			},{
+				name: 'items',
+				displayKey: 'value',
+				source: substringMatcher(item)
+			});
 			
 			// item form
 			$('.t5-la-image-icon:nth-child(1)').click(function(){
@@ -74,6 +124,19 @@ $(function(){
 			    fr.readAsDataURL(f);
 			});
 			
+			$('#t5-la-item-input, #t5-la-item-comment').keypress(function(e){
+				if(e.which == 13) {
+					save_curr_item();
+					// move to next item
+					if (_item.index() === 4) {
+						set_item(_item.siblings().eq(0));
+					} else {
+						set_item(_item.next());
+					}
+			    }				
+			});
+			
+			/*
 			$('#t5-la-item-btn').click(function(){
 				var src = $('#t5-la-item-image img').attr('src');
 				src = src.indexOf("alt-item.png") === -1 ? src : undefined;
@@ -89,6 +152,7 @@ $(function(){
 					set_item(_item.next());
 				}
 			});
+			*/
 			
 			
 			// save button
@@ -126,6 +190,16 @@ $(function(){
 			render();
 			
 			//$('#t5-list-title-input').focus();
+		}
+		
+		function save_curr_item(){
+			var src = $('#t5-la-item-image img').attr('src');
+			src = src.indexOf("alt-item.png") === -1 ? src : undefined;
+			append_item_data({
+				title: $('#t5-la-item-input').val(),
+				comment: $('#t5-la-item-comment').val()
+				, image: src
+			});
 		}
 		
 		function reset(){
@@ -196,9 +270,13 @@ $(function(){
 			
 			$('#t5-la-item-input').val(data ? data.title : '').focus();
 			$('#t5-la-item-comment').val(data ? data.comment : '');
-			$('#t5-la-item-image img').attr('src', data && data.image ? data.image: 'img/alt-item.png')
 			$('#t5-la-item-image').removeClass('t5-filled');
-			if(data && data.image) $('#t5-la-item-image').addClass('t5-filled'); 
+			if (data && data.image){
+				$('#t5-la-item-image').addClass('t5-filled');
+				$('#t5-la-item-image img').attr('src', data.image);
+			} else {
+				$('#t5-la-item-image img').attr('src', 'img/alt-item.png');				
+			}
 		}
 		
 		function append_item_data(itemData){

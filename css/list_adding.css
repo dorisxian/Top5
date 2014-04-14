@@ -453,7 +453,7 @@ img.t5-la-cat-icon {
 }
 #t5-la-item-wrap {
   margin: 5pt 0;
-  height: 90pt;
+  height: 122pt;
 }
 #t5-la-item-image,
 #t5-la-item-comment {
@@ -501,7 +501,7 @@ img.t5-la-cat-icon {
   bottom:35px;
   */
   left: 20%;
-  bottom: 30%;
+  bottom: 40%;
 }
 .t5-la-image-icon:nth-child(1):hover {
   background-image: url(../img/upload-hover.png);
@@ -515,7 +515,7 @@ img.t5-la-cat-icon {
   bottom:5px;
   */
   right: 20%;
-  bottom: 30%;
+  bottom: 40%;
 }
 .t5-la-image-icon:nth-child(2):hover {
   background-image: url(../img/url-hover.png);
