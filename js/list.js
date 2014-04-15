@@ -12,8 +12,8 @@ $(function(){
 	
 	var _templateStr;
 	$.ajax({
-		//url: 'parts/list_template.html'
-		url: '../parts/list_template.html'
+		url: 'parts/list_template.html'
+		//url: '../parts/list_template.html'
 		, success: function(res){
 			$(res).appendTo($('body'));
 		}
@@ -25,18 +25,21 @@ $(function(){
 		var _container = container;
 		
 		function init(){
-			var ele = $('#t5-list-template').clone().attr('id', undefined).removeClass('t5-template');
+			var ele = $('#t5-list-template').clone().removeAttr('id').removeClass('t5-template');
 			ele.prependTo(_container);
 			_container.isotope('prepended', ele);
 			
 			ele.removeClass().addClass('list-item');
 			ele.addClass(_data.filterClass);
 			ele.find('.t5-list-title').html(_data.title);
-			ele.find('.t5-user-pic').attr('src', _data.user.image);
-			ele.find('.t5-user-name').html(_data.user.username);
+			if (_data.user) {
+				ele.find('.t5-user-pic').attr('src', _data.user.image);
+				ele.find('.t5-user-name').html(_data.user.username);
+			}
 			var itemImages = ele.find('.t5-item-image');
 			var itemTitles = ele.find('.t5-list-item');
 			$.each(_data.items, function(index, item){
+				if (!item) return;
 				itemImages.eq(index).attr('src', item.image);
 				itemTitles.eq(index).html(item.title);
 			});
