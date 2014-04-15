@@ -124,6 +124,14 @@ $(function(){
 			    fr.readAsDataURL(f);
 			});
 			
+			
+			$('#t5-la-url-btn').click(function(){
+			    $('#t5-la-item-image img').attr('src', $('#t5-la-image-url').val());
+			    $('#t5-la-item-image').addClass('t5-filled');
+				$('#t5-la-url-modal').modal('hide');
+			});
+			
+			
 			$('#t5-la-item-input, #t5-la-item-comment').keypress(function(e){
 				if(e.which == 13) {
 					save_curr_item();
