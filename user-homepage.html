@@ -198,6 +198,14 @@
         $('.active').removeClass('active');
         $(this).addClass('active');
       });
+      
+      
+		$.getJSON("data/lists.json", function(listsData){
+			$.each(listsData, function(index, listData){
+				var list = new $.top5.List(listData, $('#feed'));
+			});
+		});
+      
     });
     </script>
   </body>

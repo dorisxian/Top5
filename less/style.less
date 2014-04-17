@@ -225,4 +225,117 @@ a.t5-cat-2nd{
 {
   display:none;
 }
+
+
+/*   list  */
+
+.list-item{
+  width: 700px;
+  margin: 30px 50px 0;
+  background-color: #ffffff;
+  .Border;
+}
+h3{
+  font-weight: 200;
+  color: @brand-primary;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.t5-list-heart
+{
+  display:inline-block;
+  height:1em;
+  width:1em;
+  vertical-align:baseline;
+  cursor:pointer;
+  
+  background-image:url(../img/heart.png);
+  background-size:100% 100%;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+/*
+.t5-list-heart:hover
+{
+  background-image:url(../img/heart-highlight.png);  
+}
+*/
+.t5-list-heart.t5-selected
+{
+  background-image:url(../img/heart-highlight.png);    
+}
+
+
+.t5-cateicon{
+  font-size: 2.2em;
+  margin-right: 14px;
+  margin-top: 12px;
+}
+.t5-user-pic{
+  .Circle;
+  .Border;
+  width: auto;
+  max-width: 100%; 
+  max-height: 100%;
+  margin: auto;
+  padding: 3px;
+}
+.t5-item-image-wrap{
+  margin-left: 27px; 
+  height: 120px; 
+  margin-top: -23px;
+}
+.t5-item-image{
+  .Border;
+  object-fit: cover;
+  background-color: #ffffff;
+  padding: 3px;
+  max-width: 100%; 
+  max-height: 100%;
+}
+.t5-ranking-box{
+  cursor: pointer;
+  display: inline-block;
+  font-family: @font-family-serif;
+  margin: 1px 5px;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  color: white;
+}
+.t5-ranking-num{
+  vertical-align: middle;
+}
+.t5-1st{
+  background-color: @shade1;
+}
+.t5-2nd{
+  background-color: @shade2;
+}
+.t5-3rd{
+  background-color: @shade3;
+}
+.t5-4th{
+  background-color: @shade4;
+}
+.t5-5th{
+  background-color: @shade5;
+}
+.t5-list-item{
+  display: inline-block;
+  .light;
+  color: @gray;
+  vertical-align: middle;
+}
+// Functional Icons
+
+.t5-functions{
+  float: right;
+  font-size: 16px;
+  margin-bottom: 5px;
+  .fa{
+    color: lighten(@gray-light, 8%);
+    margin-left: 5px;
+  }
+}
   

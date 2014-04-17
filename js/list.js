@@ -27,7 +27,7 @@ $(function(){
 		function init(){
 			var ele = $('#t5-list-template').clone().removeAttr('id').removeClass('t5-template');
 			ele.prependTo(_container);
-			_container.isotope('prepended', ele);
+			if (_container.isotope) _container.isotope('prepended', ele);
 			
 			ele.removeClass().addClass('list-item');
 			ele.addClass(_data.filterClass);
