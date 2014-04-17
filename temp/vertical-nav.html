@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="vertical-nav.css"/>
+</head>
+<body>
+	<div class="ph-dot-nav t5-ll-nav-vertical">
+		<a href="#t5-p-followers"><span>Followers</span></a>
+		<a href="#t5-p-followings"><span>Followings</span></a>
+		<a href="#t5-p-favorite"><span>Favorite</span></a>
+		<a class="active" href="#t5-p-my"><span>My Lists</span></a>
+		<div class="effect"></div>
+	</div>
+
+	<section>
+		<div id="t5-p-my">My Lists</div>
+		<div class="hidden" id="t5-p-followings">Followings</div>
+		<div class="hidden" id="t5-p-followers">Followers</div>
+		<div class="hidden" id="t5-p-favorite">Favorite</div>
+	</section>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>	
+	<script>
+    $('.t5-ll-nav-vertical a').on('click', function(e){
+        e.preventDefault();
+        var oldcontent = $('.active').attr('href');
+        var newcontent = $(this).attr('href');
+        $(oldcontent).fadeOut('fast', function(){
+          $(newcontent).fadeIn().removeClass('hidden');
+          $(oldcontent).addClass('hidden');
+        });
+        $('.active').removeClass('active');
+        $(this).addClass('active');
+    });
+	</script>
+</body>
+</html>
