@@ -260,8 +260,12 @@ $(function(){
 		function render_open(cb){
 			if (_open) {
 				$('#t5-list-adding').slideDown();
+				$('#t5-list-adding-btn').addClass('t5-focus');
 			} else {
-				$('#t5-list-adding').slideUp({complete: cb});					
+				$('#t5-list-adding').slideUp({complete: function(){
+					$('#t5-list-adding-btn').removeClass('t5-focus');
+					if (cb)	cb();
+				}});					
 			}
 		}
 		

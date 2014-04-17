@@ -284,6 +284,10 @@ a.t5-cat-2nd:hover {
 }
 */
 /*  list adding */
+#t5-list-adding-btn.t5-focus li > a {
+  background-color: #f13d0b;
+  color: white;
+}
 /* list adding title */
 #t5-list-adding {
   position: relative;
