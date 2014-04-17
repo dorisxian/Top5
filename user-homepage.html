@@ -157,7 +157,7 @@
 		<div class="effect"></div>
 	</div>
 	<section>
-		<div id="t5-all">All
+		<div id="t5-all">
 			<section class="feed-area" >
 				<div class="container-fluid">
 					<div class="row">
@@ -166,10 +166,23 @@
 				</div>
 			</section>
 		</div>
-		<div class="hidden" id="t5-featured">Featured</div>
-		<div class="hidden" id="t5-following">Following</div>
-		<div class="hidden" id="t5-my">My Lists</div>
-		<div class="hidden" id="t5-favorite">Favorite</div>
+
+		<div class="hidden" id="t5-featured">
+			<div style="text-align: center;">Featured</div>
+		</div>
+
+		<div class="hidden" id="t5-following">
+      <div style="text-align: center;">Following</div>
+    </div>
+
+		<div class="hidden" id="t5-my">
+      <div style="text-align: center;">My Lists</div>
+    </div>
+
+		<div class="hidden" id="t5-favorite">
+      <div style="text-align: center;">Favorite</div>
+    </div>
+
 	</section>
 
 
@@ -186,6 +199,8 @@
     <script src="js/list.js" type="text/javascript"></script>
     
     <script>
+    $("#t5-cat-menu").load("parts/menu.html");
+    
 	$(document).ready(function() {
       $('.t5-ll-nav a').on('click', function(e){
         e.preventDefault();

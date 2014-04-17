@@ -238,7 +238,7 @@ a.t5-cat-2nd:hover {
 /*   list  */
 .list-item {
   width: 700px;
-  margin: 30px 50px 0;
+  margin: 30px auto 0;
   background-color: #ffffff;
   border: #f13d0b 1px solid;
 }
@@ -344,7 +344,10 @@ h3 {
 }
 body {
   background-color: #282828;
-  color: white;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
 /* --- lavalamp nav ----*/
 .t5-ll-nav {
