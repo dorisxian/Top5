@@ -31,6 +31,9 @@
 body {
   min-width: 768px;
 }
+.hidden {
+  display: none;
+}
 .centered {
   float: none;
   margin: 0 auto;

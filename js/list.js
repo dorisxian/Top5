@@ -12,8 +12,8 @@ $(function(){
 	
 	var _templateStr;
 	$.ajax({
-		url: 'parts/list_template.html'
-		//url: '../parts/list_template.html'
+		//url: 'parts/list_template.html'
+		url: '../parts/list_template.html'
 		, success: function(res){
 			$(res).appendTo($('body'));
 		}

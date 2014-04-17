@@ -1,4 +1,5 @@
-[{
+[
+{
 	"title": "Cameras"
 	, "filterClass": "camera DSLR"
 	, "user": {
@@ -21,7 +22,8 @@
 			"title": "Sony Cyber-shot DSC-RX100 II"
 			, "image": "img/items/SONY_DSC-RX100.jpg"
 	}]
-}, {
+},
+{
 	"title": "Digital Cameras"
 	, "filterClass": "camera"
 	, "user": {
@@ -44,4 +46,29 @@
 			"title": "Olympus Tough TG-2 iHS"
 			, "image": "img/items/Olympus_TG2.jpg"
 	}]
-}]
+},
+{
+	"title": "Headphone"
+	, "filterClass": "headphone"
+	, "user": {
+		"username": "Sara"
+		, "image":"img/sara.png"
+	}
+	, "items": [{
+			"title": "Bose SoundTrue"
+			, "image": "img/Bose_SoundTrue.png"
+		}, {
+			"title": "Beats Solo HD"
+			, "image": "img/items/Beats_SoloHD.png"
+		}, {
+			"title": "Skullcandy Crusher"
+			, "image": "img/items/Skullcandy_Crusher.png"
+		}, {
+			"title": "Bose Quiet Comfort 15"
+			, "image": "img/items/Bose_QuietComfort15.png"
+		}, {
+			"title": "V-MODA Crossfade M-100"
+			, "image": "img/items/V-MODA_Crossfade.png"
+	}]
+}
+]

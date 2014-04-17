@@ -1,0 +1,394 @@
+.Border {
+  border: #f13d0b 1px solid;
+}
+.Border-white {
+  border: 1px solid #ffffff;
+}
+.Circle {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+.light {
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.thin {
+  font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+}
+.superthin {
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+/* overwrit bootstrap */
+.btn {
+  border-radius: 0;
+  letter-spacing: 1px;
+}
+body {
+  min-width: 768px;
+}
+.hidden {
+  display: none;
+}
+.centered {
+  float: none;
+  margin: 0 auto;
+}
+.t5-container {
+  max-width: 750px;
+}
+.navbar {
+  margin-bottom: 0;
+}
+.fa-lg {
+  font-size: 1.7em;
+}
+.form-control {
+  border: 2px solid #f13d0b;
+}
+.navbar-form .form-control {
+  width: 330px;
+}
+input:focus {
+  color: #5e5e5e;
+  background-image: none;
+}
+.username {
+  line-height: 70px;
+  margin: 0 15px;
+  color: #7c7c7c;
+  font-size: larger;
+}
+.user-menu-text {
+  padding-left: 10px;
+  font-weight: 300;
+  font-size: larger;
+}
+.user-menu .dropdown-menu > li > a {
+  padding: 7px 20px;
+}
+.user-menu .dropdown-menu .divider {
+  margin: 0;
+}
+.btn-social:hover {
+  color: #ffffff;
+}
+.t5-nav-search input::-webkit-input-placeholder {
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.t5-nav-search input:-moz-placeholder {
+  /* Firefox 18- */
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.t5-nav-search input::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.t5-nav-search input:-ms-input-placeholder {
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.t5-nav-search {
+  position: relative;
+}
+.t5-nav-search button {
+  height: 34px;
+  width: 34px;
+  position: absolute;
+  top: 0;
+  right: 5px;
+  margin: 0;
+  border: none;
+  background-image: url("../img/search-brand.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-color: transparent;
+  outline: none;
+}
+/* custom styles for the typeahead */
+h4.t5-sr-title {
+  color: #5e5e5e;
+  background-color: #eeeeee;
+  padding: 6px 0px 3px 13px;
+  margin: 0;
+  font-size: 16px;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  width: 330px;
+}
+.tt-dropdown-menu {
+  text-align: left;
+  background-color: white;
+  width: 300px;
+  border: 1px solid #eeeeee;
+  max-height: 270px;
+  overflow-y: auto;
+  opacity: 0.97;
+}
+.tt-suggestion {
+  cursor: pointer;
+  padding-left: 14px;
+}
+.tt-suggestion:hover {
+  color: #f13d0b;
+}
+.tt-suggestion p {
+  margin: 3px 0;
+  font-size: 13.5px;
+}
+.empty-message {
+  text-align: center;
+  margin: 3px auto;
+}
+/*  Category Menu   */
+#t5-cat-menu {
+  display: inline-block;
+  position: fixed;
+  top: 110pt;
+  width: 30pt;
+  background-color: white;
+  z-index: 1000;
+  cursor: pointer;
+}
+.t5-cat-1st {
+  position: relative;
+}
+.t5-cat-1st > span {
+  display: block;
+  height: 23pt;
+  margin-left: 3pt;
+  background-color: #f13d0b;
+  cursor: default;
+  color: white;
+  text-align: center;
+  line-height: 23pt;
+}
+.t5-cat-icon {
+  max-width: 100%;
+  max-height: 100%;
+  width: 44%;
+  vertical-align: text-bottom;
+  cursor: pointer;
+}
+.t5-cat-bf {
+  width: 53%;
+}
+.t5-cat-1st:not(:last-child) > span {
+  border-bottom: 1px solid #cf3409;
+}
+.t5-cat-1st > div {
+  position: absolute;
+  left: 30pt;
+  top: 0;
+  width: 120pt;
+  padding: 0.5em 0em 0.5em 1.5em;
+  background-color: white;
+  display: none;
+}
+.t5-cat-title {
+  font-family: 'Playball', 'Monotype Corsiva', 'Gabriola', cursive, script;
+  font-size: 20px;
+  margin-left: -0.5em;
+  margin-top: -0.2em;
+  margin-bottom: 0.17em;
+  cursor: default;
+}
+.t5-cat-2nd {
+  padding: 0.2em 0;
+  white-space: nowrap;
+  vertical-align: top;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.t5-cat-2nd:hover {
+  color: #f13d0b;
+}
+a.t5-cat-2nd {
+  color: #353535;
+}
+a.t5-cat-2nd:hover {
+  text-decoration: none;
+}
+.t5-cat-1st:hover > div {
+  display: block;
+}
+.t5-cat-1st:hover > span {
+  background-color: white;
+  color: black;
+  border-right: 1px solid #eeeeee;
+}
+/* template */
+.t5-template {
+  display: none;
+}
+body {
+  background-color: #282828;
+  color: white;
+}
+/* --- lavalamp nav ----*/
+.t5-ll-nav,
+.t5-ll-nav-vertical {
+  font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+  margin: 1em auto;
+  position: relative;
+}
+.t5-ll-nav {
+  width: 900px;
+}
+.t5-ll-nav-vertical {
+  width: 320px;
+  margin-top: 100px;
+  transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  /* FF3.5+ */
+  -o-transform: rotate(270deg);
+  /* Opera 10.5 */
+  -ms-transform: rotate(270deg);
+  /* IE 9 */
+  -webkit-transform: rotate(270deg);
+  /* Opera, Chrome, and Safari */
+}
+.t5-ll-nav a,
+.t5-ll-nav-vertical a {
+  display: block;
+  position: relative;
+  float: left;
+  padding: 2em 0 2em;
+  text-decoration: none;
+  color: lightgrey;
+  -webkit-transition: .7s;
+  -moz-transition: .7s;
+  -o-transition: .7s;
+  -ms-transition: .7s;
+  transition: .7s;
+}
+.t5-ll-nav a:hover,
+.t5-ll-nav-vertical a:hover,
+.t5-ll-nav a.active {
+  color: #f13d0b;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+}
+.t5-ll-nav a {
+  width: 20%;
+}
+.t5-ll-nav-vertical a {
+  width: 25%;
+}
+.t5-ll-nav-vertical span {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 40px;
+  width: 85px;
+  text-align: right;
+  transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  /* FF3.5+ */
+  -o-transform: rotate(90deg);
+  /* Opera 10.5 */
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Opera, Chrome, and Safari */
+}
+.effect,
+.bg {
+  position: absolute;
+  right: -10%;
+  -webkit-transition: 0.7s ease-in-out;
+  -moz-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  -ms-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+}
+.t5-ll-nav a:nth-child(1).active ~ .effect {
+  left: 10%;
+}
+.t5-ll-nav a:nth-child(2).active ~ .effect {
+  left: 30%;
+}
+.t5-ll-nav a:nth-child(3).active ~ .effect {
+  left: 50%;
+}
+.t5-ll-nav a:nth-child(4).active ~ .effect {
+  left: 70%;
+}
+.t5-ll-nav a:nth-child(5).active ~ .effect {
+  left: 90%;
+}
+.t5-ll-nav a:nth-child(1):hover ~ .effect {
+  left: 10%;
+}
+.t5-ll-nav a:nth-child(2):hover ~ .effect {
+  left: 30%;
+}
+.t5-ll-nav a:nth-child(3):hover ~ .effect {
+  left: 50%;
+}
+.t5-ll-nav a:nth-child(4):hover ~ .effect {
+  left: 70%;
+}
+.t5-ll-nav a:nth-child(5):hover ~ .effect {
+  left: 90%;
+}
+.t5-ll-nav-vertical a:nth-child(1):hover ~ .effect {
+  left: 12.5%;
+}
+.t5-ll-nav-vertical a:nth-child(2):hover ~ .effect {
+  left: 37.5%;
+}
+.t5-ll-nav-vertical a:nth-child(3):hover ~ .effect {
+  left: 62.5%;
+}
+.t5-ll-nav-vertical a:nth-child(4):hover ~ .effect {
+  left: 87.5%;
+}
+/* ----- dot style -----*/
+.ph-dot-nav:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 1.3pt;
+  background: #F13D0B;
+  bottom: 30px;
+}
+.ph-dot-nav a:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  bottom: 28px;
+  left: 50%;
+  margin-left: -2px;
+  background: #F13D0B;
+  border-radius: 100%;
+}
+.ph-dot-nav .effect {
+  width: 12px;
+  height: 12px;
+  bottom: 25px;
+  margin-left: -5px;
+  background: #F13D0B;
+  border-radius: 100%;
+}
