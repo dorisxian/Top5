@@ -112,6 +112,7 @@ $(function(){
 				$('#t5-la-image-file').click();
 			});
 			$('#t5-la-image-file').on('change', function(ev) {
+				/*
 			    var f = ev.target.files[0];
 			    var fr = new FileReader();
 			
@@ -122,6 +123,25 @@ $(function(){
 			    };
 			
 			    fr.readAsDataURL(f);
+			    */
+			   	
+				if ($(this).val() === '') return;
+				if (!window.FormData) return;
+				var formData = new FormData($('#t5-la-image-form').get(0));
+				$.ajax({
+					url: "svc/image_upload.php",
+					type: "POST",
+					data: formData,
+					processData: false,
+					contentType: false,  
+					success: function (res) {
+				        $('#t5-la-item-image img').attr('src', res);
+				        $('#t5-la-item-image').addClass('t5-filled');
+					}
+				});
+				
+			   
+			   
 			});
 			
 			
