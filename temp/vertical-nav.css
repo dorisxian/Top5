@@ -1,17 +1,19 @@
 
 /* --- basic styles ----*/
 
+/*
 body {
   background: #292828;
   color: white;
 }
+*/
 .hidden{
   display: none;
 }
 
 /* --- lavalamp nav ----*/
 .t5-ll-nav-vertical {
-	font-family: "HelveticaNeue-Thin", "Helvetica Neue Thin";
+	font-family: HelveticaNeueThin, "HelveticaNeue-Thin", "Helvetica Neue Thin";
 	font-size: 20px;
 	text-align: center;
 	overflow: hidden;
