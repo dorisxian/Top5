@@ -661,6 +661,9 @@ img.t5-la-cat-icon {
   text-align: center;
   color: inherit;
   letter-spacing: 1px;
+  font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
 }
 .modal-body {
   padding-top: 0;

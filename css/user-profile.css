@@ -345,10 +345,15 @@ a.t5-cat-2nd:hover {
 body {
   width: 100%;
   background-color: #282828;
+  overflow-x: hidden;
 }
 #t5-list-adding {
+  position: absolute;
+  width: 100%;
+  top: 0;
   margin-top: 70px;
   margin-bottom: 0;
+  z-index: 100;
 }
 #t5-user > div,
 #t5-tabs > div {
@@ -365,6 +370,7 @@ body {
   width: 100%;
   background-color: #282828;
   top: 70px;
+  z-index: 50;
 }
 #t5-tabs {
   top: 320px;
@@ -473,7 +479,6 @@ body {
 #t5-tabs,
 #t5-tabs > div {
   position: relative;
-  z-index: -1000;
 }
 #t5-lavalamp {
   position: fixed;
@@ -491,6 +496,7 @@ body {
   background-color: #eeeeee;
 }
 .t5-tab-head h2 {
+  font-size: 36px;
   padding: 10px;
   font-family: 'Playball', 'Monotype Corsiva', 'Gabriola', cursive, script;
   text-align: center;
