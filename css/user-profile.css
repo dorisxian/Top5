@@ -342,6 +342,25 @@ a.t5-cat-2nd:hover {
   color: #a9a9a9;
   margin-left: 5px;
 }
+#toTop {
+  right: 30px;
+  bottom: -10px;
+  background: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  /* transition */
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
 body {
   width: 100%;
   background-color: #282828;
@@ -491,9 +510,9 @@ body {
   top: 318px;
 }
 #t5-setting {
-  position: absolute;
-  top: 380px;
-  left: 120px;
+  position: fixed;
+  bottom: 10px;
+  left: 245px;
   color: white;
   font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
   font-weight: 200;
