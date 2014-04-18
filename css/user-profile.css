@@ -480,10 +480,29 @@ body {
 #t5-tabs > div {
   position: relative;
 }
-#t5-lavalamp {
+#t5-tabs-left {
   position: fixed;
   left: 130px;
   top: 318px;
+}
+#t5-setting {
+  position: absolute;
+  top: 380px;
+  left: 120px;
+  color: white;
+  font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  color: #eeeeee;
+  cursor: pointer;
+}
+#t5-setting:hover {
+  color: #f13d0b;
+}
+#t5-setting span {
+  margin: 8px;
+  vertical-align: middle;
 }
 .t5-profile-tab {
   margin-left: 30px;
