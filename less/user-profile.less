@@ -3,6 +3,7 @@
 body{
   width:100%;
   background-color: @gray-darker;
+  overflow-x:hidden;
 }
 
 #t5-list-adding
@@ -29,11 +30,16 @@ body{
   width:100%;
   background-color:@gray-darker;
   top:70px;
+  z-index:50;
 }
 #t5-tabs
 {
   top:320px;
 }
+#t5-tabs section
+{
+}
+
 
 
 #t5-user
@@ -165,7 +171,6 @@ body{
 #t5-tabs, #t5-tabs > div
 {
   position:relative;
-  z-index:-1000;
 }
 
 #t5-lavalamp
@@ -191,6 +196,7 @@ body{
 }
 .t5-tab-head h2
 {
+  font-size:36px;
   padding:10px;
   font-family:@font-family-serif;
   text-align:center;
