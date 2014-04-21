@@ -1,6 +1,7 @@
 [
 {
-	"title": "Cameras"
+	"id":0
+	, "title": "Cameras"
 	, "filterClass": "camera DSLR"
 	, "user": {
 		"username": "Dolly"
@@ -24,7 +25,8 @@
 	}]
 },
 {
-	"title": "Digital Cameras"
+	"id":1
+	, "title": "Digital Cameras"
 	, "filterClass": "camera"
 	, "user": {
 		"username": "Sara"
@@ -48,7 +50,8 @@
 	}]
 },
 {
-	"title": "Headphone"
+	"id":2
+	, "title": "Headphone"
 	, "filterClass": "headphone"
 	, "user": {
 		"username": "Sara"
