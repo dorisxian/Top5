@@ -23,9 +23,11 @@ $(function(){
 	$.top5.List = function(data, container){
 		var _data = data;
 		var _container = container;
+		var _ele;
 		
 		function init(){
 			var ele = $('#t5-list-template').clone().removeAttr('id').removeClass('t5-template');
+			_ele = ele;
 			ele.prependTo(_container);
 			if (_container.isotope) _container.isotope('prepended', ele);
 			
@@ -49,17 +51,28 @@ $(function(){
 				ele.find(specific).removeClass('hidden');
 			});
 			
-			
-			var selected = false;
+			render_fav();
 			ele.find('.t5-list-heart').click(function(){
-				selected = !selected;
-				if (selected) {
-					$(this).addClass('t5-selected');
-				} else {
-					$(this).removeClass('t5-selected');					
-				}
+				_data.fav = !_data.fav;
+				render_fav();
+				$.post('svc/fav.php', {id:_data.id, fav:_data.fav});
 			});
+			
+			
+			
 		}
+		
+		function render_fav(){
+			var heart = _ele.find('.t5-list-heart');
+			if (_data.fav) {
+				heart.addClass('t5-selected');
+			} else {
+				heart.removeClass('t5-selected');					
+			}
+		}
+		
+		
+		
 		init();
 	};
 });

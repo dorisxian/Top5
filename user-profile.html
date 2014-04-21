@@ -277,6 +277,11 @@
       			if (listData.user.username === "Dolly")
 	      			var list = new $.top5.List(listData, $('#t5-mylist-tab .t5-tab-feed'));
       		});
+      		
+      		$.each(listsData, function(index, listData){
+      			if (listData.fav)
+	      			var list = new $.top5.List(listData, $('#t5-fav-tab .t5-tab-feed'));
+      		});
       	})	
       
     });
