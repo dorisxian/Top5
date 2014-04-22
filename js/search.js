@@ -27,7 +27,7 @@ $(document).ready(function () {
 	$.ajax({
         'async': false,
         'global': false,
-        'url': "../data/people.json",
+        'url': "data/people.json",
         'dataType': "json",
         'success': function (data) {
             ppl = data;
@@ -40,7 +40,7 @@ $(document).ready(function () {
 	$.ajax({
         'async': false,
         'global': false,
-        'url': "../data/items.json",
+        'url': "data/items.json",
         'dataType': "json",
         'success': function (data) {
             item = data;
