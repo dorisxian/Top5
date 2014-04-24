@@ -6,7 +6,7 @@
 
 
 	$imageFile = $_FILES['t5-la-image-file'];
-	if (!move_uploaded_file($imageFile['tmp_name'], '../img/'.$imageFile['name'])) {
+	if (!move_uploaded_file($imageFile['tmp_name'], '../item_img/'.$imageFile['name'])) {
 		echo "UploadFaile";
 		exit;
 	}

@@ -31,6 +31,9 @@
 body {
   min-width: 768px;
 }
+.hidden {
+  display: none;
+}
 .centered {
   float: none;
   margin: 0 auto;
@@ -232,37 +235,14 @@ a.t5-cat-2nd:hover {
 .t5-template {
   display: none;
 }
-body {
-  background-color: #282828;
-}
-.hidden {
-  display: none;
-}
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
-h2 {
-  font-family: 'Playball', 'Monotype Corsiva', 'Gabriola', cursive, script;
-  color: #ffffff;
-  text-align: center;
-  line-height: 70px;
-}
-.topic-filters {
-  background-color: #353535;
-  padding: 20px;
-}
-.topic-filters .btn-info {
-  padding: 2px 20px;
-  margin: 7px;
-}
+/*   list  */
 .list-item {
   width: 700px;
-  margin: 30px 50px 0;
+  margin: 30px auto 0;
   background-color: #ffffff;
   border: #f13d0b 1px solid;
 }
-h3 {
+.list-item h3 {
   font-weight: 200;
   color: #f13d0b;
   margin-left: 20px;
@@ -361,4 +341,52 @@ h3 {
 .t5-functions .fa {
   color: #a9a9a9;
   margin-left: 5px;
+}
+#toTop {
+  right: 30px;
+  bottom: -10px;
+  background: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  /* transition */
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+body {
+  background-color: #282828;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+h2 {
+  font-family: 'Playball', 'Monotype Corsiva', 'Gabriola', cursive, script;
+  color: #ffffff;
+  text-align: center;
+  line-height: 70px;
+}
+.topic-filters {
+  background-color: #353535;
+  padding: 20px;
+}
+.topic-filters .btn-info {
+  padding: 2px 20px;
+  margin: 7px;
+}
+#t5-placeholder {
+  display: none;
+  color: white;
+  text-align: center;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
 }

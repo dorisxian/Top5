@@ -6,4 +6,9 @@ $(".t5-cat-1st")
     .mouseleave(function () {
         var path_light = $(this).find(".t5-cat-icon").attr("src").replace("dark", "light");
         $(this).find(".t5-cat-icon").attr('src', path_light);
-    });
+    })
+
+$(".t5-cat-2nd").click(function(){
+	window.location.href = "category.html?cat=" + $(this).html();
+});
+   
