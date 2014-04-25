@@ -30,6 +30,7 @@
 }
 body {
   min-width: 768px;
+  padding-top: 70px;
 }
 .hidden {
   display: none;
@@ -343,6 +344,7 @@ a.t5-cat-2nd:hover {
   margin-left: 5px;
 }
 #toTop {
+  display: none;
   right: 30px;
   bottom: -10px;
   background: white;

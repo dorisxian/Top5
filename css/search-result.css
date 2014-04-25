@@ -30,6 +30,10 @@
 }
 body {
   min-width: 768px;
+  padding-top: 70px;
+}
+.hidden {
+  display: none;
 }
 .centered {
   float: none;
@@ -231,6 +235,133 @@ a.t5-cat-2nd:hover {
 /* template */
 .t5-template {
   display: none;
+}
+/*   list  */
+.list-item {
+  width: 700px;
+  margin: 30px auto 0;
+  background-color: #ffffff;
+  border: #f13d0b 1px solid;
+}
+.list-item h3 {
+  font-weight: 200;
+  color: #f13d0b;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.t5-list-heart {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  vertical-align: baseline;
+  cursor: pointer;
+  background-image: url(../img/heart.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/*
+.t5-list-heart:hover
+{
+  background-image:url(../img/heart-highlight.png);  
+}
+*/
+.t5-list-heart.t5-selected {
+  background-image: url(../img/heart-highlight.png);
+}
+.t5-cateicon {
+  font-size: 2.2em;
+  margin-right: 14px;
+  margin-top: 12px;
+}
+.t5-user-pic {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border: #f13d0b 1px solid;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  padding: 3px;
+}
+.t5-item-image-wrap {
+  margin-left: 27px;
+  height: 120px;
+  margin-top: -23px;
+}
+.t5-item-image {
+  border: #f13d0b 1px solid;
+  object-fit: cover;
+  background-color: #ffffff;
+  padding: 3px;
+  max-width: 100%;
+  max-height: 100%;
+}
+.t5-ranking-box {
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Playball', 'Monotype Corsiva', 'Gabriola', cursive, script;
+  margin: 1px 5px;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  color: white;
+}
+.t5-ranking-num {
+  vertical-align: middle;
+}
+.t5-1st {
+  background-color: #ea3b0b;
+}
+.t5-2nd {
+  background-color: #f44819;
+}
+.t5-3rd {
+  background-color: #f56239;
+}
+.t5-4th {
+  background-color: #f77c59;
+}
+.t5-5th {
+  background-color: #f9967a;
+}
+.t5-list-item {
+  display: inline-block;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  color: #5e5e5e;
+  vertical-align: middle;
+}
+.t5-functions {
+  float: right;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.t5-functions .fa {
+  color: #a9a9a9;
+  margin-left: 5px;
+}
+#toTop {
+  display: none;
+  right: 30px;
+  bottom: -10px;
+  background: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  /* transition */
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 body {
   background-color: #282828;

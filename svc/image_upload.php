@@ -10,7 +10,7 @@
 		echo "UploadFaile";
 		exit;
 	}
-	$image = 'img/'.$imageFile['name'];
+	$image = 'item_img/'.$imageFile['name'];
 	
 	echo $image;
 	
