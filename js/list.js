@@ -57,6 +57,7 @@ $(function(){
 				render_fav();
 				$.post('svc/fav.php', {id:_data.id, fav:_data.fav});
 				$.top5.fav = _data;
+				$.top5.container = _container;
 				$('body').trigger('t5-fav');
 			});
 			

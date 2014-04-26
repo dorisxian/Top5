@@ -187,7 +187,8 @@
 	  $('body').bind('t5-fav', function(){
 			setTimeout(function(){
 		      load_lists(listsMap.fav);
-		      load_lists(listsMap.my);
+			  if(!$.top5.container.is(listsMap.my.container))
+			      load_lists(listsMap.my);
 			}, 500);
 		});
 	  $('body').bind('t5-la', function(){
