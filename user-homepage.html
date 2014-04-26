@@ -103,6 +103,9 @@
 			if ($.cookie("username") === 'Dolly') {
 				$('#t5-navbar-login').addClass('hidden');
 				$('#t5-navbar-name').removeClass('hidden');
+			} else {
+				$('.ph-dot-nav a').eq(3).hide();
+				$('.ph-dot-nav a').eq(4).hide();				
 			}
 		});
 		
