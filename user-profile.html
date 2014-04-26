@@ -274,7 +274,7 @@
       
       	$.getJSON("data/lists.json", function(listsData){
       		$.each(listsData, function(index, listData){
-      			if (listData.user.username === "Dolly")
+      			if (listData.user.username === "Dolly") 
 	      			var list = new $.top5.List(listData, $('#t5-mylist-tab .t5-tab-feed'));
       		});
       		
