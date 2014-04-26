@@ -46,8 +46,14 @@ input:focus {
 .username{
 	line-height: @navbar-height;
 	margin: 0 15px;
-	color: darken(@gray-light, 10%);
-	font-size: larger;
+  color: darken(@gray-light, 10%);
+  font-size: larger;
+}
+.username a{
+  color:inherit !important;
+}
+.username a:hover{
+  color:white !important;
 }
 .user-menu-text{
 	padding-left: 10px;
@@ -361,3 +367,5 @@ a.t5-cat-2nd{
   -moz-box-shadow: 0 2px 2px rgba(0,0,0,0.5);
   box-shadow: 0 2px 2px rgba(0,0,0,0.5);
 }
+
+

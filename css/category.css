@@ -64,6 +64,12 @@ input:focus {
   color: #7c7c7c;
   font-size: larger;
 }
+.username a {
+  color: inherit !important;
+}
+.username a:hover {
+  color: white !important;
+}
 .user-menu-text {
   padding-left: 10px;
   font-weight: 300;
