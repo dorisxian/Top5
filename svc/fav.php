@@ -24,7 +24,4 @@ $output = "../data/lists.json";
 file_put_contents($output, json_encode($json));
 
 
-
-echo 'here';
-
 ?>

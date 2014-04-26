@@ -8,12 +8,12 @@
 	$input = "../data/lists.json";
 	$json = json_decode(file_get_contents($input));
 	
+	//echo var_dump(current($json));
 	$lastId = end($json)->id;
 	
 	$num = array_push($json, $_POST);
 	
-	$new = (array)$json[$num - 1];
-	$new['id'] = $lastId + 1;
+	(array)$json[$num - 1]['id'] = $lastId + 1;
 	
 	
 	$output = "../data/lists.json";
@@ -24,7 +24,7 @@
 	
 	$input = "../data/items.json";
 	$json = json_decode(file_get_contents($input));
-	foreach($new['items'] as $item){
+	foreach($_POST['items'] as $item){
 		array_push($json, $item['title']);
 	}	
 	$output = "../data/items.json";
