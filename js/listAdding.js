@@ -45,6 +45,7 @@ $(function(){
 				//url: '../parts/list_adding.html'
 				, success: function(res){
 					$(res).appendTo($('#t5-list-adding'));
+					$('#t5-la-url-modal').appendTo($('body'));
 				}
 				,async: false
 			});
@@ -96,7 +97,8 @@ $(function(){
 				return item;
 			})();
 			// applied typeahead to the text input box
-		
+
+/*
 			$('#t5-la-item-input').typeahead({
 				hint: true,
 				highlight: true,
@@ -106,6 +108,7 @@ $(function(){
 				displayKey: 'value',
 				source: substringMatcher(item)
 			});
+			*/
 			
 			// item form
 			$('.t5-la-image-icon:nth-child(1)').click(function(){
