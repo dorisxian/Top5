@@ -212,7 +212,9 @@ $(function(){
 				});
 				// send data
 				$.post('svc/list_adding.php', _data, function(res){
-					var list = new $.top5.List(_data, $('#feed'));
+					//var list = new $.top5.List(_data, $('#feed'));
+					$.top5.la = _data;
+					$('body').trigger('t5-la');
 				});
 				
 				_open = false;

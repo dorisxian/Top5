@@ -159,15 +159,44 @@
       
       
       
-      	$.getJSON("data/lists.json", function(listsData){
-      		$.each(listsData, function(index, listData){
-      			if (listData.user.username === "Dolly") 
-	      			var myList = new $.top5.List(listData, $('#t5-mylist-tab .t5-tab-feed'));
-      			if (listData.fav)
-	      			var favList = new $.top5.List(listData, $('#t5-fav-tab .t5-tab-feed'));
-      		});
-      	})	
-      
+      function load_lists(opts){
+      	opts.container.empty();
+		$.getJSON("data/lists.json", function(listsData){
+			$.each(listsData, function(index, listData){
+	  			if (!opts.pd || opts.pd(listData))
+					var list = new $.top5.List(listData, opts.container);
+			});
+		});
+      }
+      var listsMap = {
+      	my:{
+      		container: $('#t5-mylist-tab .t5-tab-feed')
+      		, pd: function(listData){
+			  	return listData.user.username === "Dolly"; 
+		     }
+      	},fav:{
+      		container:  $('#t5-fav-tab .t5-tab-feed')
+      		, pd: function(listData){
+			  	return listData.fav;
+		    }
+      	}  
+      }
+      load_lists(listsMap.my);
+      load_lists(listsMap.fav);
+		
+	  $('body').bind('t5-fav', function(){
+			setTimeout(function(){
+		      load_lists(listsMap.fav);
+		      load_lists(listsMap.my);
+			}, 500);
+		});
+	  $('body').bind('t5-la', function(){
+			setTimeout(function(){
+		      load_lists(listsMap.my);
+			}, 500);
+		});
+
+            
     });
     </script>
   </body>
