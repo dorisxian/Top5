@@ -58,12 +58,24 @@
       <div style="text-align: center;">Following</div>
     </div>
 
-		<div class="hidden" id="t5-my">
-      <div style="text-align: center;">My Lists</div>
+	<div class="hidden" id="t5-my">
+	  <section class="feed-area" >
+			<div class="container-fluid">
+				<div class="row">
+					<div id="feed" class="col-md-8 col-md-offset-2"></div>
+				</div>
+			</div>
+	  </section>
     </div>
 
-		<div class="hidden" id="t5-favorite">
-      <div style="text-align: center;">Favorite</div>
+	<div class="hidden" id="t5-favorite">
+	  <section class="feed-area" >
+			<div class="container-fluid">
+				<div class="row">
+					<div id="feed" class="col-md-8 col-md-offset-2"></div>
+				</div>
+			</div>
+	  </section>
     </div>
 
 	</section>
@@ -108,7 +120,11 @@
       
 		$.getJSON("data/lists.json", function(listsData){
 			$.each(listsData, function(index, listData){
-				var list = new $.top5.List(listData, $('#feed'));
+				var list = new $.top5.List(listData, $('#t5-all #feed'));
+      			if (listData.user.username === "Dolly") 
+      				var mylist = new $.top5.List(listData, $('#t5-my #feed')); 
+      			if (listData.fav)
+	      			var favList = new $.top5.List(listData, $('#t5-favorite #feed'));
 			});
 		});
       
