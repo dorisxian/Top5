@@ -187,7 +187,8 @@ h6 {
 .eth-op,
 .income-op,
 .prof-op,
-.edu-op {
+.edu-op,
+.org-op {
   margin-bottom: -9px;
 }
 .checkbox,

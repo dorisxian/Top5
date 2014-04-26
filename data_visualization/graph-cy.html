@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Visualization Graph</title>
+    
+    <!-- jquery UI -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	
+	<link rel="stylesheet" href="https://rawgithub.com/novus/nvd3/master/src/nv.d3.css">
+	
+	<link rel="stylesheet" href="css/graph.css">
+
+	<link href="css/checkbox-ui.css" rel="stylesheet">
+	
+	<style>
+
+	</style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>    
+	
+	<!--
+	<script src="lib/flot/jquery.flot.js"></script>    
+	-->
+	
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="https://rawgithub.com/novus/nvd3/master/nv.d3.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
+	
+    <script src="js/flatui-checkbox.js"></script>
+	<script>
+	
+$(function(){
+	
+	//$.plot($("#graph-timeline"), [ [[0, 0], [1, 1]] ], { yaxis: { max: 1 } });
+	
+	var _range = 700;
+	
+	function generate_data(){
+		var data = [];
+		var pNum = 118;
+		for (var i = 0; i < pNum; i ++) {
+			var p = {};
+			p.lines = [];
+			var num = Math.ceil((Math.random() + Math.random())/2 * 3);
+			for (var j = 0; j < num; j++) {
+				var l = {}
+				l.start = Math.floor(Math.random() * (_range - 100));
+				l.len = Math.floor(Math.random() * 200);
+				l.height = Math.floor(Math.random() * 24); 
+				p.lines.push(l);
+			}
+			data.push(p);
+			
+		}
+		
+		function SortByStart(a, b){
+			var amin = Math.min.apply(Math, _.map(a.lines, function(l){ return l.start; }));
+			var bmin = Math.min.apply(Math, _.map(b.lines, function(l){ return l.start; }));
+			//return a.lines[0].start <= b.lines[0].start;
+			return amin <= bmin;
+		}
+		data.sort(SortByStart);
+		
+		for (var i = 0; i < pNum; i ++) {
+			var val = Math.floor(Math.random() * 6) + 1;
+			if (i > 70 && i < 90){
+				data[i].org = Math.random() < 0.7 ? 4 : val;
+			} else {
+				data[i].org = val;
+			}
+		}
+		
+		
+		
+		return data;
+	}
+	
+	/*
+	var data = generate_data();
+	$('#output').val(JSON.stringify(data));
+	*/
+	
+	var data;
+	$.ajax({
+	  url: 'data.json'
+	  , success: function(res){
+	  	data = res;
+	  }
+	  , async:false
+	  , dataType:'json'
+	});
+	
+	var profiles = [{
+		first_name: "Penny"
+		, last_name: 'Erdtmann'
+		, loc: "Troy, NY"
+		, image: 'img/penny.png'
+		/*
+		, location1:'110 8th Street'
+		, location2:'Troy, New York, 12180'
+		, cell: '(518) 209-2433'
+		, age:23
+		, gender: 'Female'
+		, mar: 'Single'
+		, eth: 'Caucasian'
+		, edu: 'College'
+		, prof: 'Retail'
+		, employ:'Part time'
+		, income: '$30,000 - 49,999'
+		*/
+		,sel:'#profile-1'
+	}, {
+		first_name: "Eric"
+		, last_name: 'Mehiel'
+		, loc: "Latham, NY"
+		, image: 'img/eric.png'
+		,sel:'#profile-2'
+	}, {
+		first_name: "Justin"
+		, loc: "Albany, NY"
+		, image: 'img/justin.png'
+		, sel:'#profile-3'
+	}, {
+		first_name: "Anonymous"
+		, loc: ""
+		, image: 'img/default_profile_image.png'
+		, sel:'#profile-4'
+	}];
+	
+	function populate(data, age){
+		
+	
+	var _selectedPerson, _hoverPerson;
+	$.each(data, function(index, p){
+		var person = $('#person-template').clone().removeClass('template').attr('id', undefined).appendTo($('#persons')).mouseenter(function(){
+			if (!$(this).hasClass('selected')) {
+				if (_hoverPerson) _hoverPerson.find('.line').trigger('local-zoom-leave');
+				_hoverPerson = $(this);
+				_hoverPerson.find('.line').trigger('local-zoom');				
+			}
+		});
+		
+		// color code
+		var className;
+		// let 1/5 people be outliers
+		var random = Math.floor(Math.random() * 5);
+		if (random === 4) className = 'org-7';
+		else  className = 'org-' + p.org;
+		person.addClass(className); 
+		
+		
+		
+		var num_p = age ? 3 : 4;
+		var i = Math.floor(Math.random() * num_p);
+		person.find('.person-image').attr('src', profiles[i].image);
+		person.find('.person-name').html(profiles[i].first_name);
+		person.find('.person-loc').html(profiles[i].loc);
+		person.click(function(){
+			if (_selectedPerson){
+				 _selectedPerson.removeClass('selected');
+				_selectedPerson.find('.line').trigger('local-zoom-leave');				 
+			}
+			_selectedPerson = person;
+			_selectedPerson.addClass('selected');
+			_selectedPerson.find('.line').trigger('local-zoom');				 
+			$('#profile').empty();
+			$(profiles[i].sel).clone().appendTo($('#profile'));
+			if (_hoverPerson && _hoverPerson.get(0) === _selectedPerson.get(0)) _hoverPerson = undefined;
+		});
+		
+		
+		var lines = person.find('.lines');
+		
+		var ratio = 29 / 24;
+		$.each(p.lines, function(index, l){
+			var tooltipStr = '<div><b>Start</b><span>3/27</span></div>'
+					   + '<div><b>End</b><span>10/30</span></div>'
+					   + '<div><b>h/Day</b><span>' + Math.floor(l.height / 3) + '</span></div>';
+					   
+			var line = $('#line-template').clone().removeClass('template').attr('id', undefined).appendTo(lines).css({
+				'left': l.start + 24
+				, 'width': l.len
+				, 'height': Math.floor((l.height + 1) / 8)
+			}).bind('local-zoom', function(){
+				$(this).height(l.height * ratio);
+			}).bind('local-zoom-leave', function(){
+				$(this).height(Math.floor((l.height + 1) / 8));
+			}).tooltip({title:tooltipStr, placement:'bottom', html:true});
+			
+
+		});			   
+		
+		
+	});
+	
+	
+	$('.person').get(39).click();
+	}
+	
+	populate(data);
+	
+	
+	var overhead = 10;
+	var len = (_range - overhead) / 5;
+	$('.time-label').each(function(index){
+		var left; 
+		if (index === 0) left = 0;
+		else left = len * index + overhead;
+		$(this).css('left', left);
+	});	
+	
+	// number chart
+	
+	nv.addGraph(function() {
+	  var chart = nv.models.lineChart()
+	                .margin({left: 70})
+	                .useInteractiveGuideline(true)
+	                .transitionDuration(100)
+	                .showLegend(true)
+	                .showYAxis(true) 
+	                .showXAxis(false)
+					.forceY([0,7000])
+	  ;
+	
+	  chart.yAxis
+	      .tickFormat(d3.format('d')).range([0, 10000]);
+      
+	  var myData = people_num();
+	
+	  d3.select('#graph-number svg')  
+	      .datum(myData)
+	      .call(chart);
+	
+	  nv.utils.windowResize(function() { chart.update() });
+	  
+	  // customized x axis
+	  $('#time-axis').clone().appendTo($('#graph-number'));
+	  
+	  // time range selector
+	  var offset = $('#graph-number rect').offset();
+	  var height = $('#graph-number rect').attr('height');
+	  var width = $('#graph-number rect').attr('width');
+	  $('#time-range-contain').css({'left': offset.left, 'top': offset.top, 'height':parseInt(height), 'width':width});
+	  $('#time-range').resizable({
+			containment:'#time-range-contain'
+			, handles: "e, w"
+			, resize: function(evt, ui){
+				//self.renderBand();
+			}
+		}).draggable({
+			containment:'#time-range-contain'
+			, axis: 'x'
+			, drag: function(evt, ui){
+				//self.renderBand();
+			}
+		});
+	  
+	  return chart;
+	});
+	
+	
+	function people_num() {
+	  var num = [];
+	 
+	  for (var i = 0; i < 1000; i++) {
+	  	/*
+	  	var y, wave = 100;
+	  	if (i < 600) {
+	  		var t = i/600;
+			y = 3500 * (1 - t) + 5000 * t + ( Math.random() - 1 ) * wave;	
+	  	}
+	  	else if (i >= 600 && i < 1000) {
+	  		var t = (i - 600)/400;
+			y = 5000 * (1 - t) + 4000 * t + ( Math.random() - 1 ) * wave;	
+	  	}
+	  	*/
+	  	var y;
+	  	if ( i === 0) y = 500;
+	  	else if (i < 200) {
+	  		y = num[i-1].y + (Math.random() - 0.3) * 100;
+	  	} else if (i < 400) {
+	  		y = num[i-1].y + (Math.random() - 0.4) * 50;
+	  	} else if (i < 600) {
+	  		y = num[i-1].y + (Math.random() - 0.5) * 50;
+	  	} else if (i < 700) {
+	  		y = num[i-1].y + (Math.random() - 0.6) * 100;
+	  	} else if (i < 1000) {
+	  		y = num[i-1].y + (Math.random() - 0.6) * 50;
+	  	}
+	  	y = Math.floor(y);
+
+	    num.push({x: i, y: y});
+	  }
+
+	  return [
+	    {
+	      values: num,      //values - represents the array of {x,y} data points
+	      key: 'Number of Volunteers', //key  - the name of the series.
+	      color: '#2C97DE'  //color - optional: choose your own line color.
+	    }
+	  ];
+	}
+	
+	
+	$('#age25').click(function(){
+		$("#persons").empty();
+		$('#ageall').removeClass('checked');
+		var data;
+		$.ajax({
+		  url: 'data2.json'
+		  , success: function(res){
+		  	data = res;
+		  }
+		  , async:false
+		  , dataType:'json'
+		});
+		populate(data, true);
+	});
+
+	$('#ageall').click(function(){
+		$("#persons").empty();
+		$('#age25').removeClass('checked');
+		var data;
+		$.ajax({
+		  url: 'data.json'
+		  , success: function(res){
+		  	data = res;
+		  }
+		  , async:false
+		  , dataType:'json'
+		});
+		populate(data);
+	});
+});	
+	$( "#filter" ).scroll();
+
+	</script>
+
+  </head>
+  <body>
+<!--
+  	<textarea id='output'>
+  	</textarea>
+  -->
+
+	<h1>Salt Recovery Volunteer Statistics</h1>
+  	
+	<div class='person template' id='person-template'>
+		<div class='lines'>
+		</div>
+		<img class='person-image' src='img/penny.png'></img>
+		<span class='person-name'>Penny</span>
+		<span class='person-loc'>Troy, NY</span>
+	</div>
+	<span id='line-template' class='line template'>
+		<span class='line-start'>3/25</span>
+		<span class='line-end'>5/30</span>
+		<span class='line-hour'>4h/day</span>
+	</span>
+	
+	<!--
+	<span id='test'>fsdsaf</span>
+	-->
+	<div class="row">
+		<div class="col-lg-2">
+			<img src="img/filter.png" alt="" style="vertical-align: bottom; height: 32px; margin-left: 38px; margin-top: 15px; margin-right: 5px;"><span class="h3 condense-font">Filter</span>
+		</div>
+		<div class="col-lg-7">
+			<img src="img/graph.png" alt="" style="vertical-align: bottom; height: 32px; margin-left: 90px; margin-top: 15px; margin-right: 5px;"><span class="h3 condense-font">Graph</span>
+		</div>
+		<div class="col-lg-2">
+			<img src="img/user.png" alt="" style="vertical-align: bottom; height: 32px; margin-left: 59px; margin-top: 15px; margin-right: 5px;"><span class="h3 condense-font">Profile</span>
+		</div>
+	</div>
+	
+
+  	<div id='body' class='dv-container'>
+		<div id='filter' class='col-lg-2 panel panel-default'>
+			<h6>Age</h6>
+	        <div class='filter-panel'>
+	            <div class="a_row">
+	              <span class="checkbox age-op" id='ageall'>
+	                <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	              </span>
+	              <span class="checkbox age-op">
+	                <input type="checkbox" data-toggle="checkbox">15-24
+	              </span>
+	            </div>
+	            <div class="a_row">
+	              <span class="checkbox age-op" id='age25'>
+	                <input type="checkbox" data-toggle="checkbox">25-34
+	              </span>
+	              <span class="checkbox age-op">
+	                <input type="checkbox" data-toggle="checkbox">35-44
+	              </span>
+	            </div>
+	            <div class="a_row">
+	              <span class="checkbox age-op">
+	                <input type="checkbox" data-toggle="checkbox">45-54
+	              </span>
+	              <span class="checkbox age-op">
+	                <input type="checkbox" data-toggle="checkbox">55 or elder
+	              </span>
+	            </div>
+	        </div>
+	        
+	        <h6>Gender</h6>
+	        <div class='filter-panel'>
+	            <div class="a_row">
+	              <span class="checkbox gender-op">
+	                <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	              </span>
+	              <span class="checkbox gender-op">
+	                <input type="checkbox" data-toggle="checkbox">Male
+	              </span>
+	              <span class="checkbox gender-op">
+	                <input type="checkbox" data-toggle="checkbox">Female
+	              </span>
+	            </div>
+	        </div>
+	        
+	        <h6>Marital Status</h6>
+	        <div class='filter-panel'>
+	            <div class="a_row">
+	              <span class="checkbox ms-op">
+	                <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	              </span>
+	              <span class="checkbox ms-op">
+	                <input type="checkbox" data-toggle="checkbox">Other
+	              </span>
+	            </div>
+	            <div class="a_row">
+	              <span class="checkbox ms-op">
+	                <input type="checkbox" data-toggle="checkbox">Married
+	              </span>
+	              <span class="checkbox ms-op">
+	                <input type="checkbox" data-toggle="checkbox">Single
+	              </span>
+	            </div>
+	        </div>
+
+	        <h6>Ethnicity</h6>
+	        <div class='filter-panel'>    
+	          <span class="checkbox eth-op">
+	            <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	          </span>
+	          <span class="checkbox eth-op">
+	            <input type="checkbox" data-toggle="checkbox">Asian or Pacific Islander
+	          </span>
+	          <span class='checkbox eth-op'>
+	            <input type='checkbox' data-toggle="checkbox">Black or African American
+	          </span>
+	          <span class='checkbox eth-op'>
+	            <input type='checkbox' data-toggle="checkbox">Caucasion
+	          </span>
+	          <span class='checkbox eth-op'>
+	            <input type='checkbox' data-toggle="checkbox">Hispanic or Latino
+	          </span>
+	          <span class='checkbox eth-op'>
+	            <input type='checkbox' data-toggle="checkbox">Other
+	          </span>
+	        </div>
+
+	        <h6>Education</h6>
+	        <div class='filter-panel'>
+	          <span class="checkbox edu-op">
+	            <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	          </span>
+	          <span class="checkbox edu-op">
+	            <input type="checkbox" data-toggle="checkbox">High School
+	          </span>
+	          <span class="checkbox edu-op">
+	            <input type="checkbox" data-toggle="checkbox">College
+	          </span>
+	          <span class="checkbox edu-op">
+	            <input type="checkbox" data-toggle="checkbox">Graduate School
+	          </span>
+	          <span class="checkbox edu-op">
+	            <input type="checkbox" data-toggle="checkbox">Armed Forces
+	          </span>
+	        </div>
+
+	        <h6>Employment</h6>
+	        <div class='filter-panel'>
+	          <div class="a_row">
+	            <span class="checkbox emp-op">
+	              <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	            </span>
+	            <span class="checkbox emp-op">
+	              <input type="checkbox" data-toggle="checkbox">Full Time
+	            </span>
+	          </div>
+	          <div class="a_row">
+	            <span class="checkbox emp-op">
+	              <input type="checkbox" data-toggle="checkbox">Part Time
+	            </span>
+	            <span class="checkbox emp-op">
+	              <input type="checkbox" data-toggle="checkbox">Retired
+	            </span>
+	          </div>
+	          <div class="a_row">
+	            <span class="checkbox emp-op">
+	              <input type="checkbox" data-toggle="checkbox">Student
+	            </span>
+	          </div>
+	        </div>
+
+	        <h6>Annual Income Level</h6>
+	        <div class='filter-panel'>
+	          <span class="checkbox income-op">
+	            <input type="checkbox" checked="yes" data-toggle="checkbox">All
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">Less than $10,000
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">$10,000-$29,999
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">$30,000-$49,999
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">$50,000-$79,999
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">$80,000-$109,999
+	          </span>
+	          <span class='checkbox income-op'>
+	            <input type='checkbox' data-toggle="checkbox">$110,000-$149,999
+	          </span>
+	        </div>
+
+	        <h6>Professional Background</h6>
+	        <div class='filter-panel'>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' checked="yes" data-toggle="checkbox">All
+	            </span>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' data-toggle="checkbox">Education
+	            </span>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' data-toggle="checkbox">Construction
+	            </span>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' data-toggle="checkbox">Healthcare
+	            </span>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' data-toggle="checkbox">Government
+	            </span>
+	            <span class='checkbox prof-op'>
+	              <input type='checkbox' data-toggle="checkbox">Others
+	            </span>
+	        </div>
+
+	        <h6>organization</h6>
+	        <div class='filter-panel'>
+	            <span class='checkbox org-op'>
+	              <input type='checkbox' checked="yes" data-toggle="checkbox">All</span>
+	            </span>
+	            <span class='checkbox org-op'>
+	              <input type='checkbox' data-toggle="checkbox">New York Cares<span class='org-legend org-5'></span>
+	            </span>
+	            <span class='checkbox org-op'>
+	              <input type='checkbox' data-toggle="checkbox">Volunteers of America<span class='org-legend org-3'></span>
+	            </span>
+	            <span class='checkbox org-op'>
+	              <input type='checkbox' data-toggle="checkbox">Church World Service<span class='org-legend org-6'></span>
+	            </span>
+	            <span class='checkbox org-op'>
+	              <input type='checkbox' data-toggle="checkbox">American Red Cross<span class='org-legend org-2'></span>
+	            </span>
+	            <span class='checkbox org-op'>
+	              <input type='checkbox' data-toggle="checkbox">World Cares Center<span class='org-legend org-1'></span>
+	            </span>
+	            <span class='checkbox org-op'>
+	              <input type='checkbox' data-toggle="checkbox">Catholic Charities, USA<span class='org-legend org-4'></span>
+	            </span>
+	            <span class='checkbox org-op'>
+	              <input type='checkbox' data-toggle="checkbox">Self organized<span class='org-legend org-7'></span>
+	            </span>
+	        </div>
+		</div>
+		
+	  	<div class='col-lg-7' id='col-middle'>
+	  		<div id='graph-timeline'>
+	  			<div id='persons'>
+	  				
+	  				
+	  			</div>
+	  			<div id="persons-mask">
+	  			</div>
+	  			<div id='time-axis'>
+	  				<span id='time-start' class='time-label'>
+	  					<span>08/20</span>
+	  					<div>2011</div>
+	  					<h5>Hurricane Irene</h5>
+	  				</span>
+	  				<span class='time-label'>
+	  					<span>03/31</span>
+	  					<div>2012</div>
+	  					<span class='time-grid'></span>
+	  				</span>
+	  				<span class='time-label'>
+	  					<span>12/18</span>
+	  					<div>2012</div>
+	  					<span class='time-grid'></span>
+	  				</span>
+	  				<span class='time-label'>
+	  					<span>03/31</span>
+	  					<div>2013</div>
+	  					<span class='time-grid'></span>
+	  				</span>
+	  				<span class='time-label'>
+	  					<span>09/30</span>
+	  					<div>2013</div>
+	  					<span class='time-grid'></span>
+	  				</span>
+	  				<span class='time-label'>
+	  					<span>03/30</span>
+	  					<div>2014</div>
+	  					<h5>Now</h5>
+	  				</span>
+	  			</div>
+			</div>  		
+	  		<div id='graph-number'>
+	  			<svg></svg>
+			</div>   
+	  	</div>
+	  	
+	  	
+	  	<div class='col-lg-2' id='col-right'>
+		  	<div id='profile' class='panel panel-default'>
+		  	</div>
+			
+				<img src="img/map-icon.png" alt="" style="vertical-align: bottom; height: 32px; margin-left: 10px; margin-top: 15px; margin-right: 5px;"><span class="h3 condense-font">Map</span>
+
+		  	<div id='map' class="panel panel-default">
+		  		<!--
+		  		<span class='map-pt'><img src="img/pin.png" alt=""></span>
+		  		-->
+		  		<span class='map-pt'><img src="img/pin.png" alt=""></span>
+		  		<span class='map-pt'><img src="img/pin.png" alt=""></span>
+		  		<img id='map-control' src='img/map_control.png'>
+		  	</div> 
+	  	</div>
+	  		
+	  		
+	</div>
+
+<!--
+	<div id='time-range-contain'>
+		<div id='time-range'></div>
+	</div>
+-->
+	  	
+	<div id='profile-1' class='profile'>
+	  		<div id='profile-head'>
+		  		<img src='img/penny.png' id='profile-image'>
+		  		
+		  		<h5 id='name'>Penny Klein</h5>
+		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span><span>1645 Tibbits Avenue<span><p><span>Troy, NY, 12180</span></div>
+		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span>(518) 209-2433</div>
+	  		</div>
+	  		
+	  		<table id='profile-attrs'>
+	  			<tr>
+	  				<td>Age</td><td>26</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Gender</td><td>Female</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Marital Status</td><td>Single</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Ethnicity</td><td>Caucasian</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Education</td><td>Graduate School</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Background</td><td>Education</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Employment</td><td>Part Time</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Annual Income</td><td>$30,000 - 49,999</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Skills</td>
+	  				<td>
+	  					<span class='label label-success'>Painting</span>
+	  					<span class='label label-primary'>Financial Services</span>
+	  				</td>
+	  			</tr>
+	  		</table>
+  		
+  		</div>
+	  	
+	  	<div id='profile-2' class='profile'>
+	  		
+	  		<div id='profile-head'>
+		  		<img src='img/eric.png' id='profile-image'>
+		  		
+		  		<h4 id='name'>Eric Mehiel</h4>
+		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span><span>210 Old Loudon Road<span><p/><span>Latham, NY, 12110</span></div>
+		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span>(518) 877-7529</div>
+	  		</div>
+	  		
+	  		<table id='profile-attrs'>
+	  			<tr>
+	  				<td>Age</td><td>33</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Gender</td><td>Male</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Marital Status</td><td>Married</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Ethnicity</td><td>Caucasian</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Education</td><td>College</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Background</td><td>Automotive</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Employment</td><td>Full time</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Annual Income</td><td>$50,000 - 79,999</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Skills</td>
+	  				<td>
+	  					<span class='label label-primary'>Electrical</span>
+	  					<span class='label label-danger'>Heating</span>
+	  				</td>
+	  			</tr>
+	  		</table>
+	  		
+	  		
+	  	</div>
+  	
+  	
+  	<div id='profile-3' class='profile'>
+  		
+  		<div id='profile-head'>
+	  		<img src='img/justin.png' id='profile-image'>
+	  		
+	  		<h4 id='name'>Justin Smith</h4>
+	  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span><span>420 Madison Avenue</span><p><span>Albany, NY 12210</span></div>
+	  		<div id='contact'><span class="glyphicon glyphicon-phone"></span>(518) 787-6904</div>
+  		</div>
+  		
+  		<table id='profile-attrs'>
+  			<tr>
+  				<td>Age</td><td>16</td>
+  			</tr>
+  			<tr>
+  				<td>Gender</td><td>Male</td>
+  			</tr>
+  			<tr>
+  				<td>Marital Status</td><td>Single</td>
+  			</tr>
+  			<tr>
+  				<td>Ethnicity</td><td>African American</td>
+  			</tr>
+  			<tr>
+  				<td>Education</td><td>High School</td>
+  			</tr>
+  			<tr>
+  				<td>Background</td><td>Education</td>
+  			</tr>
+  			<tr>
+  				<td>Employment</td><td>Student</td>
+  			</tr>
+  			<tr>
+  				<td>Annual Income</td><td><$10,000</td>
+  			</tr>
+  			<tr>
+  				<td>Skills</td>
+  				<td>
+  					<span class='label label-primary'>Food Services</span>
+  				</td>
+  			</tr>
+  		</table>
+  		
+  		
+  	</div>
+
+	  	<div id='profile-4' class='profile'>
+	  		
+	  		<div id='profile-head'>
+		  		<img src='img/default_profile_image.png' id='profile-image'>
+		  		
+		  		<h4 id='name' style='white-space: normal;color:darkgray;'>Anonymous Volunteer</h4>
+		  		<div id='loc'><span class="glyphicon glyphicon-map-marker"></span><span>Not to disclose<span><p/><span></span></div>
+		  		<div id='contact'><span class="glyphicon glyphicon-phone"></span>Not to disclose</div>
+	  		</div>
+	  		
+	  		<table id='profile-attrs'>
+	  			<tr>
+	  				<td>Age</td><td>-</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Gender</td><td>Male</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Marital Status</td><td>Married</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Ethnicity</td><td>-</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Education</td><td>College</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Background</td><td>-</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Employment</td><td>-</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Annual Income</td><td>-</td>
+	  			</tr>
+	  			<tr>
+	  				<td>Skills</td>
+	  				<td>
+	  					<span class='label label-primary'>Carpentry</span>
+	  				</td>
+	  			</tr>
+	  		</table>
+	  		
+	  		
+	  	</div>
+  	
+
+  	
+  	
+  	
+  </body>
+</html>

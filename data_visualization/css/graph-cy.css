@@ -1,0 +1,625 @@
+.condense-font {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+}
+.condense-black {
+  font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue";
+}
+.condense {
+  transform: scale(1, 1.14);
+  /* W3C */
+  -webkit-transform: scale(1, 1.14);
+  /* Safari and Chrome */
+  -moz-transform: scale(1, 1.14);
+  /* Firefox */
+  -ms-transform: scale(1, 1.14);
+  /* IE 9 */
+  -o-transform: scale(1, 1.14);
+  /* Opera */
+  letter-spacing: 0.25px;
+}
+body {
+  background-color: #fdfdf8;
+  margin: 0;
+}
+.hidden {
+  display: none;
+}
+h1 {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  line-height: 55px;
+  background-color: #e1e1d7;
+  padding-left: 50px;
+  margin-top: 30px;
+  color: #333333;
+  font-size: 26px;
+}
+.circle {
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  margin: auto;
+  cursor: pointer;
+  border: 4px #f5f5eb solid;
+}
+.circle-ethnicity {
+  background-color: #ff4c35;
+}
+.circle-ms {
+  background-color: #ff891c;
+}
+.circle-age {
+  background-color: #ffeb2b;
+}
+.circle-background {
+  background-color: #c1f05f;
+}
+.circle-employment {
+  background-color: #92efd9;
+}
+.circle-income {
+  background-color: #4fdbfd;
+}
+.circle-gender {
+  background-color: #e2a2fb;
+}
+.circle-education {
+  background-color: #ff7fc7;
+}
+.oneline {
+  top: 41%;
+}
+.twoline {
+  top: 34%;
+  line-height: 110%;
+}
+.title {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  color: #333333;
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+.title-ms,
+.title-income {
+  top: 34%;
+  line-height: 110%;
+}
+.title-age,
+.title-background,
+.title-employment,
+.title-gender,
+.title-education,
+.title-ethnicity {
+  top: 41%;
+}
+.left,
+.right {
+  background-color: #fcfcf9;
+  border: 4px solid #e1e1d7;
+  height: 380px;
+}
+.data {
+  margin-top: -10px;
+}
+img.hover {
+  width: 70px;
+  margin-top: 110px;
+  margin-left: 42%;
+}
+h2 {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  text-align: center;
+  vertical-align: middle;
+  line-height: 20px;
+  color: #5f5f5f;
+}
+.right {
+  margin-right: -25px;
+}
+img[class^='stack-'] {
+  max-height: 230px;
+  width: auto;
+  margin-top: 28px;
+}
+img.stack-ms {
+  margin-left: 150px;
+  max-height: 250px;
+  margin-top: 16px;
+}
+img.stack-age {
+  margin-left: 100px;
+}
+img.stack-employment {
+  max-height: 215px;
+  margin-left: 60px;
+}
+img.stack-gender {
+  margin-left: 55px;
+}
+img.stack {
+  height: 360px;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.icon {
+  width: 24px;
+  cursor: pointer;
+  margin-top: 2px;
+}
+.tooltip {
+  font-size: 15px;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  box-shadow: none;
+  border-radius: 0;
+  color: #5f5f5f;
+  border: none;
+  background-color: white;
+}
+body {
+  zoom: 85%;
+  min-width: 1100px !important;
+  overflow-y: auto;
+}
+/* customize scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+/* overwrite */
+.glyphicon {
+  color: gray;
+}
+.dv-container {
+  width: 1400px;
+  margin: 0 auto;
+}
+.label {
+  background-color: slategray !important;
+}
+/* global */
+html,
+body {
+  height: 100%;
+  max-width: 100%;
+}
+#body {
+  height: 100%;
+  max-width: 100%;
+  margin-top: 10px;
+}
+.template {
+  display: none;
+}
+/*  filter  */
+#filter {
+  padding: 1em;
+  margin-left: 15px;
+  padding: 15px 17px;
+  background-color: #FCFCF9;
+  overflow-y: scroll;
+  height: 800px;
+}
+#filter h6 {
+  font-weight: bold;
+}
+.filter-panel {
+  padding: 0.5em 1em;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  margin-bottom: 1em;
+  font-size: 12px;
+}
+/* map */
+#col-right {
+  margin-left: 30px;
+  z-index: 2000;
+}
+#map {
+  position: relative;
+  height: 360px;
+  width: 230px;
+  height: 260px;
+  margin: 23px 0 0 10px;
+  background-position: left top;
+  background-image: url(../img/map.png);
+  background-size: 143% 143%;
+}
+#map-control {
+  margin: 7px;
+  height: 60%;
+  opacity: 0.9;
+}
+.map-pt {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  z-index: 100;
+}
+.map-pt img {
+  width: 100%;
+}
+.map-pt:first-child {
+  left: 110px;
+  top: 70px;
+}
+.map-pt:nth-child(2) {
+  left: 142px;
+  top: 175px;
+}
+.map-pt:nth-child(3) {
+  left: 93px;
+  top: 126px;
+}
+/* profile */
+.profile {
+  display: none;
+}
+#profile .profile {
+  display: block;
+}
+#profile {
+  /*
+  width:470px;
+  margin-left:10pt;
+  */
+  margin-top: 10px;
+  padding: 1em;
+  border: 1px solid lightgray;
+  font-size: 12px;
+  width: 230px;
+  margin-left: 7px;
+}
+#profile-head {
+  position: relative;
+  height: 150px;
+  padding-top: 100px;
+  padding-left: 10px;
+}
+#profile-image {
+  position: absolute;
+  right: 3px;
+  top: 5px;
+  width: 88px;
+  height: 88px;
+  border-radius: 7px;
+  border: 2px solid #c7c7bd;
+  box-shadow: none;
+}
+#name {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+  width: 75px;
+  text-align: left;
+  white-space: nowrap;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  font-size: 18px;
+  color: #424242;
+}
+#profile-attrs {
+  margin-top: 3.1em;
+  width: 100%;
+}
+#profile-attrs tr > td {
+  line-height: 22px;
+}
+#profile-attrs tr > td:first-child {
+  width: 83px;
+  text-align: right;
+  font-weight: bolder;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  letter-spacing: 0.1px;
+  white-space: nowrap;
+}
+#profile-attrs tr > td:nth-child(2) {
+  padding-left: 1.2em;
+}
+#profile-attrs tr:last-child {
+  height: 50px;
+  vertical-align: top;
+}
+.label {
+  font-size: 95%;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+#loc,
+#contact {
+  position: relative;
+  line-height: 1.2;
+}
+#loc {
+  margin-top: 10px;
+}
+#loc .glyphicon,
+#contact .glyphicon {
+  /*
+  margin-left: 17px;
+  */
+  margin-right: 8px;
+}
+#loc p {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+/* graph */
+#col-middle {
+  margin-left: 30px;
+}
+#graph-timeline,
+#graph-number {
+  position: relative;
+  margin-bottom: 10pt;
+}
+#graph-number {
+  /*
+  border:1px solid lightgray;
+  */
+  height: 300px;
+  width: 800px;
+  padding-left: 23px;
+}
+#graph-timeline {
+  margin-top: 10px;
+  height: 500px;
+}
+#persons {
+  position: absolute;
+  right: 0;
+  width: 700px;
+  height: 430px;
+  padding-top: 18px;
+  border-left: 1px solid darkgray;
+  border-bottom: 1px solid darkgray;
+  border-top: 1px solid darkgray;
+}
+#persons-mask {
+  position: absolute;
+  right: -200px;
+  width: 200px;
+  height: 400px;
+  background-color: #fdfdf8;
+  z-index: 1000;
+}
+#time-axis {
+  position: absolute;
+  top: 430px;
+  right: 0;
+  width: 700px;
+  height: 20px;
+  z-index: -100;
+}
+#time-legend {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.time-label {
+  position: absolute;
+  font-size: 11px;
+  width: 100px;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  letter-spacing: 0.3px;
+  color: darkgray !important;
+}
+.time-grid {
+  position: absolute;
+  left: 10px;
+  top: -430px;
+  height: 430px;
+  border-right: 1px solid #eeeeee;
+}
+/* person */
+.person {
+  position: relative;
+  height: 3px;
+  margin-left: -29px;
+}
+.person:hover,
+.person.selected {
+  height: 29px;
+  box-shadow: 0 0 4px #929292;
+  z-index: 100;
+}
+.person-image,
+.person-name,
+.person-loc,
+.line-start,
+.line-end,
+.line-hour {
+  display: none;
+}
+.person:hover .person-image,
+.person:hover .person-name,
+.person:hover .person-loc,
+.person.selected .person-image,
+.person.selected .person-name,
+.person.selected .person-loc {
+  display: inline-block;
+}
+.person-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 29px;
+  width: 29px;
+  border: none;
+}
+.person-name,
+.person-loc {
+  position: absolute;
+  left: -103px;
+  width: 100px;
+  padding-right: 5px;
+  font-size: 12px;
+  text-align: right;
+  white-space: nowrap;
+  line-height: 1.1em;
+}
+.person-name {
+  top: 1px;
+  font-weight: bold;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  font-size: 13px;
+}
+.person-loc {
+  bottom: 2px;
+  font-size: 9px;
+  transform: scale(1, 1.14);
+  /* W3C */
+  -webkit-transform: scale(1, 1.14);
+  /* Safari and Chrome */
+  -moz-transform: scale(1, 1.14);
+  /* Firefox */
+  -ms-transform: scale(1, 1.14);
+  /* IE 9 */
+  -o-transform: scale(1, 1.14);
+  /* Opera */
+  letter-spacing: 0.25px;
+}
+.lines {
+  position: relative;
+  height: 100%;
+  left: 29px;
+}
+.line {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  background-color: #55cf7c;
+  width: 100px;
+}
+.line:hover .line-start,
+.line:hover .line-end,
+.line:hover .line-hour {
+  z-index: 100;
+}
+.line-start,
+.line-end,
+.line-hour {
+  position: absolute;
+  width: 20px;
+  font-size: 9px;
+  line-height: 1em;
+}
+.line-start {
+  left: -20px;
+  bottom: 0;
+  padding-right: 3px;
+  text-align: right;
+}
+.line-end {
+  right: -20px;
+  bottom: 0;
+  padding-left: 3px;
+}
+.line-hour {
+  bottom: -12px;
+  width: 100%;
+  text-align: center;
+}
+.tooltip {
+  background-color: transparent;
+}
+.tooltip b {
+  display: inline-block;
+  width: 50px;
+  text-align: right;
+  padding-right: 0.7em;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.tooltip span {
+  display: inline-block;
+  width: 30px;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "Helvetica Neue";
+  letter-spacing: 0.2px;
+}
+.person.org-1 .line,
+.org-legend.org-1 {
+  background-color: #4fd079;
+}
+.person.org-2 .line,
+.org-legend.org-2 {
+  background-color: #ff4d45;
+}
+.person.org-3 .line,
+.org-legend.org-3 {
+  background-color: #ffd300;
+}
+.person.org-4 .line,
+.org-legend.org-4 {
+  background-color: #9e4ad7;
+}
+.person.org-5 .line,
+.org-legend.org-5 {
+  background-color: #3fa0e3;
+}
+.person.org-6 .line,
+.org-legend.org-6 {
+  background-color: #536574;
+}
+.person.org-7 .line,
+.org-legend.org-7 {
+  background-color: #a9a9a9;
+}
+.org-legend {
+  float: right;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+}
+/* number graph */
+.nv-y text {
+  stroke: gray;
+}
+.nv-y path {
+  stroke: lightgray !important;
+}
+.nvtooltip {
+  top: 120px !important;
+}
+.nvtooltip thead {
+  display: none;
+}
+#graph-number .time-grid {
+  top: -225px;
+  height: 225px;
+}
+#graph-number #time-axis {
+  right: 22px;
+  top: 270px;
+}
+svg text {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+  letter-spacing: 0.2px;
+  color: #5f5f5f;
+  font-size: 13px;
+}
+#time-range-contain {
+  position: absolute;
+  z-index: -1000;
+}
+#time-range {
+  height: 100%;
+  width: 50px;
+  left: 30px;
+  background-color: #5f5f5f;
+  opacity: 0.2;
+}
