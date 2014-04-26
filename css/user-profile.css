@@ -44,6 +44,7 @@ body {
 }
 .navbar {
   margin-bottom: 0;
+  box-shadow: 0 0 10px #959595;
 }
 .fa-lg {
   font-size: 1.7em;

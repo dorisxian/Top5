@@ -71,6 +71,8 @@
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
     <!-- Bootstrap js -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!-- Cookie -->
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
     <!-- Search bar autocomplete -->
     <script src="js/min/search-ck.js" type="text/javascript"></script>
     <!-- Page js -->
@@ -81,6 +83,10 @@
 		$("#t5-cat-menu").load("parts/menu.html");
 		$('nav').load('parts/navbar.html', function(){
 			$.getScript('js/listAdding.js');
+			if ($.cookie("username") === 'Dolly') {
+				$('#t5-navbar-login').addClass('hidden');
+				$('#t5-navbar-name').removeClass('hidden');
+			}
 		});
 		
 		$('#result-tabs a').click(function (e) {
