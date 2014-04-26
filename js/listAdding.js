@@ -261,11 +261,13 @@ $(function(){
 			if (_open) {
 				$('#t5-list-adding').slideDown();
 				$('#t5-list-adding-btn').addClass('t5-focus');
+				$('body').animate({'padding-top':390}, {duration:400});
 			} else {
 				$('#t5-list-adding').slideUp({complete: function(){
 					$('#t5-list-adding-btn').removeClass('t5-focus');
 					if (cb)	cb();
-				}});					
+				}});
+				$('body').animate({'padding-top':70}, {duration:400});
 			}
 		}
 		

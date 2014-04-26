@@ -8,6 +8,8 @@
     <title>Top 5</title>
     <!-- Google Font: Playball -->
     <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+    <!-- JQuery UI for list adding -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
     <!-- Bootstrap -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/t5-theme.min.css">
@@ -15,6 +17,7 @@
     <!-- Font Awesome -->
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <!-- Page CSS -->
+    <link rel="stylesheet" type="text/css" href="css/list_adding.css"/>
     <link rel="stylesheet" href="css/search-result.css">
   </head>
 
@@ -47,8 +50,8 @@
 				<button type="submit"></button>
               </div>
             </form>
-            <ul class="nav navbar-nav">
-              <li><a href=""><i class="fa fa-edit fa-lg"></i></a></li>
+            <ul class="nav navbar-nav" id='t5-list-adding-btn'>
+              <li><a href="#" onclick='return false;'><i class="fa fa-edit fa-lg"></i></a></li>
             </ul>
             
             <!-- ***User - Name & Setting button*** -->
@@ -141,6 +144,8 @@
       </div><!-- /.container-fluid -->
     </nav>
 
+	<div id='t5-list-adding'></div>
+
     <!-- Category Menu -->
     <section id='t5-cat-menu'></section>
     <h3><span class="highlight">Share</span> and <span class="highlight">discover</span> Top 5 things in your life, 
@@ -181,11 +186,14 @@
     
     <!-- Latest jQuery -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- JQuery UI for list adding -->
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
     <!-- Bootstrap js -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <!-- Search bar autocomplete -->
     <script src="js/min/search-ck.js" type="text/javascript"></script>
     <!-- Page js -->
+    <script src="js/listAdding.js"></script>
     <script>
 	$("#t5-cat-menu").load("parts/menu.html");
 	

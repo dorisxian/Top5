@@ -421,13 +421,19 @@ a.t5-cat-2nd:hover {
 }
 /* list adding title */
 #t5-list-adding {
-  position: relative;
+  /*
+  position:relative;
+  */
+  position: fixed;
+  top: 70px;
+  width: 100%;
   background-color: white;
   display: none;
   font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
   font-weight: 300;
   letter-spacing: 0.4px;
   margin-bottom: 30px;
+  z-index: 1000;
 }
 #t5-list-adding-title {
   height: 34pt;
