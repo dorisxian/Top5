@@ -64,6 +64,7 @@ input:focus {
   margin: 0;
   color: #7c7c7c;
   font-size: larger;
+  margin-right: 30px;
 }
 .username a {
   color: inherit !important;

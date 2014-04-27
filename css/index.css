@@ -64,6 +64,7 @@ input:focus {
   margin: 0;
   color: #7c7c7c;
   font-size: larger;
+  margin-right: 30px;
 }
 .username a {
   color: inherit !important;
@@ -812,7 +813,25 @@ h4.t5-sr-title {
 #t5-banner-row {
   position: relative;
   height: 200pt;
-  margin: 75pt auto;
+  margin: 50pt auto 70pt;
+}
+#t5-start-now {
+  background-color: rgba(0, 0, 0, 0.48);
+  padding: 5px 0;
+  margin-top: -14px;
+}
+.t5-start {
+  font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  font-size: 32px;
+  text-align: center;
+  width: 100%;
+  display: block;
+}
+.t5-start:hover {
+  text-decoration: none;
+  color: white;
 }
 #t5-title {
   width: 225%;
