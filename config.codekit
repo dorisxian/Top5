@@ -1255,6 +1255,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/data_visualization\/css\/graph-cy.css": {
+		"fileType": 16,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data_visualization\/css\/graph-cy.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/data_visualization\/css\/graph.css": {
 		"fileType": 16,
 		"ignore": 1,
@@ -1449,6 +1458,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/data_visualization\/graph-cy.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data_visualization\/graph-cy.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/data_visualization\/graph.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1457,6 +1475,17 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
+		},
+	"\/data_visualization\/img\/default_profile_image.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 47617,
+		"inputAbbreviatedPath": "\/data_visualization\/img\/default_profile_image.png",
+		"outputAbbreviatedPath": "\/data_visualization\/img\/default_profile_image.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
 		},
 	"\/data_visualization\/img\/delete.png": {
 		"fileType": 32768,
@@ -1667,6 +1696,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/data_visualization\/index-2.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data_visualization\/index-2.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/data_visualization\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1717,6 +1755,26 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/data_visualization\/less\/checkbox-ui.less",
 		"outputAbbreviatedPath": "\/data_visualization\/css\/checkbox-ui.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/data_visualization\/less\/graph-cp.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/data_visualization\/less\/graph-cp.less",
+		"outputAbbreviatedPath": "\/data_visualization\/css\/graph-cp.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -2047,13 +2105,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/dior-addict-gloss-300.jpg": {
-		"fileType": 16384,
+	"\/img\/create.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 28546,
-		"inputAbbreviatedPath": "\/img\/dior-addict-gloss-300.jpg",
-		"outputAbbreviatedPath": "\/img\/dior-addict-gloss-300.jpg",
+		"initialSize": 5273,
+		"inputAbbreviatedPath": "\/img\/create.png",
+		"outputAbbreviatedPath": "\/img\/create.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2065,6 +2123,17 @@
 		"initialSize": 262607,
 		"inputAbbreviatedPath": "\/img\/dolly.png",
 		"outputAbbreviatedPath": "\/img\/dolly.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/explore.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8331,
+		"inputAbbreviatedPath": "\/img\/explore.png",
+		"outputAbbreviatedPath": "\/img\/explore.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2131,6 +2200,28 @@
 		"initialSize": 19718,
 		"inputAbbreviatedPath": "\/img\/heart.png",
 		"outputAbbreviatedPath": "\/img\/heart.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/hot.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7342,
+		"inputAbbreviatedPath": "\/img\/hot.png",
+		"outputAbbreviatedPath": "\/img\/hot.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/inspire.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6876,
+		"inputAbbreviatedPath": "\/img\/inspire.png",
+		"outputAbbreviatedPath": "\/img\/inspire.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -2333,6 +2424,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/people.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 9702,
+		"inputAbbreviatedPath": "\/img\/people.png",
+		"outputAbbreviatedPath": "\/img\/people.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/sara.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2487,17 +2589,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/yves-saint-laurent-rouge-volupte-lipstick13.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2.35409e+06,
-		"inputAbbreviatedPath": "\/img\/yves-saint-laurent-rouge-volupte-lipstick13.jpg",
-		"outputAbbreviatedPath": "\/img\/yves-saint-laurent-rouge-volupte-lipstick13.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2506,17 +2597,6 @@
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
-		},
-	"\/item_img\/1397351645_star.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 5305,
-		"inputAbbreviatedPath": "\/item_img\/1397351645_star.png",
-		"outputAbbreviatedPath": "\/item_img\/1397351645_star.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		},
 	"\/item_img\/dior-addict-gloss-300.jpg": {
 		"fileType": 16384,
@@ -2546,6 +2626,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/isotope.pkgd.min.js",
 		"outputAbbreviatedPath": "\/js\/min\/isotope.pkgd.min-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/jquery.cookie.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/jquery.cookie.js",
+		"outputAbbreviatedPath": "\/js\/min\/jquery.cookie-ck.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2623,6 +2714,17 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/min\/search-ck.js",
 		"outputAbbreviatedPath": "\/js\/min\/min\/search-ck-ck.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/js\/navbar.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/js\/navbar.js",
+		"outputAbbreviatedPath": "\/js\/min\/navbar-ck.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -2830,24 +2932,6 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/list_adding.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/list_adding.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/menu.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/menu.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/parts\/list_adding.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2875,6 +2959,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/parts\/navbar.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/parts\/navbar.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/README.md": {
 		"enableFootnoteSupport": 0,
 		"enableSmartyPants": 1,
@@ -2884,15 +2977,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/README.md",
 		"outputAbbreviatedPath": "\/README.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/search-result.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/search-result.html",
-		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
