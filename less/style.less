@@ -242,6 +242,7 @@ a.t5-cat-2nd{
 /*   list  */
 
 .list-item{
+  position:relative;
   width: 700px;
   margin: 30px auto 0;
   background-color: #ffffff;
@@ -350,6 +351,31 @@ a.t5-cat-2nd{
     margin-left: 5px;
   }
 }
+
+.t5-list-change
+{
+  position:absolute;
+  bottom:-2em;
+  display:none;
+  text-align:right;
+  width:100%;
+}
+.t5-profile-tab .t5-list-change, #t5-my .t5-list-change
+{
+  display:block;
+}
+.t5-profile-tab .list-item, #t5-my .list-item
+{
+  margin-bottom:4em;
+}
+.t5-list-change span
+{
+  color:@brand-primary;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+
 
 // Back to top button
 #toTop {

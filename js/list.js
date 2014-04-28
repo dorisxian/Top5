@@ -61,6 +61,9 @@ $(function(){
 				$('body').trigger('t5-fav');
 			});
 			
+			ele.find('.t5-list-change span').click(function(){
+				alert("To be implemented.");
+			});
 			
 			
 		}
