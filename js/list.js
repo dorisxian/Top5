@@ -53,6 +53,10 @@ $(function(){
 			
 			render_fav();
 			ele.find('.t5-list-heart').click(function(){
+				if (!$.cookie('username')) {
+					alert('Please login first.');
+					return;
+				} 
 				_data.fav = !_data.fav;
 				render_fav();
 				$.post('svc/fav.php', {id:_data.id, fav:_data.fav});
@@ -68,7 +72,12 @@ $(function(){
 			
 		}
 		
+		function fav_alert(){
+			alert('Please login first! ');
+		}
+		
 		function render_fav(){
+			if (!$.cookie('username')) return;
 			var heart = _ele.find('.t5-list-heart');
 			if (_data.fav) {
 				heart.addClass('t5-selected');
