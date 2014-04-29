@@ -1156,15 +1156,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/category.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/category.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/css\/bootstrap-social.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -2303,6 +2294,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/items\/maxfactor_clump_defy.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 126595,
+		"inputAbbreviatedPath": "\/img\/items\/maxfactor_clump_defy.jpg",
+		"outputAbbreviatedPath": "\/img\/items\/maxfactor_clump_defy.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/items\/Nikon_AW1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -2479,6 +2481,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/tina.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 811631,
+		"inputAbbreviatedPath": "\/img\/tina.png",
+		"outputAbbreviatedPath": "\/img\/tina.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/top5-logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -2589,6 +2602,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/wendy.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.71162e+06,
+		"inputAbbreviatedPath": "\/img\/wendy.png",
+		"outputAbbreviatedPath": "\/img\/wendy.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -2664,17 +2688,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/listAdding.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/listAdding.js",
-		"outputAbbreviatedPath": "\/js\/min\/listAdding-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/menu.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -2708,17 +2721,6 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
-	"\/js\/min\/navbar-ck.js": {
-		"fileType": 64,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/min\/navbar-ck.js",
-		"outputAbbreviatedPath": "\/js\/min\/min\/navbar-ck-ck.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/js\/min\/search-ck.js": {
 		"fileType": 64,
 		"ignore": 1,
@@ -2732,8 +2734,8 @@
 		},
 	"\/js\/navbar.js": {
 		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
+		"ignore": 1,
+		"ignoreWasSetByUser": 1,
 		"inputAbbreviatedPath": "\/js\/navbar.js",
 		"outputAbbreviatedPath": "\/js\/min\/navbar-ck.js",
 		"outputPathIsOutsideProject": 0,
