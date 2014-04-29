@@ -8,7 +8,8 @@
 	});
 
 
-      $('#t5-navbar-login-btn').click(function(){
+
+      $('#t5-navbar-login-btn').click(function(evt){
       	var username = $('#t5-navbar-login-username').val();
       	var password = $('#t5-navbar-login-password').val();
       	if (username === 'Dolly' & password === 'Dolly') {
@@ -16,5 +17,8 @@
 			window.location.reload();
       	} else {
       		alert("Username or password incorrect, please try again.");
+      		evt.preventDefault();
+      		$('#t5-navbar-login-username').focus();
       	}
       });
+

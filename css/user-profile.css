@@ -783,6 +783,11 @@ img.t5-la-cat-icon {
   vertical-align: middle;
   cursor: pointer;
 }
+.t5-la-instr {
+  font-size: 11px;
+  color: #959595;
+  padding-left: 5px;
+}
 body {
   width: 100%;
   background-color: #282828;

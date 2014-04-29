@@ -128,7 +128,12 @@
 	      	$('#filters').empty();
 		  }
 	  	
-	  	
+	  	$('body').bind('t5-la', function(){
+	  		var data = $.top5.la; 
+	  		if (data.category === cat) {
+      			var list = new $.top5.List(data, $('#feed'));
+	  		}
+	  	});
 	  	
 
 	  

@@ -51,6 +51,10 @@ $(function(){
 			});
 			
 			$('#t5-list-adding-btn').click(function(){
+				if (!$.cookie('username')) {
+					alert('Please login first.');
+					return;
+				}
 				_open = !_open;
 				render_open();
 				$("#t5-list-title-input").focus();

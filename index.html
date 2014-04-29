@@ -323,6 +323,18 @@
       	}
       });
       
+      $('#t5-username').focus();
+      $('#t5-username').keypress(function(e){
+		if(e.which == 13) {
+			$('#t5-password').focus();
+		}
+	  });
+      
+      $('#t5-password').keypress(function(e){
+		if(e.which == 13) {
+			$('#t5-login-btn').click();
+		}
+      });
       
       
       
