@@ -347,6 +347,9 @@ a.t5-cat-2nd:hover {
   color: #5e5e5e;
   vertical-align: middle;
 }
+.list-unstyled li {
+  white-space: nowrap;
+}
 .t5-functions {
   float: right;
   font-size: 16px;
