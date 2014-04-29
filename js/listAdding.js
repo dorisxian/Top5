@@ -330,6 +330,8 @@ $(function(){
 			} else {
 				$('#t5-la-item-image img').attr('src', 'img/alt-item.png');				
 			}
+			
+			$('#t5-la-image-url').val('');
 		}
 		
 		function append_item_data(itemData){

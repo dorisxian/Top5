@@ -191,16 +191,18 @@
 		$("#t5-cat-menu").load("parts/menu.html");
 		
 		var cat = getParameterByName("cat");
-	    $('#t5-category-title').html(cat);
+		
+		if (cat === '') cat = "Electronics";
+		$('#t5-category-title').html(cat);
   		$.getJSON("data/lists.json", function(listsData){
   			$.each(listsData, function(index, listData){
   				if(listData.category === cat)
       				var list = new $.top5.List(listData, $('#feed'));
   			});
   		});
-	 	if (cat !== "" && cat !=='Electronics') {
+	 	if (cat !=='Electronics') {
 	      	$('#filters').empty();
-	  	}
+		  }
 	  	
 	  	
 	  	
