@@ -51,7 +51,7 @@
 					<li class="t5-tab-title active"><a href="#result-lists">Lists (<span id='t5-lists-num'>0</span>)</a></li>
 					<li class="t5-tab-title"><a href="#result-items">List Items (7)</a></li>
 				</ul>
-				<div class="tab-content">
+				<div class="tab-content" style="padding-bottom: 40px;">
 					<div class="tab-pane in" id="result-people">
 						<div class="col-md-10 centered">
 							<p class="t5-no-result">No matches</p>
