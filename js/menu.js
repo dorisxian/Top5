@@ -9,6 +9,8 @@ $(".t5-cat-1st")
     })
 
 $(".t5-cat-2nd").click(function(){
-	window.location.href = "category.html?cat=" + $(this).html();
+	window.location.href = "category.html?cat=" + encodeURIComponent($(this).html());
 });
+
+
    

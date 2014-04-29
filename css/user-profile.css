@@ -927,10 +927,21 @@ body {
 #t5-tabs > div {
   position: relative;
 }
-#t5-tabs-left {
+#t5-tabs-left-container {
   position: fixed;
-  left: 130px;
-  top: 318px;
+  top: 320px;
+  width: 100%;
+}
+#t5-tabs-left-container > div {
+  position: relative;
+}
+#t5-tabs-left {
+  position: absolute;
+  left: -200px;
+  /*
+  left:130px;
+  top:318px;
+  */
 }
 #t5-setting {
   position: fixed;

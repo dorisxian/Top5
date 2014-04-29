@@ -191,20 +191,19 @@
 		$("#t5-cat-menu").load("parts/menu.html");
 		
 		var cat = getParameterByName("cat");
-	 	if (cat === "" || cat ==='Electronics') {
-	    	$(function(){
-	      		$.getJSON("data/lists.json", function(listsData){
-	      			$.each(listsData, function(index, listData){
-	      				var list = new $.top5.List(listData, $('#feed'));
-	      			});
-	      		})
-	      	});	
-	  	} else {
-	    	$('#t5-category-title').html(cat);
+	    $('#t5-category-title').html(cat);
+  		$.getJSON("data/lists.json", function(listsData){
+  			$.each(listsData, function(index, listData){
+  				if(listData.category === cat)
+      				var list = new $.top5.List(listData, $('#feed'));
+  			});
+  		});
+	 	if (cat !== "" && cat !=='Electronics') {
 	      	$('#filters').empty();
-	      	$('#feed').empty();
-	      	$('#t5-placeholder').show();
 	  	}
+	  	
+	  	
+	  	
 
 	  
         $.scrollUp({
