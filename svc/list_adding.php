@@ -30,5 +30,14 @@
 	$output = "../data/items.json";
 	file_put_contents($output, json_encode($json));
 	
+	
+	// save to lists_title.json
+	
+	$input = "../data/lists_title.json";
+	$json = json_decode(file_get_contents($input));
+	array_push($json, $_POST['title']);
+	$output = "../data/lists_title.json";
+	file_put_contents($output, json_encode($json));
+		
 
 ?>

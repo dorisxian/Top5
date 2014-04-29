@@ -48,13 +48,26 @@ $(document).ready(function () {
     });
 	return item;
 	})();
+	
+	var list = (function () {
+	$.ajax({
+        'async': false,
+        'global': false,
+        'url': "data/lists_title.json",
+        'dataType': "json",
+        'success': function (data) {
+            list = data;
+        }
+    });
+	return list;
+	})();
+	
 	// applied typeahead to the text input box
 	$('.typeahead').typeahead({
 	hint: true,
 	highlight: true,
 	minLength: 1
-	},
-	{
+	},{
 	// data source one
 		name: 'people',
 		displayKey: 'value',
@@ -65,8 +78,18 @@ $(document).ready(function () {
 			'<div class="empty-message">','no matches','</div>'
 			].join('\n')
 		}
-	},
-	{
+	},{
+	// data source three
+		name: 'lists',
+		displayKey: 'value',
+		source: substringMatcher(list),
+		templates: {
+			header: '<h4 class="t5-sr-title">Lists</h4>',
+			empty: [
+			'<div class="empty-message">','no matches','</div>'
+			].join('\n')
+		}
+	},{
 	// data source two
 		name: 'items',
 		displayKey: 'value',
@@ -77,7 +100,8 @@ $(document).ready(function () {
 			'<div class="empty-message">','no matches','</div>'
 			].join('\n')
 		}
-	});
+	}
+	);
 
 	$('.item_typeahead').typeahead({
 	hint: true,
