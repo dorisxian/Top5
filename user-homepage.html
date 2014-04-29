@@ -126,13 +126,17 @@
       });
       
       
+      $.ajaxSetup({ cache: false });
       
-      function load_lists(opts){
-      	opts.container.empty();
+      function load_lists(optsArr){
 		$.getJSON("data/lists.json", function(listsData){
-			$.each(listsData, function(index, listData){
-	  			if (!opts.pd || opts.pd(listData))
-					var list = new $.top5.List(listData, opts.container);
+			console.log(listsData);
+	      	$.each(optsArr, function(index, opts){
+		      	opts.container.empty();
+				$.each(listsData, function(index, listData){
+		  			if (!opts.pd || opts.pd(listData))
+						var list = new $.top5.List(listData, opts.container);
+				});
 			});
 		});
       }
@@ -151,28 +155,20 @@
 		    }
       	}  
       }
-      load_lists(listsMap.all);
-      load_lists(listsMap.my);
-      load_lists(listsMap.fav);
+      load_lists([listsMap.all, listsMap.my, listsMap.fav]);
 		
 	  $('body').bind('t5-fav', function(){
-			setTimeout(function(){
-			  load_lists(listsMap.fav);
-			  if(!$.top5.container.is(listsMap.all.container))
-		      	load_lists(listsMap.all);
-			  if(!$.top5.container.is(listsMap.my.container))
-			      load_lists(listsMap.my);
-				//var list = new $.top5.List($.top5.fav, listsMap.fav.container);
-			}, 500);
-		});
+		  var optsArr = [listsMap.fav];
+		  if(!$.top5.container.is(listsMap.all.container))
+	      	optsArr.push(listsMap.all);
+		  if(!$.top5.container.is(listsMap.my.container))
+		      optsArr.push(listsMap.my);
+	      load_lists(optsArr);
+		    
+	  });
 	  $('body').bind('t5-la', function(){
-			setTimeout(function(){
-		      load_lists(listsMap.all);
-		      load_lists(listsMap.my);
-				//var list = new $.top5.List($.top5.la, listsMap.all.container);
-				//var list = new $.top5.List($.top5.la, listsMap.my.container);
-			}, 500);
-		});
+	      load_lists([listsMap.all, listsMap.my]);
+	  });
       
     });
     </script>

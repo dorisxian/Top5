@@ -56,13 +56,14 @@ $(function(){
 				if (!$.cookie('username')) {
 					alert('Please login first.');
 					return;
-				} 
+				}
 				_data.fav = !_data.fav;
-				render_fav();
-				$.post('svc/fav.php', {id:_data.id, fav:_data.fav});
-				$.top5.fav = _data;
-				$.top5.container = _container;
-				$('body').trigger('t5-fav');
+				$.post('svc/fav.php', {id:_data.id, fav:_data.fav}, function(){
+					render_fav();
+					//$.top5.fav = _data;
+					$.top5.container = _container;
+					$('body').trigger('t5-fav');
+				});
 			});
 			
 			ele.find('.t5-list-change span').click(function(){
