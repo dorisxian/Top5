@@ -77,6 +77,7 @@
     <!--
     <script src="js/min/search-ck.js" type="text/javascript"></script>
     -->
+    <script src="js/typeahead.min.js" type="text/javascript"></script>
     <!-- Page js -->
     <script src="js/list.js" type="text/javascript"></script>
     <script>
@@ -86,7 +87,7 @@
 		$("#t5-cat-menu").load("parts/menu.html");
 		$('nav').load('parts/navbar.html', function(){
 			$.getScript('js/listAdding.js');
-			$.getScript('js/min/search-ck.js');
+			$.getScript('js/search.js');
 			if ($.cookie("username") === 'Dolly') {
 				$('#t5-navbar-login').addClass('hidden');
 				$('#t5-navbar-name').removeClass('hidden');
