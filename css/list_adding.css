@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'HelveticaNeueThin';
+  src: url('../font/HelveticaNeueThin.eot');
+  src: local('HelveticaNeueThin'), local('Helvetica Neue Thin'), local('HelveticaNeue-Thin'), url('../font/HelveticaNeueThin.eot?#iefix') format('embedded-opentype'), url('../font/HelveticaNeueThin.ttf') format('truetype'), url('../font/HelveticaNeueThin.woff') format('woff'), url('../font/HelveticaNeueThin.svg#HelveticaNeueThin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url('../font/HelveticaNeueLight.eot');
+  src: local('HelveticaNeueLight'), local('Helvetica Neue Light'), local('HelveticaNeue-Light'), url('../font/HelveticaNeueLight.eot?#iefix') format('embedded-opentype'), url('../font/HelveticaNeueLight.ttf') format('truetype'), url('../font/HelveticaNeueLight.woff') format('woff'), url('../font/HelveticaNeueLight.svg#HelveticaNeueLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 .Border {
   border: #f13d0b 1px solid;
 }
@@ -346,6 +360,9 @@ a.t5-cat-2nd:hover {
   letter-spacing: 0.4px;
   color: #5e5e5e;
   vertical-align: middle;
+}
+.list-unstyled li {
+  white-space: nowrap;
 }
 .t5-functions {
   float: right;
@@ -782,6 +799,11 @@ img.t5-la-cat-icon {
   line-height: 2em;
   vertical-align: middle;
   cursor: pointer;
+}
+.t5-la-instr {
+  font-size: 11px;
+  color: #959595;
+  padding-left: 5px;
 }
 /*  topbar  */
 /*

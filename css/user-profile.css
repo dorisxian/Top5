@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'HelveticaNeueThin';
+  src: url('../font/HelveticaNeueThin.eot');
+  src: local('HelveticaNeueThin'), local('Helvetica Neue Thin'), local('HelveticaNeue-Thin'), url('../font/HelveticaNeueThin.eot?#iefix') format('embedded-opentype'), url('../font/HelveticaNeueThin.ttf') format('truetype'), url('../font/HelveticaNeueThin.woff') format('woff'), url('../font/HelveticaNeueThin.svg#HelveticaNeueThin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url('../font/HelveticaNeueLight.eot');
+  src: local('HelveticaNeueLight'), local('Helvetica Neue Light'), local('HelveticaNeue-Light'), url('../font/HelveticaNeueLight.eot?#iefix') format('embedded-opentype'), url('../font/HelveticaNeueLight.ttf') format('truetype'), url('../font/HelveticaNeueLight.woff') format('woff'), url('../font/HelveticaNeueLight.svg#HelveticaNeueLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 .Border {
   border: #f13d0b 1px solid;
 }
