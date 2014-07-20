@@ -2,9 +2,7 @@
 if (!$.top5){
 	$.top5 = {};
 }
-else if ($.top5.listAdding){
-	return;
-}
+else if ($.top5.listAdding){}
 
 
 $(function(){

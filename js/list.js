@@ -45,8 +45,9 @@ $(function(){
 				itemImages.eq(index).attr('src', item.image);
 				itemTitles.eq(index).html(item.title);
 			});
-			ele.find('.t5-ranking-box').hover(function () {
-				var specific = "." + $(this).attr('class').slice(15) + "-pic";
+			ele.find('.t5-ranking-list').find('li').hover(function () {
+				var ranking = $(this).find('.t5-ranking-box');
+				var specific = "." + ranking.attr('class').slice(15) + "-pic";
 				ele.find('li').siblings(".t5-pic").addClass('hidden');
 				ele.find(specific).removeClass('hidden');
 			});
