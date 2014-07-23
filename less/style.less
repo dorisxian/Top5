@@ -145,6 +145,12 @@ h4.t5-sr-title{
 	margin: 3px auto;
 }
 
+.twitter-typeahead input:nth-child(1)
+{
+  color:lightgray;
+}
+
+
 /*  Category Menu   */
 
 #t5-cat-menu
@@ -271,6 +277,10 @@ a.t5-cat-2nd{
   background-size:100% 100%;
   background-position:center;
   background-repeat:no-repeat;
+  
+  transition:background 0.5s;
+  transition-timing-function: ease;
+  -webkit-transition-timing-function: ease; /* Safari and Chrome */
 }
 /*
 .t5-list-heart:hover
@@ -282,6 +292,10 @@ a.t5-cat-2nd{
 {
   background-image:url(../img/heart-highlight.png);    
 }
+.t5-list-heart.t5-selected:hover
+{
+}
+
 
 
 .t5-cateicon{
